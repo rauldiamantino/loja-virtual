@@ -8,9 +8,9 @@
 ## Instalação
 - Instalar package.json: `npm init`
 - Instalar Sass localmente: `npm install sass -D`
-- Instalar Tailwindcss via PlayCDN na tag `<head>` do HTML ->  `<script src="https://cdn.tailwindcss.com"></script>`
+- Instalar TailwindCss via PlayCDN na tag `<head>` do HTML:  `<script src="https://cdn.tailwindcss.com"></script>`
 - Instalar TypeScript localmente: `npm i typescript -D`
-  - Criar arquivo tsconfig.json
+  - Criar arquivo tsconfig.json:
     ```
     {
       "compilerOptions": {
