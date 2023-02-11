@@ -1,11 +1,11 @@
 # Tecnologias utilizadas
-- sass: 1.58.0
-- typescript: 4.9.5
+- Sass: 1.58.0
+- Typescript: 4.9.5
 
 # Configurações do Ambiente
 
 ## Instalação
-- package.json -> `npm init`
+- Instalar package.json -> `npm init`
 - Instalar Sass localmente -> `npm install sass -D`
 - Instalar TS localmente-> `npm i typescript -D`
   - Criar arquivo tsconfig.json
@@ -13,7 +13,6 @@
     {
       "compilerOptions": {
         "target": "esnext",
-        // "module": "commonjs",
         "rootDir": "./assets/ts",                                  
         "outDir": "./assets/dist/js",                                        
         "noImplicitAny": false,
@@ -23,6 +22,7 @@
       }
     }
     ```
+- Tailwindcss inserir PlayCDN na tag `<head>` do HTML ->  `<script src="https://cdn.tailwindcss.com"></script>`
 
 ## Compilação e localhost
 - Compilar Sass -> `sass assets/scss/style.scss:assets/dist/css/style.css --style compressed`
