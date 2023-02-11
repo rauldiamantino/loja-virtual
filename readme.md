@@ -1,3 +1,6 @@
+# Demonstração do projeto
+<img src="./src/assets/images/img-readme.webm">
+
 # Tecnologias utilizadas
 - Sass: 1.58.0
 - TypeScript: 4.9.5
