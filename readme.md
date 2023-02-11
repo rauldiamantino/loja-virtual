@@ -1,9 +1,14 @@
+# Tecnologias utilizadas
+- sass: 1.58.0
+- typescript: 4.9.5
+
 # Configurações do Ambiente
 
 ## Instalação
 - package.json -> `npm init`
 - Instalar Sass localmente -> `npm install sass -D`
 - Instalar TS localmente-> `npm i typescript -D`
+  - Criar arquivo tsconfig.json
 
 ## Compilação e localhost
 - Compilar Sass -> `sass assets/scss/style.scss:assets/dist/css/style.css --style compressed`
