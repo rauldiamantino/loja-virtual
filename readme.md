@@ -1,5 +1,5 @@
 # Demonstração do projeto
-<img src="./src/assets/images/img-readme.webm">
+<img src="./src/assets/images/img-readme.gif">
 
 # Tecnologias utilizadas
 - Sass: 1.58.0
