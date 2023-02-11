@@ -6,7 +6,7 @@
 
 ## Instalação
 - Instalar package.json -> `npm init`
-- Instalar Sass localmente -> `npm install sass -D`
+- Instalar Sass Globalmente -> `npm install -g sass`
 - Instalar TS localmente-> `npm i typescript -D`
   - Criar arquivo tsconfig.json
     ```
@@ -25,6 +25,6 @@
 - Tailwindcss inserir PlayCDN na tag `<head>` do HTML ->  `<script src="https://cdn.tailwindcss.com"></script>`
 
 ## Compilação e localhost
-- Compilar Sass -> `sass assets/scss/style.scss:assets/dist/css/style.css --style compressed`
-- Compilar TS -> `npx tsc`
-- Localhost PHP -> `php -S localhost:8000`
+- Compilar Sass em CSS minificado: `sass src/assets/scss/style.scss:src/assets/dist/css/style.css --style compressed`
+- Compilar TS: `npx tsc`
+- Localhost PHP: `php -S localhost:8000`
