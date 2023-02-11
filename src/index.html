@@ -11,22 +11,57 @@
 </head>
 
 <body>
-  <header>
+  <header class="relative">
     <section class="mx-10 flex justify-between items-center">
       <img src="./assets/images/logo.png" alt="logo" class="w-10 h-10">
       <nav class="sass-topo-menu">
         <ul class="flex justify-center">
-          <li class="py-4 px-5 hover:text-neutral-600 transition duration-150 cursor-pointer">Lançamentos</li>
-          <li class="py-4 px-5 hover:text-neutral-600 transition duration-150 cursor-pointer">Mulheres</li>
-          <li class="py-4 px-5 hover:text-neutral-600 transition duration-150 cursor-pointer">Homens</li>
-          <li class="py-4 px-5 hover:text-neutral-600 transition duration-150 cursor-pointer">Infantil</li>
-          <li class="py-4 px-5 hover:text-neutral-600 transition duration-150 cursor-pointer">Esportes</li>
-          <li class="py-4 px-5 hover:text-neutral-600 transition duration-150 cursor-pointer">Coleções</li>
-          <li class="py-4 px-5 hover:text-neutral-600 transition duration-150 cursor-pointer">Outlet</li>
+          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
+            <span class="py-5 px-5 cursor-pointer">Lançamentos</span>
+            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
+              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Tendências</li>
+            </ul>
+          </li>
+          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
+            <span class="py-5 px-5 cursor-pointer">Mulheres</span>
+            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
+              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Calçados</li>
+            </ul>
+          </li>
+          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
+            <span class="py-5 px-5 cursor-pointer">Homens</span>
+            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
+              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Acessórios</li>
+            </ul>
+          </li>
+          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
+            <span class="py-5 px-5 cursor-pointer">Infantil</span>
+            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
+              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Camisetas</li>
+            </ul>
+          </li>
+          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
+            <span class="py-5 px-5 cursor-pointer">Esportes</span>
+            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
+              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Tendências</li>
+            </ul>
+          </li>
+          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
+            <span class="py-5 px-5 cursor-pointer">Coleções</span>
+            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
+              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Tendências</li>
+            </ul>
+          </li>
+          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
+            <span class="py-5 px-5 cursor-pointer">Outlet</span>
+            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
+              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Esportes</li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <section class="relative sass-topo-pesquisar">
-        <input type="search" name="input-pesquisar" id="input-pesquisar" class="border border-neutral-200 p-1 rounded-lg">
+        <input type="search" name="input-pesquisar" id="input-pesquisar" class="border border-neutral-300 p-1 rounded-lg">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="absolute top-1/2 -translate-y-1/2 right-3" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
         </svg>
