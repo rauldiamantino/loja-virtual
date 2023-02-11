@@ -1,13 +1,15 @@
 # Tecnologias utilizadas
 - Sass: 1.58.0
-- Typescript: 4.9.5
+- TypeScript: 4.9.5
+- TailwindCss: 3.2.6
 
 # Configurações do Ambiente
 
 ## Instalação
-- Instalar package.json -> `npm init`
-- Instalar Sass localmente -> `npm install sass -D`
-- Instalar TS localmente-> `npm i typescript -D`
+- Instalar package.json: `npm init`
+- Instalar Sass localmente: `npm install sass -D`
+- Instalar Tailwindcss via PlayCDN na tag `<head>` do HTML ->  `<script src="https://cdn.tailwindcss.com"></script>`
+- Instalar TypeScript localmente: `npm i typescript -D`
   - Criar arquivo tsconfig.json
     ```
     {
@@ -22,9 +24,9 @@
       }
     }
     ```
-- Tailwindcss inserir PlayCDN na tag `<head>` do HTML ->  `<script src="https://cdn.tailwindcss.com"></script>`
+- Configurar servidor embutido PHP: https://github.com/rauldiamantino/ambiente-php
 
 ## Compilação e localhost
 - Compilar Sass -> `sass assets/scss/style.scss:assets/dist/css/style.css --style compressed`
-- Compilar TS -> `npx tsc`
+- Compilar TypeScript -> `npx tsc`
 - Localhost PHP -> `php -S localhost:8000`
