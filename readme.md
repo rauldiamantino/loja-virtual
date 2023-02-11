@@ -9,20 +9,20 @@
 - Instalar Sass localmente -> `npm install sass -D`
 - Instalar TS localmente-> `npm i typescript -D`
   - Criar arquivo tsconfig.json
-  ```
-  {
-    "compilerOptions": {
-      "target": "esnext",
-      // "module": "commonjs",
-      "rootDir": "./assets/ts",                                  
-      "outDir": "./assets/dist/js",                                        
-      "noImplicitAny": false,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "sourceMap": true,  
+    ```
+    {
+      "compilerOptions": {
+        "target": "esnext",
+        // "module": "commonjs",
+        "rootDir": "./assets/ts",                                  
+        "outDir": "./assets/dist/js",                                        
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,  
+      }
     }
-  }
-  ```
+    ```
 
 ## Compilação e localhost
 - Compilar Sass -> `sass assets/scss/style.scss:assets/dist/css/style.css --style compressed`
