@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    // "module": "commonjs",
-    "rootDir": "./assets/ts",                                  
-    "outDir": "./assets/dist/js",                                        
+    "target": "esnext",    
+    "rootDir": "./src/assets/ts",                                  
+    "outDir": "./src/assets/dist/js",                                        
     "noImplicitAny": false,
-    "removeComments": true,
+    "removeComments": true,    
     "preserveConstEnums": true,
     "sourceMap": true,  
   }
