@@ -1,8 +1,8 @@
 const menuCategorias = ($alvo) => {
-    const $btnAbrir = document.querySelector('.sass-btn-categorias');
     const $menu = document.querySelector('.sass-topo-menu');
-    const $areaExterna = document.querySelector('.sass-area-externa');
     const $todasCategorias = $menu.querySelectorAll('details');
+    const $areaExterna = document.querySelector('.sass-area-externa');
+    const $btnAbrir = document.querySelector('.sass-btn-categorias');
     if ($alvo == $btnAbrir) {
         abrirMenuCategorias($menu, $areaExterna);
     }
@@ -14,14 +14,14 @@ const menuCategorias = ($alvo) => {
     });
 };
 const abrirMenuCategorias = ($menu, $areaExterna) => {
-    $menu.classList.remove('translate-x-[100%]');
-    $menu.classList.add('translate-x-[0%]');
     $areaExterna.classList.remove('hidden');
+    $menu.classList.add('translate-x-[0%]');
+    $menu.classList.remove('translate-x-[100%]');
 };
 const fecharMenuCategorias = ($menu, $areaExterna) => {
+    $areaExterna.classList.add('hidden');
     $menu.classList.add('translate-x-[100%]');
     $menu.classList.remove('translate-x-[0%]');
-    $areaExterna.classList.add('hidden');
 };
 const fecharDemaisCategorias = ($alvo, $categoria, $todasCategorias) => {
     const $alvoPai = $alvo.parentNode;
@@ -29,12 +29,13 @@ const fecharDemaisCategorias = ($alvo, $categoria, $todasCategorias) => {
         $todasCategorias.forEach(($outraCategoria) => {
             const $categoriaAtual = $outraCategoria == $alvoPai;
             if (!$categoriaAtual) {
-                $outraCategoria.removeAttribute('open');
+                fechaCategoria($outraCategoria);
             }
         });
     }
 };
-const fechaCategoria = () => {
+const fechaCategoria = ($outraCategoria) => {
+    $outraCategoria.removeAttribute('open');
 };
 export { menuCategorias };
 //# sourceMappingURL=menu-categorias.js.map

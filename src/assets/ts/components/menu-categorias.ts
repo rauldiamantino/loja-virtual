@@ -2,7 +2,7 @@ const menuCategorias = ($alvo:HTMLElement) => {
   const $menu:HTMLElement = document.querySelector('.sass-topo-menu')
   const $todasCategorias:NodeList = $menu.querySelectorAll('details')
   const $areaExterna:HTMLElement = document.querySelector('.sass-area-externa')
-  const $btnAbrir:HTMLButtonElement = document.querySelector('.sass-btn-categorias')  
+  const $btnAbrir:HTMLButtonElement = document.querySelector('.sass-btn-categorias')
 
   if ($alvo == $btnAbrir) {
     abrirMenuCategorias($menu, $areaExterna)
@@ -14,7 +14,7 @@ const menuCategorias = ($alvo:HTMLElement) => {
 
   $todasCategorias.forEach(($categoria:HTMLElement) => {
     fecharDemaisCategorias($alvo, $categoria, $todasCategorias)
-  }) 
+  })
 }
 
 const abrirMenuCategorias = ($menu:HTMLElement, $areaExterna:HTMLElement) => {
@@ -29,7 +29,7 @@ const fecharMenuCategorias = ($menu:HTMLElement, $areaExterna:HTMLElement) => {
   $menu.classList.remove('translate-x-[0%]')
 }
 
-const fecharDemaisCategorias = ($alvo:any, $categoria:HTMLElement, $todasCategorias:NodeList) => {  
+const fecharDemaisCategorias = ($alvo:any, $categoria:HTMLElement, $todasCategorias:NodeList) => {
   const $alvoPai:HTMLElement = $alvo.parentNode
 
   if($alvoPai == $categoria) {
@@ -37,14 +37,25 @@ const fecharDemaisCategorias = ($alvo:any, $categoria:HTMLElement, $todasCategor
       const $categoriaAtual = $outraCategoria == $alvoPai
 
       if (! $categoriaAtual) {
-        fechaCategoria($outraCategoria)      
-      }           
-    })      
-  }   
+        fechaCategoria($outraCategoria)
+      }
+    })     
+  }
 }
 
 const fechaCategoria = ($outraCategoria:HTMLElement) => {
-  $outraCategoria.removeAttribute('open') 
+  $outraCategoria.removeAttribute('open')
 }
+
+// $(function() {
+//   $('details').on('mouseover focus', function() {
+//     $(this).attr('open', true);
+//   }).on('mouseout blur', function() {
+//     $(this).attr('open', false);
+//   })
+// })
+
+
+
 
 export { menuCategorias }
