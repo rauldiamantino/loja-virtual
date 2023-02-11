@@ -11,69 +11,319 @@
 </head>
 
 <body>
-  <header class="relative">
-    <section class="mx-10 flex justify-between items-center">
-      <img src="./assets/images/logo.png" alt="logo" class="w-10 h-10">
-      <nav class="sass-topo-menu">
-        <ul class="flex justify-center">
-          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
-            <span class="py-5 px-5 cursor-pointer">Lançamentos</span>
-            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
-              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Tendências</li>
+  <header class="sticky top-0 bg-white">
+    <section class="w-full h-9 flex justify-center items-center bg-neutral-800">
+      <p class="text-white text-sm">PROJETO EM DESENVOLVIMENTO</p>
+    </section>
+    <section class="px-10 h-full flex justify-between items-center relative">
+      <span class="font-bold">LOGO</span>
+      <nav class="h-full bg-white sass-topo-menu">
+        <ul class="h-full flex justify-center items-center">
+          <li class="border-b-2 border-transparent hover:border-black group py-7 transition duration-150">
+            <span class="py-7 px-5 group-hover:text-neutral-500 group-hover:cursor-pointer">Lançamentos</span>
+            <ul class="hidden group-hover:flex justify-center py-10 absolute top-full left-0 right-0 bg-white">
+              <section class="w-4/5 grid grid-cols-4">
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Masculino</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calçados</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acessórios</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Feminino</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calçados</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acessórios</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Infantil</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calçados</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acessórios</li>
+                  </ul>
+                </li>
+              </section>
             </ul>
           </li>
-          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
-            <span class="py-5 px-5 cursor-pointer">Mulheres</span>
-            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
-              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Calçados</li>
+          <li class="border-b-2 border-transparent hover:border-black group py-7 transition duration-150">
+            <span class="py-7 px-5 group-hover:text-neutral-500 group-hover:cursor-pointer">Mulheres</span>
+            <ul class="hidden group-hover:flex justify-center py-10 absolute top-full left-0 right-0 bg-white">
+              <section class="w-4/5 grid grid-cols-4">
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Calçados</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis para Corrida</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis para Academia</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis de Basquete</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Chinelos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Chuteiras</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Roupas</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Moletons</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calças e Leggings</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Camisetas e Regatas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Jaquetas e Agasalhos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Shorts</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tops</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Vestidos e Saias</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Camisas de Times</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Meias</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Acessórios</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bolsas e Mochilas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bonés</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bolas de Futebol</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Outros</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Esportes</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Academia</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Treino iniciantes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida Iniciantes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Futebol</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Basquete</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Yoga</li>
+                  </ul>
+                </li>
+              </section>
             </ul>
           </li>
-          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
-            <span class="py-5 px-5 cursor-pointer">Homens</span>
-            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
-              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Acessórios</li>
+          <li class="border-b-2 border-transparent hover:border-black group py-7 transition duration-150">
+            <span class="py-7 px-5 group-hover:text-neutral-500 group-hover:cursor-pointer">Homens</span>
+            <ul class="hidden group-hover:flex justify-center py-10 absolute top-full left-0 right-0 bg-white">
+              <section class="w-4/5 grid grid-cols-4">
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Calçados</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis para Corrida</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis para Academia</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Motorsport</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis de Basquete</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Chinelos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Chuteiras</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Roupas</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Camisetas e Regatas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Moletons</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Jaquetas e Agasalhos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Camisas de Times</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Shorts</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calças</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Conjuntos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Meias</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Acessórios</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bolsas e Mochilas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bonés</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bolas de Futebol</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Outros</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Esportes</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Futebol</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Academia</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Motorsport</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Basquete</li>
+                  </ul>
+                </li>
+              </section>
             </ul>
           </li>
-          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
-            <span class="py-5 px-5 cursor-pointer">Infantil</span>
-            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
-              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Camisetas</li>
+          <li class="border-b-2 border-transparent hover:border-black group py-7 transition duration-150">
+            <span class="py-7 px-5 group-hover:text-neutral-500 group-hover:cursor-pointer">Infantil</span>
+            <ul class="hidden group-hover:flex justify-center py-10 absolute top-full left-0 right-0 bg-white">
+              <section class="w-4/5 grid grid-cols-4">
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Categoria</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calçados</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acessórios</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Compre por Idade</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bebês - 0 a 4 anos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Crianças - 5 a 7 anos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Juvenil - 8 a 16 anos</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Acessórios</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bolsas e Mochilas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bonés</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Bolas de Futebol</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Outros</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Esportes</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Academia</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Treino iniciantes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida Iniciantes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Futebol</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Basquete</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Yoga</li>
+                  </ul>
+                </li>
+              </section>
             </ul>
           </li>
-          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
-            <span class="py-5 px-5 cursor-pointer">Esportes</span>
-            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
-              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Tendências</li>
+          <li class="border-b-2 border-transparent hover:border-black group py-7 transition duration-150">
+            <span class="py-7 px-5 group-hover:text-neutral-500 group-hover:cursor-pointer">Esportes</span>
+            <ul class="hidden group-hover:flex justify-center py-10 absolute top-full left-0 right-0 bg-white">
+              <section class="w-4/5 grid grid-cols-4">
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Futebol</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Palmeiras</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Coleção Neymar</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Chuteiras</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Clubes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Manchester City</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Seleções</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Performance</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Treino Iniciantes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acedemia</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Yoga</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Nitro</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Motorsport</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">BMW Motorsport</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Mercedes AMG Petronas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Scuderia Ferrari</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Red Bull Racing</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Basquete</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Tênis de Basquete</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas de Basquete</li>
+                  </ul>
+                </li>
+              </section>
             </ul>
           </li>
-          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
-            <span class="py-5 px-5 cursor-pointer">Coleções</span>
-            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
-              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Tendências</li>
+          <li class="border-b-2 border-transparent hover:border-black group py-7 transition duration-150">
+            <span class="py-7 px-5 group-hover:text-neutral-500 group-hover:cursor-pointer">Coleções</span>
+            <ul class="hidden group-hover:flex justify-center py-10 absolute top-full left-0 right-0 bg-white">
+              <section class="w-4/5 grid grid-cols-4">
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Coleções</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Clássicos</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Suede</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">RS-Collection</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Mayze</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Slipstream</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Cali</li>
+                  </ul>
+                </li>
+              </section>
             </ul>
           </li>
-          <li class="border-b-2 border-transparent hover:border-black py-4 hover:text-neutral-600 transition duration-150 group">
-            <span class="py-5 px-5 cursor-pointer">Outlet</span>
-            <ul class="w-full h-max hidden group-hover:flex justify-center pt-4 pb-8 absolute top-full left-0 shadow-sm">
-              <li class="w-4/5 py-2 px-5 hover:text-neutral-600 transition duration-150">Esportes</li>
+          <li class="border-b-2 border-transparent hover:border-black group py-7 transition duration-150">
+            <span class="py-7 px-5 group-hover:text-neutral-500 group-hover:cursor-pointer">Outlet</span>
+            <ul class="hidden group-hover:flex justify-center py-10 absolute top-full left-0 right-0 bg-white">
+              <section class="w-4/5 grid grid-cols-4">
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Mulheres</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calçados</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acessórios</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Homens</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calçados</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acessórios</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Infantil</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Calçados</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Roupas</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Acessórios</li>
+                  </ul>
+                </li>
+                <li class="flex flex-col gap-3 py-2 px-5 transition duration-150">
+                  <span class="border-b border-neutral-200 pb-2 font-normal cursor-pointer">Esportes</span>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Academia</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Treino iniciantes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Corrida Iniciantes</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Futebol</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Basquete</li>
+                    <li class="text-neutral-500 hover:text-black transition duration-150 text-sm cursor-pointer">Yoga</li>
+                  </ul>
+                </li>
+              </section>
             </ul>
           </li>
         </ul>
       </nav>
-      <section class="relative sass-topo-pesquisar">
-        <input type="search" name="input-pesquisar" id="input-pesquisar" class="border border-neutral-300 p-1 rounded-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="absolute top-1/2 -translate-y-1/2 right-3" viewBox="0 0 16 16">
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-        </svg>
-      </section>
-      <section class="sass-topo-carrinho">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-        </svg>
+      <section class="flex items-center gap-6">
+        <section class="relative group sass-topo-pesquisar">
+          <input type="search" name="input-pesquisar" id="input-pesquisar" placeholder="Buscar" class="w-48 border border-neutral-300 py-2 pl-10 group-hover:bg-neutral-50/30 text-sm rounded-full">
+          <div class="p-2 absolute top-1/2 -translate-y-1/2 left-1 hover:bg-neutral-200 rounded-full cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </div>
+        </section>
+        <section class="p-2 hover:bg-neutral-200 rounded-full cursor-pointer sass-topo-carrinho">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+          </svg>
+        </section>
       </section>
     </section>
   </header>
 
+  <main class="h-screen w-full bg-neutral-100"></main>
 </body>
 
 </html>
