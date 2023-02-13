@@ -10,8 +10,8 @@
   <title>Loja Virtual</title>
 </head>
 
-<body>
-  <header class="sticky top-0 bg-white">
+<body>  
+  <header class="sticky top-0 z-50 bg-white">
     <section class="w-full h-9 flex justify-center items-center bg-neutral-800">
       <p class="text-white text-sm">PROJETO EM DESENVOLVIMENTO</p>
     </section>
@@ -304,8 +304,9 @@
             </ul>
           </details>
         </ul>
-      </nav>
-      <section class="w-full h-screen hidden fixed top-0 left-0 z-40 bg-black/80 sass-area-externa"></section>
+      </nav>      
+
+      
       <section class="flex items-center gap-6">
         <section class="lg:relative absolute top-full left-0 right-0 group sass-topo-pesquisar">
           <input type="search" name="input-pesquisar" id="input-pesquisar" placeholder="Buscar" class="lg:w-48 w-full border border-neutral-300 py-2 pl-10 group-hover:bg-neutral-50/30 text-sm lg:rounded-full">
@@ -328,10 +329,14 @@
         </button>
       </section>
     </section>
+
+    <section class="lg:hidden w-full h-screen hidden fixed top-0 left-0 z-40 bg-black/80 sass-area-externa"></section>
   </header>
 
-  <main class="h-screen w-full bg-neutral-100"></main>
+  <main class="h-screen w-full bg-neutral-100">        
+  </main>
 
+  
   <script type="module" src="./assets/dist/js/script.js"></script>
 </body>
 </html>
