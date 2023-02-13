@@ -1,8 +1,8 @@
 const menuPrincipal = ($alvo:HTMLElement) => {
-  const $menu:HTMLElement = document.querySelector('.sass-topo-menu')
+  const $menu:HTMLElement = document.querySelector('.css-topo-menu')
   const $todasCategorias:NodeList = $menu.querySelectorAll('details')
-  const $areaExterna:HTMLElement = document.querySelector('.sass-area-externa')  
-  const $btnAbrir:HTMLButtonElement = document.querySelector('.sass-btn-categorias')
+  const $areaExterna:HTMLElement = document.querySelector('.css-area-externa')  
+  const $btnAbrir:HTMLButtonElement = document.querySelector('.css-btn-categorias')
   const cliqueBtnAbrir:Boolean = $alvo == $btnAbrir
   const cliqueAreaExterna:Boolean = $alvo == $areaExterna
 
