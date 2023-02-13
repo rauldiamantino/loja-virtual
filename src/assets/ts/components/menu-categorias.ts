@@ -16,7 +16,7 @@ const menuCategorias = ($alvo:HTMLElement) => {
   
   $todasCategorias.forEach(($categoria:HTMLElement) => {
     fechaDemaisCategorias($alvo, $categoria, $todasCategorias)      
-    fechaCategSeClicouFora($alvo, $todasCategorias)  
+    fechaCategCliqueExterno($alvo, $todasCategorias)  
   })
 
 }
@@ -33,21 +33,21 @@ const fechaMenuCategorias = ($menu:HTMLElement, $areaExterna:HTMLElement) => {
   $menu.classList.remove('translate-x-[0%]')
 }
 
-const fechaDemaisCategorias = ($alvo:any, $categoria:HTMLElement, $todasCategorias:NodeList) => {
-  const $alvoPai:HTMLElement = $alvo.parentNode
+const fechaDemaisCategorias = ($alvo:any, $categoria:HTMLElement, $todasCategorias:NodeList) => {  
+  const alvoIgualCategoria:Boolean = $alvo.parentNode == $categoria
 
-  if($alvoPai == $categoria) {
-    $todasCategorias.forEach(($outraCategoria:HTMLElement) => {
-      const $categoriaAtual = $outraCategoria == $alvoPai
-
-      if (! $categoriaAtual) {
-        fechaCategoria($outraCategoria)
+  if(alvoIgualCategoria) {
+    $todasCategorias.forEach(($categoria:HTMLElement) => {
+      const alvoDiferenteCategoria:Boolean = $alvo.parentNode !== $categoria
+      
+      if (alvoDiferenteCategoria) {
+        fechaCategoria($categoria)
       }
-    })     
+    })
   }
 }
 
-const fechaCategSeClicouFora = ($alvo:HTMLElement, $todasCategorias:NodeList) => {  
+const fechaCategCliqueExterno = ($alvo:HTMLElement, $todasCategorias:NodeList) => {  
   const clicouForaCategoria = $alvo.tagName !== 'SUMMARY'
 
   if (clicouForaCategoria) {

@@ -13,7 +13,7 @@ const menuCategorias = ($alvo) => {
     }
     $todasCategorias.forEach(($categoria) => {
         fechaDemaisCategorias($alvo, $categoria, $todasCategorias);
-        fechaCategSeClicouFora($alvo, $todasCategorias);
+        fechaCategCliqueExterno($alvo, $todasCategorias);
     });
 };
 const abreMenuCategorias = ($menu, $areaExterna) => {
@@ -27,17 +27,17 @@ const fechaMenuCategorias = ($menu, $areaExterna) => {
     $menu.classList.remove('translate-x-[0%]');
 };
 const fechaDemaisCategorias = ($alvo, $categoria, $todasCategorias) => {
-    const $alvoPai = $alvo.parentNode;
-    if ($alvoPai == $categoria) {
-        $todasCategorias.forEach(($outraCategoria) => {
-            const $categoriaAtual = $outraCategoria == $alvoPai;
-            if (!$categoriaAtual) {
-                fechaCategoria($outraCategoria);
+    const alvoIgualCategoria = $alvo.parentNode == $categoria;
+    if (alvoIgualCategoria) {
+        $todasCategorias.forEach(($categoria) => {
+            const alvoDiferenteCategoria = $alvo.parentNode !== $categoria;
+            if (alvoDiferenteCategoria) {
+                fechaCategoria($categoria);
             }
         });
     }
 };
-const fechaCategSeClicouFora = ($alvo, $todasCategorias) => {
+const fechaCategCliqueExterno = ($alvo, $todasCategorias) => {
     const clicouForaCategoria = $alvo.tagName !== 'SUMMARY';
     if (clicouForaCategoria) {
         $todasCategorias.forEach(($categoria) => {
