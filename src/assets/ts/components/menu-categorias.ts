@@ -1,4 +1,4 @@
-const menuCategorias = ($alvo:HTMLElement) => {
+const menuPrincipal = ($alvo:HTMLElement) => {
   const $menu:HTMLElement = document.querySelector('.sass-topo-menu')
   const $todasCategorias:NodeList = $menu.querySelectorAll('details')
   const $areaExterna:HTMLElement = document.querySelector('.sass-area-externa')  
@@ -7,11 +7,11 @@ const menuCategorias = ($alvo:HTMLElement) => {
   const clicouAreaExterna:Boolean = $alvo == $areaExterna
 
   if (clicouBtnAbrir) {
-    abreMenuCategorias($menu, $areaExterna)
+    abreMenuPrincipal($menu, $areaExterna)
   }
   
   if (clicouAreaExterna) {
-    fechaMenuCategorias($menu, $areaExterna)
+    fechaMenuPrincipal($menu, $areaExterna)
   }      
   
   $todasCategorias.forEach(($categoria:HTMLElement) => {
@@ -21,13 +21,13 @@ const menuCategorias = ($alvo:HTMLElement) => {
 
 }
 
-const abreMenuCategorias = ($menu:HTMLElement, $areaExterna:HTMLElement) => {
+const abreMenuPrincipal = ($menu:HTMLElement, $areaExterna:HTMLElement) => {
   $areaExterna.classList.remove('hidden')
   $menu.classList.add('translate-x-[0%]')
   $menu.classList.remove('translate-x-[100%]')
 }
 
-const fechaMenuCategorias = ($menu:HTMLElement, $areaExterna:HTMLElement) => {
+const fechaMenuPrincipal = ($menu:HTMLElement, $areaExterna:HTMLElement) => {
   $areaExterna.classList.add('hidden')
   $menu.classList.add('translate-x-[100%]')
   $menu.classList.remove('translate-x-[0%]')
@@ -69,4 +69,4 @@ const fechaCategoria = ($categoria:HTMLElement) => {
 //   })
 // })
 
-export { menuCategorias }
+export { menuPrincipal }
