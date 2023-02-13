@@ -3,20 +3,20 @@ const menuPrincipal = ($alvo:HTMLElement) => {
   const $todasCategorias:NodeList = $menu.querySelectorAll('details')
   const $areaExterna:HTMLElement = document.querySelector('.sass-area-externa')  
   const $btnAbrir:HTMLButtonElement = document.querySelector('.sass-btn-categorias')
-  const clicouBtnAbrir:Boolean = $alvo == $btnAbrir
-  const clicouAreaExterna:Boolean = $alvo == $areaExterna
+  const cliqueBtnAbrir:Boolean = $alvo == $btnAbrir
+  const cliqueAreaExterna:Boolean = $alvo == $areaExterna
 
-  if (clicouBtnAbrir) {
+  if (cliqueBtnAbrir) {
     abreMenuPrincipal($menu, $areaExterna)
   }
   
-  if (clicouAreaExterna) {
+  if (cliqueAreaExterna) {
     fechaMenuPrincipal($menu, $areaExterna)
   }      
   
   $todasCategorias.forEach(($categoria:HTMLElement) => {
     fechaDemaisCategorias($alvo, $categoria, $todasCategorias)      
-    fechaCategCliqueExterno($alvo, $todasCategorias)  
+    fechaCategCliqueFora($alvo, $todasCategorias)  
   })
 
 }
@@ -47,10 +47,10 @@ const fechaDemaisCategorias = ($alvo:any, $categoria:HTMLElement, $todasCategori
   }
 }
 
-const fechaCategCliqueExterno = ($alvo:HTMLElement, $todasCategorias:NodeList) => {  
-  const clicouForaCategoria = $alvo.tagName !== 'SUMMARY'
+const fechaCategCliqueFora = ($alvo:HTMLElement, $todasCategorias:NodeList) => {  
+  const cliqueFora = $alvo.tagName !== 'SUMMARY'
 
-  if (clicouForaCategoria) {
+  if (cliqueFora) {
     $todasCategorias.forEach(($categoria:HTMLElement) => {      
       fechaCategoria($categoria)                  
     })                 
