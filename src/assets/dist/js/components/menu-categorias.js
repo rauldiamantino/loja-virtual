@@ -1,27 +1,27 @@
-const menuCategorias = ($alvo) => {
-    const $menu = document.querySelector('.sass-topo-menu');
+const menuPrincipal = ($alvo) => {
+    const $menu = document.querySelector('.css-topo-menu');
     const $todasCategorias = $menu.querySelectorAll('details');
-    const $areaExterna = document.querySelector('.sass-area-externa');
-    const $btnAbrir = document.querySelector('.sass-btn-categorias');
-    const clicouBtnAbrir = $alvo == $btnAbrir;
-    const clicouAreaExterna = $alvo == $areaExterna;
-    if (clicouBtnAbrir) {
-        abreMenuCategorias($menu, $areaExterna);
+    const $areaExterna = document.querySelector('.css-area-externa');
+    const $btnAbrir = document.querySelector('.css-btn-categorias');
+    const cliqueBtnAbrir = $alvo == $btnAbrir;
+    const cliqueAreaExterna = $alvo == $areaExterna;
+    if (cliqueBtnAbrir) {
+        abreMenuPrincipal($menu, $areaExterna);
     }
-    if (clicouAreaExterna) {
-        fechaMenuCategorias($menu, $areaExterna);
+    if (cliqueAreaExterna) {
+        fechaMenuPrincipal($menu, $areaExterna);
     }
     $todasCategorias.forEach(($categoria) => {
         fechaDemaisCategorias($alvo, $categoria, $todasCategorias);
-        fechaCategCliqueExterno($alvo, $todasCategorias);
+        fechaCategCliqueFora($alvo, $todasCategorias);
     });
 };
-const abreMenuCategorias = ($menu, $areaExterna) => {
+const abreMenuPrincipal = ($menu, $areaExterna) => {
     $areaExterna.classList.remove('hidden');
     $menu.classList.add('translate-x-[0%]');
     $menu.classList.remove('translate-x-[100%]');
 };
-const fechaMenuCategorias = ($menu, $areaExterna) => {
+const fechaMenuPrincipal = ($menu, $areaExterna) => {
     $areaExterna.classList.add('hidden');
     $menu.classList.add('translate-x-[100%]');
     $menu.classList.remove('translate-x-[0%]');
@@ -37,9 +37,9 @@ const fechaDemaisCategorias = ($alvo, $categoria, $todasCategorias) => {
         });
     }
 };
-const fechaCategCliqueExterno = ($alvo, $todasCategorias) => {
-    const clicouForaCategoria = $alvo.tagName !== 'SUMMARY';
-    if (clicouForaCategoria) {
+const fechaCategCliqueFora = ($alvo, $todasCategorias) => {
+    const cliqueFora = $alvo.tagName !== 'SUMMARY';
+    if (cliqueFora) {
         $todasCategorias.forEach(($categoria) => {
             fechaCategoria($categoria);
         });
@@ -48,5 +48,21 @@ const fechaCategCliqueExterno = ($alvo, $todasCategorias) => {
 const fechaCategoria = ($categoria) => {
     $categoria.removeAttribute('open');
 };
-export { menuCategorias };
+const abreMenuHover = ($todasCategorias) => {
+    const $breakpointDesktop = window.innerWidth > 1024;
+    $todasCategorias.forEach(($categoria) => {
+        $categoria.addEventListener('mouseover', () => {
+            if ($breakpointDesktop) {
+                $categoria.setAttribute('Open', 'true');
+                $categoria.addEventListener('mouseleave', () => {
+                    $categoria.removeAttribute('Open');
+                });
+            }
+            else {
+                return;
+            }
+        });
+    });
+};
+export { menuPrincipal, abreMenuHover };
 //# sourceMappingURL=menu-categorias.js.map
