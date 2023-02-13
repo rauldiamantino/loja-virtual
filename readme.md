@@ -22,7 +22,7 @@
       "compilerOptions": {
         "target": "esnext",
         "rootDir": "./assets/ts",                                  
-        "outDir": "./assets/dist/js",                                        
+        "outDir": "./assets/js",                                        
         "noImplicitAny": false,
         "removeComments": true,
         "preserveConstEnums": true,
