@@ -8,11 +8,11 @@ const elementoClicado = () => {
   })
 }
 
-const seNavegadorRedimensionado = () => {
+const navegadorRedimensionado = () => {
   window.addEventListener('resize', () => fechaCategoriasDoMenu())
 }
 
 elementoClicado()
-seNavegadorRedimensionado()
+navegadorRedimensionado()
 
 
