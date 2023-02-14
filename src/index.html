@@ -5,8 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/dist/css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
   <title>Loja Virtual</title>
 </head>
 
@@ -17,265 +28,280 @@
     </section>
     <section class="lg:p-0 lg:px-10 p-4 h-full flex flex-row justify-between items-center relative">
       <span class="font-bold">LOGO</span>
-      <nav class="flex flex-col css-menu-principal">
-        <ul class="css-menu-principal css-categoria">
-          <span>Lançamentos</span>
-          <li class="css-subcategoria-nivel-1">
-            <span>Masculino</span>
-            <ul>
-              <li>Calçados</li>
-              <li>Roupas</li>
-              <li>Acessórios</li>
+      <nav class="lg:divide-none lg:flex-row lg:w-full divide-y divide-neutral-200 p-6 w-8/12 h-screen fixed top-0 right-0 z-50 flex flex-col gap-2 overflow-y-auto bg-white css-menu-principal">
+        <ul class="css-menu-principal css-categoria">          
+          <input type="checkbox" id="cat-lancamentos" class="hidden peer">
+          <label for="cat-lancamentos" class="peer-checked:hidden"><div class="p-2">Lançamentos</div></label>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 font-bold text-black css-categoria-oculta"><a href="">Lançamentos</a></div>
+            <div class="p-2 pt-3 hover:text-black"><a href="">Masculino</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Calçados</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Roupas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Acessórios</a></li>
             </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Feminino</span>
-            <ul>
-              <li>Calçados</li>
-              <li>Roupas</li>
-              <li>Acessórios</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Feminino</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Calçados</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Roupas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Acessórios</a></li>
             </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Infantil</span>
-            <ul>
-              <li>Calçados</li>
-              <li>Roupas</li>
-              <li>Acessórios</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Infantil</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Calçados</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Roupas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Acessórios</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="css-menu-principal css-categoria">          
+          <input type="checkbox" id="cat-mulheres" class="hidden peer">
+          <label for="cat-mulheres" class="peer-checked:hidden"><div class="p-2">Mulheres</div></label>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 font-bold text-black css-categoria-oculta"><a href="">Mulheres</a></div>
+            <div class="p-2 pt-3 hover:text-black"><a href="">Calçados</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Tênis</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Tênis para Corrida</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Tênis para Academia</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Tênis de Basquete</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Chinelos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Chuteiras</a></li>
+            </ul>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Roupas</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Moletons</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Calças e Leggings</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Camisetas e Regatas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Jaquetas e Agasalhos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Shorts</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Tops</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Vestidos e Saias</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Camisas de Times</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Meias</a></li>
+            </ul>
+          </li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Acessórios</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Bolsas e Mochilas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Bonés</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Bolas de Futebol</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Outros</a></li>
+            </ul>
+          </li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Esportes</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Academia</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Treino iniciantes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Corrida</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Corrida Iniciantes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Futebol</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Basquete</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Yoga</a></li>
             </ul>
           </li>
         </ul>
 
         <ul class="css-menu-principal css-categoria">
-          <span>Mulheres</span>
-          <li class="css-subcategoria-nivel-1">
-            <span>Calçados</span>
-            <ul>
-              <li>Tênis</li>
-              <li>Tênis para Corrida</li>
-              <li>Tênis para Academia</li>
-              <li>Tênis de Basquete</li>
-              <li>Chinelos</li>
-              <li>Chuteiras</li>
+          <input type="checkbox" id="cat-homens" class="hidden peer">
+          <label for="cat-homens" class="peer-checked:hidden"><div class="p-2">Homens</div></label>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">            
+            <div class="p-2 font-bold text-black css-categoria-oculta"><a href="">Homens</a></div>
+            <div class="p-2 pt-3 hover:text-black"><a href="">Calçados</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Tênis</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Tênis para Corrida</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Tênis para Academia</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Motorsport</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Tênis de Basquete</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Chinelos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Chuteiras</a></li>
             </ul>
-          <li class="css-subcategoria-nivel-1">
-          <li class="css-subcategoria-nivel-1">
-            <span>Roupas</span>
-            <ul>
-              <li>Moletons</li>
-              <li>Calças e Leggings</li>
-              <li>Camisetas e Regatas</li>
-              <li>Jaquetas e Agasalhos</li>
-              <li>Shorts</li>
-              <li>Tops</li>
-              <li>Vestidos e Saias</li>
-              <li>Camisas de Times</li>
-              <li>Meias</li>
-            </ul>
-          </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Acessórios</span>
-            <ul>
-              <li>Bolsas e Mochilas</li>
-              <li>Bonés</li>
-              <li>Bolas de Futebol</li>
-              <li>Outros</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Roupas</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Camisetas e Regatas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Moletons</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Jaquetas e Agasalhos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Camisas de Times</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Shorts</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Calças</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Conjuntos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Meias</a></li>
             </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Esportes</span>
-            <ul>
-              <li>Academia</li>
-              <li>Treino iniciantes</li>
-              <li>Corrida</li>
-              <li>Corrida Iniciantes</li>
-              <li>Futebol</li>
-              <li>Basquete</li>
-              <li>Yoga</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Acessórios</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Bolsas e Mochilas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Bonés</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Bolas de Futebol</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Outros</a></li>
+            </ul>
+          </li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Esportes</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Futebol</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Corrida</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Academia</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Motorsport</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Basquete</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="css-menu-principal css-categoria">          
+          <input type="checkbox" id="cat-infantil" class="hidden peer">
+          <label for="cat-infantil" class="peer-checked:hidden"><div class="p-2">Infantil</div></label>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <a href="">
+              <div class="p-2 font-bold text-black css-categoria-oculta"><a href="">Infantil</a></div>
+            </a>
+            <div class="p-2 pt-3 hover:text-black"><a href="">Categoria</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Calçados</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Roupas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Acessórios</a></li>
+            </ul>
+          </li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Compre por Idade</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Bebês - 0 a 4 anos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Crianças - 5 a 7 anos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Juvenil - 8 a 16 anos</a></li>
+            </ul>
+          </li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Acessórios</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Bolsas e Mochilas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Bonés</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Bolas de Futebol</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Outros</a></li>
+            </ul>
+          </li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Esportes</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Academia</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Treino iniciantes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Corrida</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Corrida Iniciantes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Futebol</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Basquete</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Yoga</a></li>
             </ul>
           </li>
         </ul>
 
         <ul class="css-menu-principal css-categoria">
-          <span>Homens</span>
-          <li class="css-subcategoria-nivel-1">
-            <span>Calçados</span>
-            <ul>
-              <li>Tênis</li>
-              <li>Tênis para Corrida</li>
-              <li>Tênis para Academia</li>
-              <li>Motorsport</li>
-              <li>Tênis de Basquete</li>
-              <li>Chinelos</li>
-              <li>Chuteiras</li>
-            </ul>
-          <li>
-            <span>Roupas</span>
-            <ul>
-              <li>Camisetas e Regatas</li>
-              <li>Moletons</li>
-              <li>Jaquetas e Agasalhos</li>
-              <li>Camisas de Times</li>
-              <li>Shorts</li>
-              <li>Calças</li>
-              <li>Conjuntos</li>
-              <li>Meias</li>
+          <input type="checkbox" id="cat-esportes" class="hidden peer">
+          <label for="cat-esportes" class="peer-checked:hidden"><div class="p-2">Esportes</div></label>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 font-bold text-black css-categoria-oculta"><a href="">Esportes</a></div>
+            <div class="p-2 pt-3 hover:text-black"><a href="">Futebol</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Palmeiras</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Coleção Neymar</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Chuteiras</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Clubes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Manchester City</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Seleções</a></li>
             </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Acessórios</span>
-            <ul>
-              <li>Bolsas e Mochilas</li>
-              <li>Bonés</li>
-              <li>Bolas de Futebol</li>
-              <li>Outros</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Performance</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Corrida</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Treino Iniciantes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Acedemia</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Yoga</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Nitro</a></li>
             </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Esportes</span>
-            <ul>
-              <li>Futebol</li>
-              <li>Corrida</li>
-              <li>Academia</li>
-              <li>Motorsport</li>
-              <li>Basquete</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Motorsport</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">BMW Motorsport</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Mercedes AMG Petronas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Scuderia Ferrari</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Red Bull Racing</a></li>
+            </ul>
+          </li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Basquete</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Tênis de Basquete</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Roupas de Basquete</a></li>
             </ul>
           </li>
         </ul>
 
-        <ul class="css-menu-principal css-categoria">
-          <span>Infantil</span>
-          <li class="css-subcategoria-nivel-1">
-            <span>Categoria</span>
-            <ul>
-              <li>Calçados</li>
-              <li>Roupas</li>
-              <li>Acessórios</li>
-            </ul>
-          </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Compre por Idade</span>
-            <ul>
-              <li>Bebês - 0 a 4 anos</li>
-              <li>Crianças - 5 a 7 anos</li>
-              <li>Juvenil - 8 a 16 anos</li>
-            </ul>
-          </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Acessórios</span>
-            <ul>
-              <li>Bolsas e Mochilas</li>
-              <li>Bonés</li>
-              <li>Bolas de Futebol</li>
-              <li>Outros</li>
-            </ul>
-          </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Esportes</span>
-            <ul>
-              <li>Academia</li>
-              <li>Treino iniciantes</li>
-              <li>Corrida</li>
-              <li>Corrida Iniciantes</li>
-              <li>Futebol</li>
-              <li>Basquete</li>
-              <li>Yoga</li>
+        <ul class="css-menu-principal css-categoria">          
+          <input type="checkbox" id="cat-colecoes" class="hidden peer">
+          <label for="cat-colecoes" class="peer-checked:hidden"><div class="p-2">Coleções</div></label>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 font-bold text-black css-categoria-oculta"><a href="">Coleções</a></div>
+            <div class="p-2 pt-3 hover:text-black"><a href="">Coleções</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Clássicos</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Suede</a></li>
+              <li class="ml-7 hover:text-black"><a href="">RS-Collection</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Mayze</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Slipstream</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Cali</a></li>
             </ul>
           </li>
         </ul>
 
-        <ul class="css-menu-principal css-categoria">
-          <span>Esportes</span>
-          <li class="css-subcategoria-nivel-1">
-            <span>Futebol</span>
-            <ul>
-              <li>Palmeiras</li>
-              <li>Coleção Neymar</li>
-              <li>Chuteiras</li>
-              <li>Clubes</li>
-              <li>Manchester City</li>
-              <li>Seleções</li>
+        <ul class="css-menu-principal css-categoria">          
+          <input type="checkbox" id="cat-outlet" class="hidden peer">
+          <label for="cat-outlet" class="peer-checked:hidden"><div class="p-2">Outlet</div></label>          
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 font-bold text-black css-categoria-oculta"><a href="">Outlet</a></div>
+            <div class="p-2 pt-3 hover:text-black"><a href="">Mulheres</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Calçados</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Roupas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Acessórios</a></li>
             </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Performance</span>
-            <ul>
-              <li>Corrida</li>
-              <li>Treino Iniciantes</li>
-              <li>Acedemia</li>
-              <li>Yoga</li>
-              <li>Nitro</li>
-            </ul>
-          </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Motorsport</span>
-            <ul>
-              <li>BMW Motorsport</li>
-              <li>Mercedes AMG Petronas</li>
-              <li>Scuderia Ferrari</li>
-              <li>Red Bull Racing</li>
-            </ul>
-          </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Basquete</span>
-            <ul>
-              <li>Tênis de Basquete</li>
-              <li>Roupas de Basquete</li>
-            </ul>
-          </li>
-        </ul>
-
-        <ul class="css-menu-principal css-categoria">
-          <span>Coleções</span>
-          <li class="css-subcategoria-nivel-1">
-            <span>Coleções</span>
-            <ul>
-              <li>Clássicos</li>
-              <li>Suede</li>
-              <li>RS-Collection</li>
-              <li>Mayze</li>
-              <li>Slipstream</li>
-              <li>Cali</li>
-            </ul>
-          </li>
-        </ul>
-
-        <ul class="css-menu-principal css-categoria">
-          <span>Outlet</span>
-          <li class="css-subcategoria-nivel-1">
-            <span>Mulheres</span>
-            <ul>
-              <li>Calçados</li>
-              <li>Roupas</li>
-              <li>Acessórios</li>
-            </ul>
-          </li>
-          <li class="css-subcategoria-nivel-1">
-            <ser">Homens</span>
-              <ul>
-                <li>Calçados</li>
-                <li>Roupas</li>
-                <li>Acessórios</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Homens</a></div>
+              <ul class="text-left list-disc">
+                <li class="ml-7 hover:text-black"><a href="">Calçados</a></li>
+                <li class="ml-7 hover:text-black"><a href="">Roupas</a></li>
+                <li class="ml-7 hover:text-black"><a href="">Acessórios</a></li>
               </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Infantil</span>
-            <ul>
-              <li>Calçados</li>
-              <li>Roupas</li>
-              <li>Acessórios</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Infantil</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Calçados</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Roupas</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Acessórios</a></li>
             </ul>
           </li>
-          <li class="css-subcategoria-nivel-1">
-            <span>Esportes</span>
-            <ul>
-              <li>Academia</li>
-              <li>Treino iniciantes</li>
-              <li>Corrida</li>
-              <li>Corrida Iniciantes</li>
-              <li>Futebol</li>
-              <li>Basquete</li>
-              <li>Yoga</li>
+          <li class="hidden peer-checked:block text-neutral-500 css-subcategoria-nivel-1">
+            <div class="p-2 pt-3 hover:text-black"><a href="">Esportes</a></div>
+            <ul class="text-left list-disc">
+              <li class="ml-7 hover:text-black"><a href="">Academia</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Treino iniciantes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Corrida</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Corrida Iniciantes</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Futebol</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Basquete</a></li>
+              <li class="ml-7 hover:text-black"><a href="">Yoga</a></li>
             </ul>
           </li>
         </ul>
@@ -308,10 +334,14 @@
   </header>
 
   <main class="h-screen w-full bg-neutral-100">
+
+
+
+
   </main>
 
 
-  <script type="module" src="./assets/dist/js/script.js"></script>
+  <script type="module" src="./assets/js/script.js"></script>
 </body>
 
 </html>
