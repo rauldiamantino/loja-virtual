@@ -19,5 +19,11 @@ const fecharMenuPrincipal = ($menuPrincipal, $areaExterna) => {
     $menuPrincipal.classList.add('translate-x-[100%]');
     $areaExterna.classList.add('hidden');
 };
-export { menuPrincipal };
+const fechaCategoriasDoMenu = () => {
+    const $categorias = document.querySelectorAll('.css-menu-principal > Input');
+    $categorias.forEach(($categoria) => {
+        $categoria.checked = false;
+    });
+};
+export { menuPrincipal, fechaCategoriasDoMenu };
 //# sourceMappingURL=menu-principal.js.map

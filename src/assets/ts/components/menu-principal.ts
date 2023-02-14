@@ -24,4 +24,12 @@ const fecharMenuPrincipal = ($menuPrincipal:HTMLElement, $areaExterna:HTMLElemen
   $areaExterna.classList.add('hidden')
 }
 
-export { menuPrincipal }
+const fechaCategoriasDoMenu = () => {
+  const $categorias:NodeList = document.querySelectorAll('.css-menu-principal > Input')
+  
+    $categorias.forEach(($categoria:HTMLInputElement) => {
+      $categoria.checked = false
+    })
+}
+
+export { menuPrincipal, fechaCategoriasDoMenu }
