@@ -1,5 +1,5 @@
 const menuPrincipal = ($alvo:any) => {  
-  const $menuPrincipal:HTMLElement = document.querySelector('.css-menu-principal')
+  const $menuPrincipal:HTMLElement = document.querySelector('.css-topo-menu-principal')
   const $areaExterna:HTMLElement = document.querySelector('.css-area-externa')
   const $btnAbrir:HTMLButtonElement = document.querySelector('.css-btn-categorias')
   const $clicouBtnAbrir:Boolean = $alvo.target == $btnAbrir
@@ -25,7 +25,7 @@ const fecharMenuPrincipal = ($menuPrincipal:HTMLElement, $areaExterna:HTMLElemen
 }
 
 const fechaCategoriasDoMenu = () => {
-  const $categorias:NodeList = document.querySelectorAll('.css-menu-principal > Input')
+  const $categorias:NodeList = document.querySelectorAll('.css-categoria-input')
   
     $categorias.forEach(($categoria:HTMLInputElement) => {
       $categoria.checked = false

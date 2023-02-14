@@ -5,9 +5,9 @@ const elementoClicado = () => {
         menuPrincipal($alvo);
     });
 };
-const seNavegadorRedimensionado = () => {
+const navegadorRedimensionado = () => {
     window.addEventListener('resize', () => fechaCategoriasDoMenu());
 };
 elementoClicado();
-seNavegadorRedimensionado();
+navegadorRedimensionado();
 //# sourceMappingURL=script.js.map
