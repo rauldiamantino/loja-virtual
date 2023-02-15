@@ -1,12 +1,3 @@
-# Demonstração do projeto
-
-![image](https://user-images.githubusercontent.com/100098231/218242933-49e3bbe2-2923-46a3-a91f-f1f163b4ecf9.png)
-
-<img src="./src/assets/images/img-readme.gif">
-
-
-
-
 # Tecnologias utilizadas
 - TypeScript: 4.9.5
 - TailwindCss: 3.2.6
