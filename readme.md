@@ -22,24 +22,5 @@
 - Volte para o início do MAMP e clique no botão `Start Servers`
 - Acesse http://localhost/
 
-
-## 2. Instalação TypeScript e Package Json
-- Certifique-se de estar na raíz do repositório `loja-virtual`
-- Instale package.json: `npm init`
-- Instale TypeScript localmente: `npm i typescript -D`
-  - Criar arquivo tsconfig.json:
-    ```
-    {
-      "compilerOptions": {
-        "target": "esnext",
-        "rootDir": "./assets/ts",                                  
-        "outDir": "./assets/js",                                        
-        "noImplicitAny": false,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,  
-      }
-    }
-    ```    
-## 3. Compilação
-- Compilar TS: `npx tsc`
+## 2. Compilação
+- Compilar TypeScript: `npx tsc`
