@@ -1,10 +1,10 @@
 <?php ?>
-<header class="sticky top-0 z-50 bg-white css-topo">
-    <section class="px-10 w-full h-9 flex justify-end items-center text-sm bg-neutral-100 text-neutral-500 css-topo-superior">
+<section class="px-10 w-full h-9 flex justify-end items-center text-sm bg-neutral-100 text-neutral-500 css-topo-superior">
       <p class="pr-4 hover:text-black"><a href="#">Junte-se a nós</a></p>
       <span class="text-xs select-none">|</span>      
       <p class="pl-4 hover:text-black"><a href="#">Entrar</a></p>
     </section>
+<header class="sticky top-0 z-50 bg-white css-topo">    
     <section class="lg:p-0 lg:px-10 lg:flex lg:items-center grid grid-cols-2 justify-between pt-4 h-full relative css-topo-inferior">
       <span class="lg:pl-0 pl-4 flex justify-start items-center font-bold css-topo-logo"><a href="#">LOGO</a></span>
       <nav class="lg:p-0 lg:static lg:divide-none lg:transform-none lg:transition-none lg:flex-row lg:h-min lg:w-min  lg:overflow-hidden lg:gap-0 divide-y divide-neutral-200 p-6 w-8/12 h-screen fixed top-0 right-0 z-50 transform translate-x-[100%] transition duration-150 flex flex-col gap-2 overflow-y-auto bg-white css-topo-menu-principal">
