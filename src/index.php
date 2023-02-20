@@ -5,7 +5,7 @@
   <body>    
     <?php include("./partials/header.php"); ?>
 
-    <main class="h-screen w-full bg-neutral-50 css-conteudo-principal">     
+    <main class="h-max w-full bg-neutral-50 css-conteudo-principal">     
       <?php 
         $banner = [
           "id" => "home-banner-principal-1",

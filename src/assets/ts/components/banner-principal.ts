@@ -4,47 +4,39 @@ const bannerPrincipal = ($alvo:any) => {
   const $clicouBtnLeft:Boolean = $alvo.target == $btnLeft
   const $clicouBtnRight:Boolean = $alvo.target == $btnRight
   const $carrosselClicado:HTMLElement = $alvo.target.closest('.css-banner-principal')
-  const $imagens:HTMLElement = $carrosselClicado.querySelector('.css-banner-principal-imagens')  
-  const $qtdeImagens:NodeList = $imagens.querySelectorAll('img')
+  const $imagens:HTMLElement = $carrosselClicado.querySelector('.css-banner-principal-imagens')   
+  const $contadorMaximo:number = $imagens.querySelectorAll('img').length 
   let contador:any = $imagens.id
 
-  if($clicouBtnLeft) {
-    diminuirContador(contador, $imagens)
-    $imagens.style.transform = `translateX(${contador * -100}%)`
+  if($clicouBtnLeft) {    
+    $imagens.style.transform = `translateX(${diminuirContador(contador, $contadorMaximo, $imagens) * -100}%)`
   }
   
-  if($clicouBtnRight) {
-    aumentarContador(contador, $imagens)
-    $imagens.style.transform = `translateX(${contador * -100}%)`
+  if($clicouBtnRight) {    
+    $imagens.style.transform = `translateX(${aumentarContador(contador, $contadorMaximo, $imagens) * -100}%)`
   }
 }
 
-const aumentarContador = (contador:number, $imagens:any) => {
-  const $contadorMaximo:number = $imagens.querySelectorAll('img').length
-
-  contador = $imagens.id
-
-  if(contador >= $contadorMaximo - 1) {
-    contador = 0
-  } else {
-    contador++
-  }
-
+const diminuirContador = (contador:number, $contadorMaximo:number, $imagens:any) => {
+  const chegouAoFim = contador <= 0
+  const zeraContador = $contadorMaximo - 1
+  const continuaContagem = contador--
+  
+  chegouAoFim ? contador = zeraContador : continuaContagem
   $imagens.id = contador
+
+  return $imagens.id
 }
 
-const diminuirContador = (contador:number, $imagens:any) => {
-  const $contadorMaximo:number = $imagens.querySelectorAll('img').length
+const aumentarContador = (contador:number, $contadorMaximo:number, $imagens:any) => {
+  const chegouAoFim = contador >= $contadorMaximo - 1
+  const zeraContador = contador = 0
+  const continuaContagem = contador--
   
-  contador = $imagens.id
-  
-  if(contador <= 0) {
-    contador = $contadorMaximo - 1
-  } else {
-    contador--
-  }
-
+  chegouAoFim ? zeraContador : continuaContagem
   $imagens.id = contador
+
+  return $imagens.id
 }
 
 export { bannerPrincipal }

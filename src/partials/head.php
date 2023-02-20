@@ -6,4 +6,5 @@
   <link rel="stylesheet" href="./assets/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Loja Virtual</title>
+
 </head>
