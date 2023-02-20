@@ -24,9 +24,8 @@ const diminuirContador = (contador, $contadorMaximo, $imagens) => {
 };
 const aumentarContador = (contador, $contadorMaximo, $imagens) => {
     const chegouAoFim = contador >= $contadorMaximo - 1;
-    const zeraContador = contador = 0;
     const continuaContagem = contador++;
-    chegouAoFim ? zeraContador : continuaContagem;
+    chegouAoFim ? contador = 0 : continuaContagem;
     $imagens.id = contador;
     return $imagens.id;
 };

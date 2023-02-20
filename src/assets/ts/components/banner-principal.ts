@@ -18,9 +18,9 @@ const bannerPrincipal = ($alvo:any) => {
 }
 
 const diminuirContador = (contador:number, $contadorMaximo:number, $imagens:any) => {
-  const chegouAoFim = contador <= 0
-  const zeraContador = $contadorMaximo - 1
-  const continuaContagem = contador--
+  const chegouAoFim:Boolean = contador <= 0
+  const zeraContador:number = $contadorMaximo - 1
+  const continuaContagem:number = contador--
   
   chegouAoFim ? contador = zeraContador : continuaContagem
   $imagens.id = contador
@@ -29,11 +29,10 @@ const diminuirContador = (contador:number, $contadorMaximo:number, $imagens:any)
 }
 
 const aumentarContador = (contador:number, $contadorMaximo:number, $imagens:any) => {
-  const chegouAoFim = contador >= $contadorMaximo - 1
-  const zeraContador = contador = 0
-  const continuaContagem = contador++
+  const chegouAoFim:Boolean = contador >= $contadorMaximo - 1  
+  const continuaContagem:number = contador++
   
-  chegouAoFim ? zeraContador : continuaContagem
+  chegouAoFim ? contador = 0 : continuaContagem
   $imagens.id = contador
 
   return $imagens.id
