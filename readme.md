@@ -1,7 +1,5 @@
 # Demonstração
-
-<embed src="./src/assets/videos/demonstracao-readme.webm.mov" autostart="true" height="auto" width="1024" />
-
+<img src=".src/assets/videos/demonstracao-readme.webm.gif">
 
 # Tecnologias utilizadas
 - TypeScript: `4.9.5`
