@@ -1,5 +1,5 @@
 # Demonstração
-<img src=".src/assets/videos/demonstracao-readme.webm.gif">
+<img src="./src/assets/videos/demonstracao-readme.webm.gif">
 
 # Tecnologias utilizadas
 - TypeScript: `4.9.5`
