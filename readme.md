@@ -1,3 +1,8 @@
+# Demonstração
+
+<embed src="./src/assets/videos/demonstracao-readme.webm" autostart="true" height="auto" width="1024" />
+
+
 # Tecnologias utilizadas
 - TypeScript: `4.9.5`
 - TailwindCss: `3.2.6`
