@@ -1,11 +1,13 @@
 <?php ?>
 <header class="sticky top-0 z-50 bg-white css-topo">
-    <section class="w-full h-9 flex justify-center items-center bg-neutral-800 css-topo-aviso">
-      <p class="text-white text-sm css-topo-aviso-texto">PROJETO EM DESENVOLVIMENTO</p>
+    <section class="px-10 w-full h-9 flex justify-end items-center text-sm bg-neutral-100 text-neutral-500 css-topo-superior">
+      <p class="pr-4 hover:text-black"><a href="#">Junte-se a nós</a></p>
+      <span class="text-xs select-none">|</span>      
+      <p class="pl-4 hover:text-black"><a href="#">Entrar</a></p>
     </section>
-    <section class="lg:p-0 lg:px-10 lg:flex lg:items-center grid grid-cols-2 justify-between pt-4 h-full relative css-topo-menu">
+    <section class="lg:p-0 lg:px-10 lg:flex lg:items-center grid grid-cols-2 justify-between pt-4 h-full relative css-topo-inferior">
       <span class="lg:pl-0 pl-4 flex justify-start items-center font-bold css-topo-logo">LOGO</span>
-      <nav class="lg:p-0 lg:static lg:divide-none lg:transform-none lg:transition-none lg:flex-row lg:h-min lg:overflow-hidden divide-y divide-neutral-200 p-6 w-8/12 h-screen fixed top-0 right-0 z-50 transform translate-x-[100%] transition duration-150 flex flex-col gap-2 overflow-y-auto bg-white css-topo-menu-principal">
+      <nav class="lg:p-0 lg:static lg:divide-none lg:transform-none lg:transition-none lg:flex-row lg:h-min lg:w-min  lg:overflow-hidden lg:gap-0 divide-y divide-neutral-200 p-6 w-8/12 h-screen fixed top-0 right-0 z-50 transform translate-x-[100%] transition duration-150 flex flex-col gap-2 overflow-y-auto bg-white css-topo-menu-principal">
         <ul class="lg:flex group css-topo-menu-principal css-categoria">
 
           <input type="checkbox" id="cat-lancamentos" class="hidden peer css-categoria-input">
@@ -13,7 +15,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Lançamentos</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:group-hover:border-black lg:py-4 lg:block peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:py-4 css-categoria-titulo-depois-texto">Lançamentos</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Lançamentos</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
@@ -52,7 +54,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Mulheres</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:group-hover:border-black lg:py-4 lg:block peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:py-4 css-categoria-titulo-depois-texto">Mulheres</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Mulheres</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
@@ -113,7 +115,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Homens</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:group-hover:border-black lg:py-4 lg:block peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:py-4 css-categoria-titulo-depois-texto">Homens</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Homens</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
@@ -172,7 +174,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Infantil</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:group-hover:border-black lg:py-4 lg:block peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:py-4 css-categoria-titulo-depois-texto">Infantil</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Infantil</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
@@ -224,7 +226,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Esportes</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:group-hover:border-black lg:py-4 lg:block peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:py-4 css-categoria-titulo-depois-texto">Esportes</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Esportes</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
@@ -276,7 +278,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Coleções</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:group-hover:border-black lg:py-4 lg:block peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:py-4 css-categoria-titulo-depois-texto">Coleções</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Coleções</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
@@ -302,7 +304,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Outlet</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:group-hover:border-black lg:py-4 lg:block peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:py-4 css-categoria-titulo-depois-texto">Outlet</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Outlet</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
@@ -347,13 +349,7 @@
         </ul>
       </nav>    
 
-      <section class="lg:pr-0 pr-4 flex justify-end items-center gap-6 css-topo-box-direita">        
-        <section class="p-2 hover:bg-neutral-200 rounded-full cursor-pointer css-topo-box-direita-carrinho">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
-            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-          </svg>
-        </section>
-
+      <section class="lg:pr-0 lg:absolute lg:top-1/2 lg:translate-y-[-50%] lg:right-20 lg:z-10 pr-4 flex justify-end items-center gap-6 css-topo-box-direita">                
         <button class="lg:hidden w-8 h-8 cursor-pointer css-btn-categorias">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-full h-full pointer-events-none" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
