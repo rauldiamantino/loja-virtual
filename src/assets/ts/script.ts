@@ -6,7 +6,6 @@ const elementoClicado = () => {
     const $alvo:any = event
     
     menuPrincipal($alvo)
-    bannerPrincipal($alvo)
   })
 }
 
@@ -16,5 +15,4 @@ const navegadorRedimensionado = () => {
 
 elementoClicado()
 navegadorRedimensionado()
-
-
+bannerPrincipal()

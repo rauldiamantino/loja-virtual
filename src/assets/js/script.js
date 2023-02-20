@@ -4,7 +4,6 @@ const elementoClicado = () => {
     document.addEventListener('click', (event) => {
         const $alvo = event;
         menuPrincipal($alvo);
-        bannerPrincipal($alvo);
     });
 };
 const navegadorRedimensionado = () => {
@@ -12,4 +11,5 @@ const navegadorRedimensionado = () => {
 };
 elementoClicado();
 navegadorRedimensionado();
+bannerPrincipal();
 //# sourceMappingURL=script.js.map

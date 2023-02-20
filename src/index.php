@@ -5,15 +5,10 @@
   <body>    
     <?php include("./partials/header.php"); ?>
 
-    <main class="h-max w-full bg-neutral-50 css-conteudo-principal">     
+    <main class="h-full w-full bg-neutral-900 css-conteudo-principal">     
       <?php 
         $banner = [
-          "id" => "home-banner-principal-1",
-          "imagens" => [
-            './assets/images/banner-principal/1.jpg',
-            './assets/images/banner-principal/2.jpg',
-            './assets/images/banner-principal/3.jpg'
-          ],
+          "imagens" => ['./assets/images/banner-principal/1.jpg', './assets/images/banner-principal/2.jpg', './assets/images/banner-principal/3.jpg'],
         ];
         
         include("./partials/banner-principal.php"); 
