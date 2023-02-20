@@ -11,7 +11,7 @@
           "imagens" => [
             './assets/images/banner-principal/1.jpg',
             './assets/images/banner-principal/2.jpg',
-            './assets/images/banner-principal/3.jpg'
+            './assets/images/banner-principal/4.jpg'
           ],
         ];
 
