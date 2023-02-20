@@ -14,5 +14,5 @@ const navegadorRedimensionado = () => {
 }
 
 elementoClicado()
-navegadorRedimensionado()
 bannerPrincipal()
+navegadorRedimensionado()
