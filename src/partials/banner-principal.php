@@ -10,10 +10,10 @@
   </section>
 
   <section class="lg:h-max h-96 flex overflow-x-auto css-banner-principal-imagens">        
-  <?php 
-    foreach($banner["imagens"] as $imagem) { ?>
-    <img src="<?= $imagem ?>" class="object-cover">'
-  <?php }; ?>
+    <?php 
+      foreach($banner["imagens"] as $imagem) { ?>
+      <img src="<?= $imagem ?>" class="object-cover">'
+    <?php }; ?>
   </section>
 
   
