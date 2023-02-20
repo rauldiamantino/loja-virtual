@@ -31,7 +31,7 @@ const diminuirContador = (contador:number, $contadorMaximo:number, $imagens:any)
 const aumentarContador = (contador:number, $contadorMaximo:number, $imagens:any) => {
   const chegouAoFim = contador >= $contadorMaximo - 1
   const zeraContador = contador = 0
-  const continuaContagem = contador--
+  const continuaContagem = contador++
   
   chegouAoFim ? zeraContador : continuaContagem
   $imagens.id = contador
