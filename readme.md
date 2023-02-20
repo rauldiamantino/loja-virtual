@@ -1,6 +1,6 @@
 # Demonstração
 
-<embed src="./src/assets/videos/demonstracao-readme.webm" autostart="true" height="auto" width="1024" />
+<embed src="./src/assets/videos/demonstracao-readme.webm.mov" autostart="true" height="auto" width="1024" />
 
 
 # Tecnologias utilizadas
