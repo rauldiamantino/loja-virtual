@@ -9,7 +9,7 @@
     </svg>
   </section>
 
-  <section class="w-full h-max overflow-x-auto">
+  <section class="w-full h-max overflow-x-clip">
     <section class="lg:h-max flex h-96 css-banner-principal-imagens" id="1">
       <?php
         foreach($banner["imagens"] as $imagem){

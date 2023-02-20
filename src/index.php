@@ -17,7 +17,7 @@
         ];
         
         include("./partials/banner-principal.php"); 
-      ?>      
+      ?>
     </main>
     
     <?php include("./partials/footer.php"); ?>
