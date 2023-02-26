@@ -12,7 +12,7 @@
           <li class="lg:leading-6 lg:text-sm text-xs text-neutral-500 leading-loose"><a href="">Como Comprar</a></li>
           <li class="lg:leading-6 lg:text-sm text-xs text-neutral-500 leading-loose"><a href="">Politica Global Lgpd</a></li>
           <li class="lg:leading-6 lg:text-sm text-xs text-neutral-500 leading-loose"><a href="">Trocas</a></li>
-        </ul>        
+        </ul>
       </section>
 
       <section class="lg:col-start-2 md:col-start-1 bg-white w-full css-rodape-pagamentos">
@@ -40,7 +40,7 @@
 
         <h2 class="mt-3 py-2 font-normal">Loja Virtual</h2>
         <p class="lg:leading-6 lg:text-sm text-xs text-neutral-500 leading-loose">Av. Pedro Álvares Cabral, 1000<br> Ibirapuera, São Paulo-SP, 00000-000</p>
-        <p class="lg:leading-6 lg:text-sm text-xs text-neutral-500 leading-loose">Empresa Fictícia de Comércio Eletrônico</p>        
+        <p class="lg:leading-6 lg:text-sm text-xs text-neutral-500 leading-loose">Empresa Fictícia de Comércio Eletrônico</p>
       </section>
       <section>
         <p class="text-sm font-bold">&copy 2023 Raul Diamantino</p>

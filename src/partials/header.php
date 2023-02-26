@@ -1,15 +1,15 @@
 <section class="px-10 w-full h-9 flex justify-end items-center text-sm bg-neutral-100 text-neutral-500 css-topo-superior">
       <p class="pr-4 hover:text-black"><a href="#">Junte-se a nós</a></p>
-      <span class="text-xs select-none">|</span>      
+      <span class="text-xs select-none">|</span>
       <p class="pl-4 hover:text-black"><a href="#">Entrar</a></p>
     </section>
-<header class="sticky top-0 z-50 bg-white css-topo">    
+<header class="sticky top-0 z-50 bg-white css-topo">
     <section class="lg:p-0 lg:px-10 lg:flex lg:items-center grid grid-cols-2 justify-between pt-4 h-full relative css-topo-inferior">
       <span class="lg:pl-0 pl-4 flex justify-start items-center font-bold css-topo-logo"><a href="#">LOGO</a></span>
 
       <?php include("./partials/menu-principal.php")?>
 
-      <section class="lg:pr-0 lg:absolute lg:top-1/2 lg:translate-y-[-50%] lg:right-20 lg:z-10 pr-4 flex justify-end items-center gap-6 css-topo-box-direita">                
+      <section class="lg:pr-0 lg:absolute lg:top-1/2 lg:translate-y-[-50%] lg:right-20 lg:z-10 pr-4 flex justify-end items-center gap-6 css-topo-box-direita">
         <button class="lg:hidden w-8 h-8 cursor-pointer css-btn-categorias">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-full h-full pointer-events-none" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />

@@ -15,7 +15,7 @@
           ],
         ];
 
-        include("./partials/banner-principal.php"); 
+        include("./partials/banner-principal.php");
       ?>
     </main>
 
