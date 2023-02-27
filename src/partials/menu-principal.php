@@ -7,7 +7,7 @@
             <div class="lg:py-4 p-2 css-categoria-titulo-antes-texto">Lançamentos</div>
           </label>
 
-          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Lançamentos</a></div>
+          <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="categorias.php?dir=pages&file=lancamentos" class="lg:p-4 css-categoria-titulo-depois-texto">Lançamentos</a></div>
 
           <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-full lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
