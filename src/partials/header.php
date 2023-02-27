@@ -1,10 +1,12 @@
-<section class="px-10 w-full h-9 flex justify-end items-center text-sm bg-neutral-100 text-neutral-500 css-topo-superior">
-      <p class="pr-4 hover:text-black"><a href="#">Junte-se a nós</a></p>
-      <span class="text-xs select-none">|</span>
-      <p class="pl-4 hover:text-black"><a href="#">Entrar</a></p>
-    </section>
+<section class="w-full bg-neutral-100 css-topo-superior">
+  <section class="xl:mx-auto xl:px-0 xl:max-w-7xl px-10 h-9 flex justify-end items-center text-sm text-neutral-500">
+    <p class="pr-4 hover:text-black"><a href="#">Junte-se a nós</a></p>
+    <span class="text-xs select-none">|</span>
+    <p class="pl-4 hover:text-black"><a href="#">Entrar</a></p>
+  </section>
+</section>
 <header class="sticky top-0 z-50 bg-white css-topo">
-    <section class="lg:p-0 lg:px-10 lg:flex lg:items-center grid grid-cols-2 justify-between pt-4 h-full relative css-topo-inferior">
+    <section class="xl:mx-auto xl:px-0 xl:max-w-7xl lg:p-0 lg:px-10 lg:flex lg:items-center grid grid-cols-2 justify-between pt-4 h-full relative css-topo-inferior">
       <span class="lg:pl-0 pl-4 flex justify-start items-center font-bold css-topo-logo"><a href="#">LOGO</a></span>
 
       <?php include("./partials/menu-principal.php")?>
@@ -38,4 +40,4 @@
       </section>
     </section>
     <section class="lg:hidden w-full h-screen hidden fixed top-0 left-0 z-40 bg-black/80 css-area-externa"></section>
-  </header>
+</header>

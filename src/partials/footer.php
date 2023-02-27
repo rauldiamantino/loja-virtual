@@ -1,5 +1,5 @@
 <?php ?>
-<footer class="mt-10 border-t border-neutral-200 h-max py-10 css-rodape">
+<footer class="mt-5 border-t border-neutral-200 h-max py-10 css-rodape">
     <section class="lg:mx-auto lg:w-4/6 lg:p-0 lg:grid-cols-3 lg:justify-start lg:text-base md:grid md:grid-cols-2 px-4 flex flex-col gap-4 text-sm bg-white css-rodape-superior">
       <section class="bg-white w-full css-rodape-lista">
         <ul>
