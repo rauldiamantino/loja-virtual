@@ -8,5 +8,7 @@
     <?php include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php"); ?>
   </main>
   <?php include("./partials/footer.php"); ?>
+
+  <script type="module" src="./assets/js/script.js"></script>
 </body>
 </html>
