@@ -1,5 +1,7 @@
 # Demonstração
-<img src="./src/assets/videos/demonstracao-readme.webm.gif">
+
+[demonstracao-readme-min.webm](https://user-images.githubusercontent.com/100098231/222591802-6fb9d678-0073-4bd8-a6dd-4bb4d7faee07.webm)
+
 
 # Tecnologias utilizadas
 - TypeScript: `4.9.5`
