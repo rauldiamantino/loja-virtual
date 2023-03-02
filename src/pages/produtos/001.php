@@ -1,4 +1,7 @@
 <?php 
+
+  echo "Teste";
+  
   $produto = [
     "codigo" => 001,
     "referencia" => "rd001",
