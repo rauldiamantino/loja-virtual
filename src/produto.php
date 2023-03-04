@@ -42,8 +42,8 @@
         ?>
       </div>
 
-      <section class="flex flex-col gap-5 css-pag-produto-textos">
-        <section class="h-min flex flex-col gap-5 col-start-4 css-pp-caixa-2">
+      <section class="flex css-pag-produto-textos">
+        <section class="flex flex-col gap-5 css-pp-caixa-2">
           <h2 class="text-sm css-c2-categoria">Lançamentos</h2>
           <h1 class="text-2xl font-medium css-c2-produto-name"><?php echo $produtoNome?></h1>
           <section class="css-c2-preco">
