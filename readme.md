@@ -1,6 +1,8 @@
+Desenvolvendo minhas habilidades em TypeScript, Tailwindcss e PHP.
+
 # Demonstração
 
-[demonstracao-readme-min.webm](https://user-images.githubusercontent.com/100098231/222591802-6fb9d678-0073-4bd8-a6dd-4bb4d7faee07.webm)
+[screen-capture.webm](https://user-images.githubusercontent.com/100098231/222880716-326386c1-8198-4790-846e-98e4e94b201b.webm)
 
 
 # Tecnologias utilizadas
