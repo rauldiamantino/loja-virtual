@@ -1,7 +1,7 @@
 <?php 
   include("./pages/produtos/{$produtoCodigo}.php");
   $produtoNome = $produto["nome"];
-  $imagemPrincipal = $produto["variavel-1"]["imagens"][0];
+  $imagemPrincipal = $produto["variacao-1"]["imagens"][0];
   $precoDe = $produto["preco-de"];
   $precoPor = $produto["preco-por"];
   $qtdeParcelas = $produto["qtde-parcelas"];

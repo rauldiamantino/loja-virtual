@@ -1,3 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
 body{font-family:'Ubuntu', sans-serif; font-weight:300;}
+
+
+/* Customização da Details na Página do Produto */
+.css-pag-produto summary              {background: url('./images/details/details-down.svg') no-repeat center right;}
+.css-pag-produto details[open] summary{background: url('./images/details/details-up.svg') no-repeat center right;}
