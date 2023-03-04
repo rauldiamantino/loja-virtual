@@ -42,7 +42,7 @@
         ?>
       </div>
 
-      <section class="flex css-pag-produto-textos">
+      <section class="css-pag-produto-textos">
         <section class="flex flex-col gap-5 css-pp-caixa-2">
           <h2 class="text-sm css-c2-categoria">Lançamentos</h2>
           <h1 class="text-2xl font-medium css-c2-produto-name"><?php echo $produtoNome?></h1>
@@ -98,7 +98,7 @@
           </section>
 
           <section class="css-c2-especificacoes">
-            <section class="h-min css-pp-caixa-2">
+            <section class="w-full h-min css-pp-caixa-2">
               <details open>
                 <summary class="border-t border-gray-200 py-4 flex justify-between items-center list-none">Descrição</summary>
                 <section class="py-4 css-c2-descricao">
