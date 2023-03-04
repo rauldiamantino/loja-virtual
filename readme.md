@@ -1,4 +1,4 @@
-Atualmente estou focado neste projeto e desenvolvendo minhas habilidades em TypeScript, Tailwindcss e PHP.
+Desenvolvendo minhas habilidades em TypeScript, Tailwindcss e PHP.
 
 # Demonstração
 
