@@ -33,7 +33,7 @@
       }
     ?>
 
-    <section class="w-full h-max grid grid-cols-4 grid-rows-2 gap-4 items-start css-pag-produto">
+    <section class="w-full h-max grid grid-cols-4 gap-4 items-start css-pag-produto">
       <div class="w-full grid grid-cols-<?php echo $colunasImagensProduto ?> col-span-3 row-span-full gap-4 css-pp-caixa-1">
         <?php
           foreach($imagens as $urlImagem) {
