@@ -1,10 +1,11 @@
 <?php 
   include("./pages/produtos/{$produtoCodigo}.php");
+  
   $produtoNome = $produto["nome"];
-  $imagemPrincipal = $produto["variacao-1"]["imagens"][0];
-  $precoDe = $produto["preco-de"];
-  $precoPor = $produto["preco-por"];
-  $qtdeParcelas = $produto["qtde-parcelas"];
+  $imagemPrincipal = isset($produto["variacao-1"]) ? $produto["variacao-1"]["imagens"][0] : $produto["imagens"][0];
+  $precoDe = isset($produto["preco-de"]) ? $produto["preco-de"] : null;
+  $precoPor = isset($produto["preco-por"]) ? $produto["preco-por"] : null;
+  $qtdeParcelas = isset($produto["qtde-parcelas"]) ? $produto["qtde-parcelas"] : null;
   $totalParcelado = number_format($precoPor / $qtdeParcelas, 2, ",", ".");
 ?>
 

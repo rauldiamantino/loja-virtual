@@ -8,21 +8,21 @@
     <?php 
       include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
 
-      $produtoCodigo = $produto["codigo"];
-      $produtoNome = $produto["nome"];
-      $referencia = $produto["referencia"];
-      $imagens = $produto["variacao-1"]["imagens"];
-      $imagemPrincipal = $produto["variacao-1"]["imagens"][0];
-      $precoDe = $produto["preco-de"];
-      $precoPor = $produto["preco-por"];
-      $qtdeParcelas = $produto["qtde-parcelas"];
+      $produtoCodigo = isset($produto["codigo"]) ? $produto["codigo"] : null;
+      $produtoNome = isset($produto["nome"]) ? $produto["nome"] : null;
+      $referencia = isset($produto["referencia"]) ? $produto["referencia"] : null;
+      $imagens = isset($produto["variacao-1"]["imagens"]) ? $produto["variacao-1"]["imagens"] : $produto["imagens"];
+      $imagemPrincipal = isset($produto["variacao-1"]["imagens"][0]) ? $produto["variacao-1"]["imagens"][0] : $produto["imagens"][0];
+      $precoDe = isset($produto["preco-de"]) ? $produto["preco-de"] : null;
+      $precoPor = isset($produto["preco-por"]) ? $produto["preco-por"] : null;
+      $qtdeParcelas = isset($produto["qtde-parcelas"]) ? $produto["qtde-parcelas"] : null;
       $totalParcelado = number_format($precoPor / $qtdeParcelas, 2, ",", ".");
-      $descricaoTitulo = $produto["descricao"]["titulo"];
-      $descricaoTexto = $produto["descricao"]["texto"];
+      $descricaoTitulo = isset($produto["descricao"]["titulo"]) ? $produto["descricao"]["titulo"] : null;
+      $descricaoTexto = isset($produto["descricao"]["texto"]) ? $produto["descricao"]["texto"] : null;
       $colunasImagensProduto;
       $qtdeImagens = sizeof($imagens);
-      $nomeVariacao2 = $produto["variacao-1"]["variacao-2"]["nome-variacao-2"];
-      $itensVariacao2 = $produto["variacao-1"]["variacao-2"][0];
+      $nomeVariacao2 = isset($produto["variacao-1"]["variacao-2"]["nome-variacao-2"]) ? $produto["variacao-1"]["variacao-2"]["nome-variacao-2"] : null;
+      $itensVariacao2 = isset($produto["variacao-1"]["variacao-2"][0]) ? $produto["variacao-1"]["variacao-2"][0] : null;
 
       $qtdeImagens == 1 ? $colunasImagensProduto = 1 : $colunasImagensProduto = 2;
 
