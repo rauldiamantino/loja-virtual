@@ -26,10 +26,10 @@
       $qtdeImagens = sizeof($imagens);
       $nomeVariacao1 = $produto["variacao-1"]["nome-variacao-1"];
       $itensVariacao1 = $produto["variacao-1"][0];
-      $nomeVariacao2 = $produto["variacao-1"]["variacao-2"]["nome"];
-      $itensVariacao2 = $produto["variacao-1"]["variacao-2"][0];
-
+      $segundaVariacaoExiste = false;
       $qtdeImagens == 1 ? $colunasImagensProduto = 1 : $colunasImagensProduto = 2;
+      
+
 
       // print_r(imagensDoProduto($produto["variacao-1"], "Vermelho"));
 
@@ -104,7 +104,6 @@
             </span>
           </p>
 
-
           <?php if(variacaoExiste($itensVariacao1)) { ?>
                   <section class="css-c2-variacao-1">
                     <span class="css-nome-variacao-1"><?php echo $nomeVariacao1 ?></span>
@@ -115,7 +114,9 @@
                                 if(is_array($item) && array_key_exists("variacao-2", $item)) {
                                   $nome = $item["nome"]; 
                                   
-                                  ?>
+                                  if(variacaoExiste($item["variacao-2"])) {
+                                    $segundaVariacaoExiste = true;
+                                  } ?>
 
                                   <span class="w-full flex items-center justify-center">
                                     <input
@@ -132,49 +133,46 @@
                                       <?php echo $nome ?>
                                     </label>
                                   </span>
-
-                                  <?php if(variacaoExiste($itensVariacao2)) { ?>
-                                          <section class="hidden py-4 css-c2-variacoes">
-                                            <section class="css-c2-variacao-2">
-                                              <span class="css-nome-variacao-2"><?php echo $nomeVariacao2?></span>
-
-                                              <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
-                                                
-                                                <?php foreach($itensVariacao2 as $variacao) { ?>
-
-                                                        <span class="w-full flex items-center justify-center">
-
-                                                          <input
-                                                            type="radio"
-                                                            name="css-id-itens-variacao-2"
-                                                            id="css-id-item-<?php echo $variacao?>"
-                                                            class="hidden peer"
-                                                            <?php if($itensVariacao2[0] == $variacao) echo "checked = 'checked'";?>
-                                                          />
-
-                                                          <label
-                                                            for="css-id-item-<?php echo $variacao?>"
-                                                            class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
-                                                            
-                                                            <?php echo $variacao?>
-
-                                                          </label>
-
-                                                        </span>
-
-                                                <?php } ?>
-                                              </span>
-                                              
-                                            </section>
-                                          </section>
-                                  <?php } ?>
-                         <?php }
+                        <?php }
                              } ?>
                       </span>
                   </section>
           <?php } ?>
 
-          
+          <?php if($segundaVariacaoExiste) { ?>
+                  <section class="py-4 css-c2-variacoes">
+                    <section class="css-c2-variacao-2">
+                      <span class="css-nome-variacao-2"><?php echo $item["variacao-2"]["nome"]?></span>
+
+                      <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
+                        
+                        <?php foreach($item["variacao-2"][0] as $variacao) { ?>
+
+                                <span class="w-full flex items-center justify-center">
+
+                                  <input
+                                    type="radio"
+                                    name="css-id-itens-variacao-2"
+                                    id="css-id-item-<?php echo $variacao?>"
+                                    class="hidden peer"
+                                  />
+
+                                  <label
+                                    for="css-id-item-<?php echo $variacao?>"
+                                    class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
+                                    
+                                    <?php echo $variacao?>
+
+                                  </label>
+
+                                </span>
+
+                        <?php } ?>
+                      </span>
+                      
+                    </section>
+                  </section>
+          <?php } ?>
           
           <button class="p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar">Adicionar ao carrinho</button>
 

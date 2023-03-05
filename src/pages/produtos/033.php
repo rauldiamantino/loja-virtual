@@ -27,12 +27,8 @@
         ],
         "variacao-2" => [
           "nome" => "Tamanho",
-          [35, 36, 37],
+          [40, 41, 42],
         ],
-      ],
-      "variacao-2" => [
-        [35, 36, 37],
-        "nome" => "Tamanho"
       ],
     ],
     "imagens-sem-variacao" => [

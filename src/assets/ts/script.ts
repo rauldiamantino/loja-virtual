@@ -16,3 +16,20 @@ const navegadorRedimensionado = () => {
 elementoClicado()
 bannerPrincipal()
 navegadorRedimensionado()
+
+
+const $inputsPrimeiraVariacao:NodeList = document.querySelectorAll(".css-c2-variacao-1 input")
+const $inputsSegundaVariacao:NodeList = document.querySelectorAll(".css-c2-variacao-2 input")
+
+
+$inputsPrimeiraVariacao.forEach(($inputVariacao:any) => {
+  $inputVariacao.addEventListener('click', () => {
+    if($inputVariacao.checked == true) {
+      console.log($inputVariacao.id)
+    }
+  })
+})
+
+$inputsSegundaVariacao.forEach(($inputVariacao:HTMLInputElement) => {
+  
+})
