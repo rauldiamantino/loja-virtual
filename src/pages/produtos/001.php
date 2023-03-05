@@ -6,21 +6,18 @@
     "preco-de" => 459.99,
     "preco-por" => 399.99,
     "qtde-parcelas" => 3,
-    // "variacao-1" => [
-    //   "imagens" => ["../assets/images/produtos/001/1.webp"],
-    //   "nome-variacao-1" => "Cor",
-    //   "variacao-2" => [
-    //     [39, 40, 41],
-    //     "nome-variacao-2" => "Tamanho"
-    //   ],
-    // ],
-    "imagens" => [
-      "../assets/images/produtos/001/1.webp",
-      "../assets/images/produtos/001/2.webp",
+    "variacao-1" => [
+      "imagens" => [],
+      "nome-variacao-1" => "Cor",
+      "variacao-2" => [
+        [],
+        "nome-variacao-2" => "",
+      ],
+    ],
+    "imagens-sem-variacao" => [
       "../assets/images/produtos/001/3.webp",
       "../assets/images/produtos/001/4.webp",
       "../assets/images/produtos/001/5.jpg",
-      "../assets/images/produtos/001/6.webp",
     ],
     "descricao" => [
       "titulo" => "CONFORTO CLÁSSICO",

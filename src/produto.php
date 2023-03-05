@@ -8,21 +8,21 @@
     <?php 
       include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
 
-      $produtoCodigo = isset($produto["codigo"]) ? $produto["codigo"] : null;
-      $produtoNome = isset($produto["nome"]) ? $produto["nome"] : null;
-      $referencia = isset($produto["referencia"]) ? $produto["referencia"] : null;
-      $imagens = isset($produto["variacao-1"]["imagens"]) ? $produto["variacao-1"]["imagens"] : $produto["imagens"];
-      $imagemPrincipal = isset($produto["variacao-1"]["imagens"][0]) ? $produto["variacao-1"]["imagens"][0] : $produto["imagens"][0];
-      $precoDe = isset($produto["preco-de"]) ? $produto["preco-de"] : null;
-      $precoPor = isset($produto["preco-por"]) ? $produto["preco-por"] : null;
-      $qtdeParcelas = isset($produto["qtde-parcelas"]) ? $produto["qtde-parcelas"] : null;
+      $produtoCodigo = $produto["codigo"];
+      $produtoNome = $produto["nome"];
+      $referencia = $produto["referencia"];
+      $imagens = buscarImagens($produto["variacao-1"]["imagens"], $produto["imagens-sem-variacao"]);
+      $imagemPrincipal = $imagens[0];
+      $precoDe = $produto["preco-de"];
+      $precoPor = $produto["preco-por"];
+      $qtdeParcelas = $produto["qtde-parcelas"];
       $totalParcelado = number_format($precoPor / $qtdeParcelas, 2, ",", ".");
-      $descricaoTitulo = isset($produto["descricao"]["titulo"]) ? $produto["descricao"]["titulo"] : null;
-      $descricaoTexto = isset($produto["descricao"]["texto"]) ? $produto["descricao"]["texto"] : null;
+      $descricaoTitulo = $produto["descricao"]["titulo"];
+      $descricaoTexto = $produto["descricao"]["texto"];
       $colunasImagensProduto;
       $qtdeImagens = sizeof($imagens);
-      $nomeVariacao2 = isset($produto["variacao-1"]["variacao-2"]["nome-variacao-2"]) ? $produto["variacao-1"]["variacao-2"]["nome-variacao-2"] : null;
-      $itensVariacao2 = isset($produto["variacao-1"]["variacao-2"][0]) ? $produto["variacao-1"]["variacao-2"][0] : null;
+      $nomeVariacao2 = $produto["variacao-1"]["variacao-2"]["nome-variacao-2"];
+      $itensVariacao2 = $produto["variacao-1"]["variacao-2"][0];
 
       $qtdeImagens == 1 ? $colunasImagensProduto = 1 : $colunasImagensProduto = 2;
 
@@ -30,6 +30,16 @@
         $formatado = number_format($numero, 2, ",", ".");
 
         return $formatado;
+      }
+
+      function buscarImagens($imagensVariacao1, $imagensSemVariacao) {
+        if(! empty($imagensVariacao1)) {
+    
+          return $imagensVariacao1;
+        }else {
+          
+          return $imagensSemVariacao;
+        }
       }
     ?>
 
@@ -43,7 +53,7 @@
       </div>
 
       <section class="css-pag-produto-textos">
-        <section class="flex flex-col gap-5 css-pp-caixa-2">
+        <section class="flex flex-col gap-4 css-pp-caixa-2">
           <h2 class="text-sm css-c2-categoria">Lançamentos</h2>
           <h1 class="text-2xl font-medium css-c2-produto-name"><?php echo $produtoNome?></h1>
           <section class="css-c2-preco">
@@ -58,21 +68,23 @@
               R$ <?php echo $totalParcelado ?>
             </span>
           </p>
-          <section class="css-c2-variacoes">
-            <section class="css-c2-variacao-1"></section>
-            <section class="css-c2-variacao-2">
-              <span class="css-nome-variacao-2"><?php echo $nomeVariacao2?></span>
-              <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
-                <?php foreach($itensVariacao2 as $variacao) { ?>
-                  <span class="w-full flex items-center justify-center">
-                    <input type="radio" name="css-id-itens-variacao-2" id="css-id-tamanho-<?php echo $variacao?>" class="hidden peer"
-                      <?php if($itensVariacao2[0] == $variacao) echo "checked = 'checked'";?> />
-                    <label for="css-id-tamanho-<?php echo $variacao?>" class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded"><?php echo $variacao?></label>
-                  </span>
-                <?php } ?>
-              </span>
-            </section>
-          </section>
+           
+          <?php if(! empty($itensVariacao2)) { ?>
+                  <section class="py-4 css-c2-variacoes">
+                    <section class="css-c2-variacao-1"></section>
+                    <section class="css-c2-variacao-2">
+                      <span class="css-nome-variacao-2"><?php echo $nomeVariacao2?></span>
+                      <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
+                        <?php foreach($itensVariacao2 as $variacao) { ?>
+                          <span class="w-full flex items-center justify-center">
+                            <input type="radio" name="css-id-itens-variacao-2" id="css-id-tamanho-<?php echo $variacao?>" class="hidden peer"
+                              <?php if($itensVariacao2[0] == $variacao) echo "checked = 'checked'";?> />
+                            <label for="css-id-tamanho-<?php echo $variacao?>" class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded"><?php echo $variacao?></label>
+                          </span>
+                        <?php } ?>
+                    </section>
+                  </section>
+          <?php } ?>
           
           <button class="p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar">Adicionar ao carrinho</button>
 
