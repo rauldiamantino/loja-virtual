@@ -9,13 +9,34 @@
     "variacao-1" => [
       "imagens" => [],
       "nome-variacao-1" => "Cor",
+      [
+        "nome" => "Azul",
+        "imagens" => [
+          "../assets/images/produtos/001/3.webp",
+        ],
+        "variacao-2" => [
+          "nome" => "Tamanho",
+          [35, 36, 37],
+        ],
+      ],
+
+      [
+        "nome" => "Branco",
+        "imagens" => [
+          "../assets/images/produtos/001/4.webp",
+        ],
+        "variacao-2" => [
+          "nome" => "Tamanho",
+          [35, 36, 37],
+        ],
+      ],
       "variacao-2" => [
         [],
-        "nome-variacao-2" => "",
+        "nome" => "",
       ],
     ],
+
     "imagens-sem-variacao" => [
-      "../assets/images/produtos/001/3.webp",
       "../assets/images/produtos/001/4.webp",
       "../assets/images/produtos/001/5.jpg",
     ],

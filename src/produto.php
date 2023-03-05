@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <?php include("./partials/head.php"); ?>
 
 <body>
+
   <?php include("./partials/header.php"); ?>
+
   <main class="xl:mx-auto xl:max-w-7xl py-2">
     <?php 
       include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
@@ -21,10 +24,28 @@
       $descricaoTexto = $produto["descricao"]["texto"];
       $colunasImagensProduto;
       $qtdeImagens = sizeof($imagens);
-      $nomeVariacao2 = $produto["variacao-1"]["variacao-2"]["nome-variacao-2"];
+      $nomeVariacao1 = $produto["variacao-1"]["nome-variacao-1"];
+      $itensVariacao1 = $produto["variacao-1"][0];
+      $nomeVariacao2 = $produto["variacao-1"]["variacao-2"]["nome"];
       $itensVariacao2 = $produto["variacao-1"]["variacao-2"][0];
 
       $qtdeImagens == 1 ? $colunasImagensProduto = 1 : $colunasImagensProduto = 2;
+
+      // print_r(imagensDoProduto($produto["variacao-1"], "Vermelho"));
+
+      ## Funções PHP
+      function imagensDoProduto($variacao, $nomeVariacao) {
+
+        foreach($variacao as $item) {
+
+          if(is_array($item) && array_key_exists("imagens", $item)) {
+
+            if($item["nome"] == $nomeVariacao) {
+              return ($item["imagens"]);
+            }
+          }
+        }
+      }
 
       function numeroParaReal($numero) {
         $formatado = number_format($numero, 2, ",", ".");
@@ -48,23 +69,32 @@
       }
     ?>
 
+    <!-- Início Produto -->
     <section class="w-full h-max grid grid-cols-4 gap-4 items-start css-pag-produto">
+
+      <!-- Início Caixa 1 Produto -->
       <div class="w-full grid grid-cols-<?php echo $colunasImagensProduto ?> col-span-3 row-span-full gap-4 css-pp-caixa-1">
         <?php
           foreach($imagens as $urlImagem) {
             echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full'>";
           }
         ?>
-      </div>
+      </div><!-- Fim Caixa 1 Produto -->
 
+      <!-- Início Produto Textos -->
       <section class="css-pag-produto-textos">
+
+        <!-- Início Caixa 2 Produto -->
         <section class="flex flex-col gap-4 css-pp-caixa-2">
+
           <h2 class="text-sm css-c2-categoria">Lançamentos</h2>
           <h1 class="text-2xl font-medium css-c2-produto-name"><?php echo $produtoNome?></h1>
+
           <section class="css-c2-preco">
             <p class="text-sm line-through text-gray-500 css-c2-preco-de">R$ <?php echo numeroParaReal($precoDe)?></p>
             <p class="text-base css-c2-preco-por">R$ <?php echo numeroParaReal($precoPor)?></p>
           </section>
+
           <p class="text-sm css-c2-parcelamento">
             <span class="css-c2-qtde-parcelas">
               ou <?php echo $qtdeParcelas ?>
@@ -73,40 +103,78 @@
               R$ <?php echo $totalParcelado ?>
             </span>
           </p>
-          
-          <?php if(variacaoExiste($itensVariacao2)) { ?>
-                  <section class="py-4 css-c2-variacoes">
-                    <section class="css-c2-variacao-1"></section>
-                    <section class="css-c2-variacao-2">
-                      <span class="css-nome-variacao-2"><?php echo $nomeVariacao2?></span>
-                      <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
-                        
-                      <?php foreach($itensVariacao2 as $variacao) { ?>
-                        
-                              <span class="w-full flex items-center justify-center">
 
-                                <input
-                                  type="radio"
-                                  name="css-id-itens-variacao-2"
-                                  id="css-id-tamanho-<?php echo $variacao?>"
-                                  class="hidden peer"
-                                  <?php if($itensVariacao2[0] == $variacao) echo "checked = 'checked'";?>
-                                />
 
-                                <label
-                                  for="css-id-tamanho-<?php echo $variacao?>"
-                                  class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
+          <?php if(variacaoExiste($itensVariacao1)) { ?>
+                  <section class="css-c2-variacao-1">
+                    <span class="css-nome-variacao-1"><?php echo $nomeVariacao1 ?></span>
+                      
+                      <span class="pt-2 grid grid-cols-4 gap-1 css-itens-variacao-1">
+
+                        <?php foreach($produto["variacao-1"] as $item) {
+                                if(is_array($item) && array_key_exists("variacao-2", $item)) {
+                                  $nome = $item["nome"]; 
                                   
-                                  <?php echo $variacao?>
+                                  ?>
 
-                                </label>
+                                  <span class="w-full flex items-center justify-center">
+                                    <input
+                                      type="radio"
+                                      name="css-id-itens-variacao-1"
+                                      id="css-id-item-<?php echo $nome ?>"
+                                      class="hidden peer"
+                                      <?php if($produto["variacao-1"][0]["nome"] == $nome) echo "checked = 'checked'";?>
+                                      
+                                    />
+                                    <label
+                                      for="css-id-item-<?php echo $nome ?>"
+                                      class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
+                                      <?php echo $nome ?>
+                                    </label>
+                                  </span>
 
-                              </span>
+                                  <?php if(variacaoExiste($itensVariacao2)) { ?>
+                                          <section class="hidden py-4 css-c2-variacoes">
+                                            <section class="css-c2-variacao-2">
+                                              <span class="css-nome-variacao-2"><?php echo $nomeVariacao2?></span>
 
-                      <?php } ?>
-                    </section>
+                                              <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
+                                                
+                                                <?php foreach($itensVariacao2 as $variacao) { ?>
+
+                                                        <span class="w-full flex items-center justify-center">
+
+                                                          <input
+                                                            type="radio"
+                                                            name="css-id-itens-variacao-2"
+                                                            id="css-id-item-<?php echo $variacao?>"
+                                                            class="hidden peer"
+                                                            <?php if($itensVariacao2[0] == $variacao) echo "checked = 'checked'";?>
+                                                          />
+
+                                                          <label
+                                                            for="css-id-item-<?php echo $variacao?>"
+                                                            class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
+                                                            
+                                                            <?php echo $variacao?>
+
+                                                          </label>
+
+                                                        </span>
+
+                                                <?php } ?>
+                                              </span>
+                                              
+                                            </section>
+                                          </section>
+                                  <?php } ?>
+                         <?php }
+                             } ?>
+                      </span>
                   </section>
           <?php } ?>
+
+          
           
           <button class="p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar">Adicionar ao carrinho</button>
 
@@ -158,8 +226,12 @@
             </section>
             
           </section>
-      </section>
-    </section>
+
+        </section><!-- Fim Caixa 2 Produto -->
+
+      </section><!-- Fim Produto Textos -->
+
+    </section><!-- Fim Produto -->
 
   </main>
 

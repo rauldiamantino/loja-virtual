@@ -7,21 +7,42 @@
     "preco-por" => 299.99,
     "qtde-parcelas" => 6,
     "variacao-1" => [
-      "imagens" => [
-        "../assets/images/produtos/001/1.webp",
-        "../assets/images/produtos/001/2.webp",
-        "../assets/images/produtos/001/3.webp",
-        "../assets/images/produtos/001/4.webp",
-        "../assets/images/produtos/001/5.jpg",
-        "../assets/images/produtos/001/6.webp",
-      ],
+      "imagens" => [],
       "nome-variacao-1" => "Cor",
+      [
+        "nome" => "Preto",
+        "imagens" => [
+          "../assets/images/produtos/001/4.webp",
+        ],
+        "variacao-2" => [
+          "nome" => "Tamanho",
+          [35, 36, 37],
+        ],
+      ],
+
+      [
+        "nome" => "Azul",
+        "imagens" => [
+          "../assets/images/produtos/001/3.webp",
+        ],
+        "variacao-2" => [
+          "nome" => "Tamanho",
+          [35, 36, 37],
+        ],
+      ],
       "variacao-2" => [
         [35, 36, 37],
-        "nome-variacao-2" => "Tamanho"
+        "nome" => "Tamanho"
       ],
     ],
-    "imagens-sem-variacao" => [],
+    "imagens-sem-variacao" => [
+      "../assets/images/produtos/001/1.webp",
+      "../assets/images/produtos/001/2.webp",
+      "../assets/images/produtos/001/3.webp",
+      "../assets/images/produtos/001/4.webp",
+      "../assets/images/produtos/001/5.jpg",
+      "../assets/images/produtos/001/6.webp",
+    ],
     "descricao" => [
       "titulo" => "CONFORTO CLÁSSICO EXCELENTE",
       "texto" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis doloremque officia nobis, voluptas dolorum sapiente accusamus obcaecati animi sed reiciendis accusantium iure ad earum unde eaque dolores libero nesciunt ratione! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, quos. Dicta doloribus minus at aliquid officia itaque earum delectus ratione aliquam, nesciunt dolores facilis illo minima ducimus maxime blanditiis distinctio!",

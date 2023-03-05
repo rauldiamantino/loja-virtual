@@ -14,7 +14,7 @@
   }
 
   $produtoNome = $produto["nome"];
-  $imagemPrincipal = definirImagemPrincipal($produto["variacao-1"]["imagens"], $produto["imagens-sem-variacao"]);
+  $imagemPrincipal = definirImagemPrincipal($produto["variacao-1"][0]["imagens"], $produto["imagens-sem-variacao"]);
   $precoDe = $produto["preco-de"];
   $precoPor = $produto["preco-por"];
   $qtdeParcelas = $produto["qtde-parcelas"];
