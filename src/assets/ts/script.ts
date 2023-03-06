@@ -1,5 +1,6 @@
 import { menuPrincipal, fechaCategoriasDoMenu } from "./components/menu-principal.js"
 import { bannerPrincipal } from "./components/banner-principal.js"
+import { selecionarPrimeiraVariacao } from "./pages/produto.js"
 
 const elementoClicado = () => {
   document.addEventListener('click', (event) => {
@@ -16,20 +17,4 @@ const navegadorRedimensionado = () => {
 elementoClicado()
 bannerPrincipal()
 navegadorRedimensionado()
-
-
-const $inputsPrimeiraVariacao:NodeList = document.querySelectorAll(".css-c2-variacao-1 input")
-const $inputsSegundaVariacao:NodeList = document.querySelectorAll(".css-c2-variacao-2 input")
-
-
-$inputsPrimeiraVariacao.forEach(($inputVariacao:any) => {
-  $inputVariacao.addEventListener('click', () => {
-    if($inputVariacao.checked == true) {
-      console.log($inputVariacao.id)
-    }
-  })
-})
-
-$inputsSegundaVariacao.forEach(($inputVariacao:HTMLInputElement) => {
-  
-})
+selecionarPrimeiraVariacao()

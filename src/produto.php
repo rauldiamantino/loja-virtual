@@ -4,13 +4,13 @@
 <?php include("./partials/head.php"); ?>
 
 <body>
-
   <?php include("./partials/header.php"); ?>
 
   <main class="xl:mx-auto xl:max-w-7xl py-2">
     <?php 
       include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
 
+      $produtoJson = json_encode($produto);
       $produtoCodigo = $produto["codigo"];
       $produtoNome = $produto["nome"];
       $referencia = $produto["referencia"];
@@ -28,8 +28,6 @@
       $itensVariacao1 = $produto["variacao-1"][0];
       $segundaVariacaoExiste = false;
       $qtdeImagens == 1 ? $colunasImagensProduto = 1 : $colunasImagensProduto = 2;
-      
-
 
       // print_r(imagensDoProduto($produto["variacao-1"], "Vermelho"));
 
@@ -71,6 +69,7 @@
 
     <!-- Início Produto -->
     <section class="w-full h-max grid grid-cols-4 gap-4 items-start css-pag-produto">
+      <div class="hidden css-pp-objeto"><?php echo $produtoJson ?></div>
 
       <!-- Início Caixa 1 Produto -->
       <div class="w-full grid grid-cols-<?php echo $colunasImagensProduto ?> col-span-3 row-span-full gap-4 css-pp-caixa-1">
@@ -119,14 +118,7 @@
                                   } ?>
 
                                   <span class="w-full flex items-center justify-center">
-                                    <input
-                                      type="radio"
-                                      name="css-id-itens-variacao-1"
-                                      id="css-id-item-<?php echo $nome ?>"
-                                      class="hidden peer"
-                                      <?php if($produto["variacao-1"][0]["nome"] == $nome) echo "checked = 'checked'";?>
-                                      
-                                    />
+                                    <input type="radio" name="css-id-itens-variacao-1" id="css-id-item-<?php echo $nome ?>" class="hidden peer"/>
                                     <label
                                       for="css-id-item-<?php echo $nome ?>"
                                       class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
@@ -137,43 +129,48 @@
                              } ?>
                       </span>
                   </section>
-          <?php } ?>
 
-          <?php if($segundaVariacaoExiste) { ?>
-                  <section class="py-4 css-c2-variacoes">
-                    <section class="css-c2-variacao-2">
-                      <span class="css-nome-variacao-2"><?php echo $item["variacao-2"]["nome"]?></span>
+                  <?php foreach($produto["variacao-1"] as $item) {
+                          if(is_array($item) && array_key_exists("variacao-2", $item)) {
+                            $nome = $item["nome"]; 
+                            ?>
 
-                      <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
-                        
-                        <?php foreach($item["variacao-2"][0] as $variacao) { ?>
+                            <section class="hidden py-4 css-c2-variacoes" data-primeira-variacao="<?php echo 'css-id-item-'.$nome ?>">
+                              <section class="css-c2-variacao-2">
+                                <span class="css-nome-variacao-2"><?php echo $item["variacao-2"]["nome"]?></span>
 
-                                <span class="w-full flex items-center justify-center">
+                                <span class="pt-2 grid grid-cols-2 gap-1 css-itens-variacao-2">
 
-                                  <input
-                                    type="radio"
-                                    name="css-id-itens-variacao-2"
-                                    id="css-id-item-<?php echo $variacao?>"
-                                    class="hidden peer"
-                                  />
+                                  <?php foreach($item["variacao-2"][0] as $variacao) { ?>
 
-                                  <label
-                                    for="css-id-item-<?php echo $variacao?>"
-                                    class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
-                                    
-                                    <?php echo $variacao?>
+                                          <span class="w-full flex items-center justify-center">
 
-                                  </label>
+                                            <input
+                                              type="radio"
+                                              name="css-id-itens-variacao-2"
+                                              id="css-id-item-<?php echo $variacao?>"
+                                              class="hidden peer"
+                                            />
 
+                                            <label
+                                              for="css-id-item-<?php echo $variacao?>"
+                                              class="border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded">
+                                              
+                                              <?php echo $variacao?>
+
+                                            </label>
+
+                                          </span>
+
+                                  <?php } ?>
                                 </span>
-
-                        <?php } ?>
-                      </span>
-                      
-                    </section>
-                  </section>
+                                
+                              </section>
+                            </section>
+                   <?php }
+                        } ?>
           <?php } ?>
-          
+
           <button class="p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar">Adicionar ao carrinho</button>
 
           <section class="p-2 flex justify-between text-sm css-c2-compartilhar">
