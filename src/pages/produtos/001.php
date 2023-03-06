@@ -10,39 +10,36 @@
       "imagens" => [],
       "nome-variacao-1" => "Cor",
       [
+        "nome" => "Preto",
+        "imagens" => [
+          "../assets/images/produtos/001/1.webp",
+        ],
+        "variacao-2" => [
+          "nome" => "Tamanho",
+          [38],
+        ],
+      ],
+
+      [
         "nome" => "Azul",
         "imagens" => [
           "../assets/images/produtos/001/3.webp",
         ],
         "variacao-2" => [
           "nome" => "Tamanho",
-          [35, 36, 37],
+          [41, 42, 43],
         ],
-      ],
-
-      [
-        "nome" => "Branco",
-        "imagens" => [
-          "../assets/images/produtos/001/4.webp",
-        ],
-        "variacao-2" => [
-          "nome" => "Tamanho",
-          [35, 36, 37],
-        ],
-      ],
-      "variacao-2" => [
-        [],
-        "nome" => "",
       ],
     ],
-
+    
     "imagens-sem-variacao" => [
-      "../assets/images/produtos/001/4.webp",
+      "../assets/images/produtos/001/1.webp",
       "../assets/images/produtos/001/5.jpg",
+      "../assets/images/produtos/001/6.webp",
     ],
     "descricao" => [
       "titulo" => "CONFORTO CLÁSSICO",
       "texto" => "Seu companheiro em sua prática esportiva ou dia a dia é esse tênis Nike masculino é a opção perfeita. O cabedal (parte superior do calçado) em malha respirável proporciona suporte, apoio e durabilidade. A entressola em EVA e solado emborrachado que garantem maior estabilidade e aderência em todas as superfícies. O tênis conta também contraforte acolchoado para maior suporte, ficando livre de atrito. Além disso, seu design super moderno e o padrão Nike em todos os detalhes do calçado. Confira e compre hoje!",
-    ]
+    ],
   ];
 ?>
