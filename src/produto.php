@@ -61,6 +61,10 @@
     }
   }
 
+  function buscarImagensVariacao($itensPrimeiraVariacao) {
+    print_r($itensPrimeiraVariacao["imagens"]);
+  }
+
   /*-------------------------------
           Página do Produto
   -------------------------------*/
@@ -76,6 +80,18 @@
   echo "<div class='hidden css-pp-objeto'>$produtoJson</div>";
 
   # Início Caixa 1 Produto
+
+  // if(variacaoExiste($itensPrimeiraVariacao)){
+
+  //   foreach($primeiraVariacao as $itens) {
+  //     // buscarImagensVariacao($itensPrimeiraVariacao);
+  //     foreach($itens as $item) {
+  //       echo($item);
+  //     }
+
+  //   }
+  // }
+
   echo "<div class='w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1'>";
       
   foreach($urlsImagens as $urlImagem) {

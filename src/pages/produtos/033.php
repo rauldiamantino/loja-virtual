@@ -12,7 +12,9 @@
       [
         "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/001/4.webp",
+          "../assets/images/produtos/001/1.webp",
+          "../assets/images/produtos/001/6.webp",
+          "../assets/images/produtos/001/3.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
@@ -24,6 +26,8 @@
         "nome" => "Azul",
         "imagens" => [
           "../assets/images/produtos/001/4.webp",
+          "../assets/images/produtos/001/5.jpg",
+          "../assets/images/produtos/001/2.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
