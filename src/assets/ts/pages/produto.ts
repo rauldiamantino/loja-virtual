@@ -1,5 +1,5 @@
 // const $dadosProdutoObj:Object = document.querySelector(".css-pp-objeto").innerHTML
-const $inputsPrimeiraVariacao:NodeList = document.querySelectorAll(".css-c2-variacao-1 input")
+const $inputsPrimeiraVariacao:NodeList = document.querySelectorAll(".css-c2-prim-variacao input")
 const $segundaVariacao:NodeList = document.querySelectorAll(".css-c2-variacoes")
 
 const selecionarPrimeiraVariacao = () => {

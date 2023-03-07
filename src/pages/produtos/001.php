@@ -6,15 +6,15 @@
     "preco-de" => 459.99,
     "preco-por" => 399.99,
     "qtde-parcelas" => 3,
-    "variacao-1" => [
+    "prim-variacao" => [
       "imagens" => [],
-      "nome-variacao-1" => "Cor",
+      "nome-prim-variacao" => "Cor",
       [
         "nome" => "Preto",
         "imagens" => [
           "../assets/images/produtos/001/1.webp",
         ],
-        "variacao-2" => [
+        "seg-variacao" => [
           "nome" => "Tamanho",
           [38],
         ],
@@ -25,7 +25,7 @@
         "imagens" => [
           "../assets/images/produtos/001/3.webp",
         ],
-        "variacao-2" => [
+        "seg-variacao" => [
           "nome" => "Tamanho",
           [41, 42, 43],
         ],

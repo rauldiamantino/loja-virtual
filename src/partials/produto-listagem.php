@@ -2,9 +2,9 @@
   include("./pages/produtos/{$produtoCodigo}.php");
   
   if(! function_exists("definirIMagemPrincipal")) {
-    function definirImagemPrincipal($imagensVariacao1, $imagensSemVariacao) {
-      if(! empty($imagensVariacao1)) {
-        return $imagensVariacao1[0];
+    function definirImagemPrincipal($imagensPrimVariacao, $imagensSemVariacao) {
+      if(! empty($imagensPrimVariacao)) {
+        return $imagensPrimVariacao[0];
       }else {
         return $imagensSemVariacao[0];
       }
@@ -14,11 +14,11 @@
   }
 
   $produtoNome = $produto["nome"];
-  $imagemPrincipal = definirImagemPrincipal($produto["variacao-1"][0]["imagens"], $produto["imagens-sem-variacao"]);
   $precoDe = $produto["preco-de"];
   $precoPor = $produto["preco-por"];
   $qtdeParcelas = $produto["qtde-parcelas"];
   $totalParcelado = number_format($precoPor / $qtdeParcelas, 2, ",", ".");
+  $imagemPrincipal = definirImagemPrincipal($produto["prim-variacao"][0]["imagens"], $produto["imagens-sem-variacao"]);
 ?>
 
 <a href="produto.php?dir=pages/produtos&file=<?php echo $produtoCodigo ?>">

@@ -1,4 +1,4 @@
-const $inputsPrimeiraVariacao = document.querySelectorAll(".css-c2-variacao-1 input");
+const $inputsPrimeiraVariacao = document.querySelectorAll(".css-c2-prim-variacao input");
 const $segundaVariacao = document.querySelectorAll(".css-c2-variacoes");
 const selecionarPrimeiraVariacao = () => {
     const $primeiraVariacaoPadrao = $inputsPrimeiraVariacao[0];
