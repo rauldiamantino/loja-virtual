@@ -1,5 +1,3 @@
-Desenvolvendo minhas habilidades em TypeScript, Tailwindcss e PHP.
-
 # Demonstração
 
 [screen-capture.webm](https://user-images.githubusercontent.com/100098231/222880716-326386c1-8198-4790-846e-98e4e94b201b.webm)
