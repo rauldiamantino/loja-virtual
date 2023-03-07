@@ -1,164 +1,176 @@
 <?php
-  echo "<!DOCTYPE html>
+echo "<!DOCTYPE html>
           <html lang='pt-br'>";
 
-  include("./partials/head.php");
+include("./partials/head.php");
 
-  /*-------------------------------
+/*-------------------------------
     Informações do array $produto[]
   -------------------------------*/
-  include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
+include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
 
-  $produtoJson = json_encode($produto);
-  
-  $nomeProduto = $produto["nome"];
-  $codigoProduto = $produto["codigo"];
-  $refProduto = $produto["referencia"];
-  
-  $segundaVariacaoExiste = false;
-  $primeiraVariacao = $produto["prim-variacao"];
-  $itensPrimeiraVariacao = $primeiraVariacao [0];
-  $nomePrimeiraVariacao = $primeiraVariacao["nome-prim-variacao"];
-  
-  $precoDe = $produto["preco-de"];
-  $precoPor = $produto["preco-por"];
-  $qtdeParcelas = $produto["qtde-parcelas"];
-  $totalParcelado = numeroParaReal($precoPor / $qtdeParcelas);
+$produtoJson = json_encode($produto);
 
-  $textoDescricao = $produto["descricao"]["texto"];
-  $tituloDescricao = $produto["descricao"]["titulo"];
-  
-  $colunasDeImagens;
-  $urlsImagens = imagensProduto($primeiraVariacao, $produto);
-  $imagemPrincipal = $urlsImagens[0];
-  $qtdeImagens = sizeof($urlsImagens);
-  $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
-  
-  /*-------------------------------
+$nomeProduto = $produto["nome"];
+$codigoProduto = $produto["codigo"];
+$refProduto = $produto["referencia"];
+
+$segundaVariacaoExiste = false;
+$primeiraVariacao = $produto["prim-variacao"];
+$itensPrimeiraVariacao = $primeiraVariacao["itens"];
+$nomePrimeiraVariacao = $primeiraVariacao["nome-prim-variacao"];
+
+$precoDe = $produto["preco-de"];
+$precoPor = $produto["preco-por"];
+$qtdeParcelas = $produto["qtde-parcelas"];
+$totalParcelado = numeroParaReal($precoPor / $qtdeParcelas);
+
+$textoDescricao = $produto["descricao"]["texto"];
+$tituloDescricao = $produto["descricao"]["titulo"];
+
+/*-------------------------------
               Funções
   -------------------------------*/
-  function numeroParaReal($numero) {
-    $formatado = number_format($numero, 2, ",", ".");
-    return $formatado;
+function numeroParaReal($numero)
+{
+  $formatado = number_format($numero, 2, ",", ".");
+  return $formatado;
+}
+
+function variacaoExiste($itensVariacao)
+{
+  if (!empty($itensVariacao)) {
+    return true;
+  } else {
+    return false;
   }
+}
 
-  function imagensProduto($primeiraVariacao, $produto) {
-    $imgPrimeiraVariacao = $primeiraVariacao["imagens"];
-    $imgSemVariacao = $produto["imagens-sem-variacao"];
+function buscarImagensVariacao($itensPrimeiraVariacao)
+{
+  print_r($itensPrimeiraVariacao["imagens"]);
+}
 
-    if(! empty($imgPrimeiraVariacao)) {
-      return $imgPrimeiraVariacao;
-    }else {
-      return $imgSemVariacao;
-    }
+function imagensProduto($primeiraVariacao, $produto)
+{
+  $imgPrimeiraVariacao = $primeiraVariacao["imagens"];
+  $imgSemVariacao = $produto["imagens-sem-variacao"];
+
+  if (!empty($imgPrimeiraVariacao)) {
+    return $imgPrimeiraVariacao;
+  } else {
+    return $imgSemVariacao;
   }
+}
 
-  function variacaoExiste($itensVariacao){
-    if(! empty($itensVariacao)) {
-      return true;
-    }else {
-      return false;
-    }
-  }
-
-  function buscarImagensVariacao($itensPrimeiraVariacao) {
-    print_r($itensPrimeiraVariacao["imagens"]);
-  }
-
-  /*-------------------------------
+/*-------------------------------
           Página do Produto
   -------------------------------*/
-  echo "<body>";
-  
-  include("./partials/header.php");
+echo "<body>";
 
-  echo "<main class='xl:mx-auto xl:max-w-7xl py-2'>";
+include("./partials/header.php");
 
-  # Início Produto
-  echo "<section class='w-full h-max grid grid-cols-4 gap-4 items-start css-pag-produto'>";
-  
-  echo "<div class='hidden css-pp-objeto'>$produtoJson</div>";
+echo "<main class='xl:mx-auto xl:max-w-7xl py-2'>";
 
-  # Início Caixa 1 Produto
+# Início Produto
+echo "<section class='w-full h-max grid grid-cols-4 gap-4 items-start css-pag-produto'>";
 
-  // if(variacaoExiste($itensPrimeiraVariacao)){
+echo "<div class='hidden css-pp-objeto'>$produtoJson</div>";
 
-  //   foreach($primeiraVariacao as $itens) {
-  //     // buscarImagensVariacao($itensPrimeiraVariacao);
-  //     foreach($itens as $item) {
-  //       echo($item);
-  //     }
+# Início Caixa 1 Produto
 
-  //   }
-  // }
+if (variacaoExiste($itensPrimeiraVariacao)) {
+  // $colunasDeImagens;
+  // $urlsImagens = imagensProduto($primeiraVariacao, $produto);
+  // $imagemPrincipal = $urlsImagens[0];
+  // $qtdeImagens = sizeof($urlsImagens);
 
-  echo "<div class='w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1'>";
-      
-  foreach($urlsImagens as $urlImagem) {
-    echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full'>";
+  // $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
+
+  foreach ($itensPrimeiraVariacao as $item) {
+    $colunasDeImagens;
+    $urlsImagensItem = $item["imagens"];
+    $qtdeImagens = sizeof($urlsImagensItem);
+
+    if (!empty($urlsImagensItem)) {
+      // print_r($urlsImagensItem);
+      $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
+    } else {
+      $qtdeImagens = sizeof($produto["imagens-sem-variacao"]);
+      $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
+    }
+
+    echo "<div class='w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1'>";
+
+    foreach ($urlsImagensItem as $urlImagem) {
+      echo $urlImagem;
+      echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full'>";
+    }
+    echo "</div>"; # Fim Caixa 1 Produto
   }
-      
-  echo "</div>";# Fim Caixa 1 Produto
+}
 
-  # Início Produto Textos
-  echo "<section class='css-pag-produto-textos'>";
 
-  # Início Caixa 2 Produto
-  echo "<section class='flex flex-col gap-4 css-pp-caixa-2'>
+
+# Início Produto Textos
+echo "<section class='css-pag-produto-textos'>";
+
+# Início Caixa 2 Produto
+echo "<section class='flex flex-col gap-4 css-pp-caixa-2'>
           <h2 class='text-sm css-c2-categoria'>Lançamentos</h2>
           <h1 class='text-2xl font-medium css-c2-produto-name'>$nomeProduto</h1>
 
           <section class='css-c2-preco'>
-            <p class='text-sm line-through text-gray-500 css-c2-preco-de'>R$ ". numeroParaReal($precoDe) ."</p>
-            <p class='text-base css-c2-preco-por'>R$ ". numeroParaReal($precoPor) ."</p>
+            <p class='text-sm line-through text-gray-500 css-c2-preco-de'>R$ " . numeroParaReal($precoDe) . "</p>
+            <p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "</p>
           </section>
 
           <p class='text-sm css-c2-parcelamento'>
             <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de<span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
           </p>";
 
-  if(variacaoExiste($itensPrimeiraVariacao)) {
+if (variacaoExiste($itensPrimeiraVariacao)) {
 
-    # Início Primeira Variação
-    echo "<section class='css-c2-prim-variacao'>
-            <span class='css-nome-prim-variacao'><?= $nomePrimeiraVariacao ?></span>
+  # Início Primeira Variação
+  echo "<section class='css-c2-prim-variacao'>
+            <span class='css-nome-prim-variacao'>$nomePrimeiraVariacao</span>
             <span class='pt-2 grid grid-cols-4 gap-1 css-itens-prim-variacao'>";
 
-    foreach($primeiraVariacao as $itemPrimVariacao) {
+  foreach ($primeiraVariacao as $itemPrimVariacao) {
 
-      if(is_array($itemPrimVariacao) && array_key_exists("seg-variacao", $itemPrimVariacao)) {
-        $nomeItemPrimVariacao = $itemPrimVariacao["nome"]; 
-        $segundaVariacaoDoItem = $itemPrimVariacao["seg-variacao"];
-        
-        echo "<span class='w-full flex items-center justify-center css-item-prim-variacao'>
+    if (is_array($itemPrimVariacao) && array_key_exists("seg-variacao", $itemPrimVariacao)) {
+      $nomeItemPrimVariacao = $itemPrimVariacao["nome"];
+      $segundaVariacaoDoItem = $itemPrimVariacao["seg-variacao"];
+
+      echo "<span class='w-full flex items-center justify-center css-item-prim-variacao'>
                 <input type='radio' name='css-id-itens-prim-variacao' id='css-id-item-$nomeItemPrimVariacao' class='hidden peer'/>
                 <label
                   for='css-id-item-$nomeItemPrimVariacao' class='border border-gray-200 hover:border-gray-900  transition duration-150 peer-checked:border-gray-900  p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded'>
                   $nomeItemPrimVariacao
                 </label>
               </span>";
-        
-        variacaoExiste($segundaVariacaoDoItem) ? $segundaVariacaoExiste = true : $segundaVariacaoExiste = false;
-      }
-    }
 
-    echo  "</span>
+      variacaoExiste($segundaVariacaoDoItem) ? $segundaVariacaoExiste = true : $segundaVariacaoExiste = false;
+    }
+  }
+
+  echo  "</span>
         </section>"; # Fim Primeira Variação
 
-    foreach($primeiraVariacao as $itemPrimVariacao) {
-      if(is_array($itemPrimVariacao) && array_key_exists("seg-variacao", $itemPrimVariacao)) {
-        $nomeItemPrimVariacao = $itemPrimVariacao["nome"]; 
-        
-        # Início Segunda Variação
-        echo "<section class='hidden py-4 css-c2-variacoes' data-primeira-variacao='css-id-item-$nomeItemPrimVariacao'>
+  foreach ($primeiraVariacao as $itemPrimVariacao) {
+    if (is_array($itemPrimVariacao) && array_key_exists("seg-variacao", $itemPrimVariacao)) {
+      $nomeItemPrimVariacao = $itemPrimVariacao["nome"];
+
+      # Início Segunda Variação
+      echo "<section class='hidden py-4 css-c2-variacoes' data-primeira-variacao='css-id-item-$nomeItemPrimVariacao'>
                 <section class='css-c2-seg-variacao'>
                   <span class='css-nome-seg-variacao'>{$itemPrimVariacao['seg-variacao']['nome']}</span>
 
                   <span class='pt-2 grid grid-cols-2 gap-1 css-itens-seg-variacao'>";
 
-        foreach($itemPrimVariacao["seg-variacao"][0] as $variacao) {
+      foreach ($itemPrimVariacao["seg-variacao"][0] as $variacao) {
 
-          echo "<span class='w-full flex items-center justify-center css-item-seg-variacao'>
+        echo "<span class='w-full flex items-center justify-center css-item-seg-variacao'>
                   <input
                     type='radio'
                     name='css-id-itens-seg-variacao'
@@ -172,16 +184,16 @@
                     $variacao
                   </label>
                 </span>";
-        }
+      }
 
-        echo "</span>
+      echo "</span>
             </section>
           </section>"; # Fim Segunda Variação
-      }
     }
   }
+}
 
-  echo "<button class='p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar'>Adicionar ao carrinho</button>
+echo "<button class='p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar'>Adicionar ao carrinho</button>
 
         <section class='p-2 flex justify-between text-sm css-c2-compartilhar'>
           <span>Compartilhar:</span>
@@ -237,17 +249,16 @@
       </section>
   </section>"; # Fim Caixa 2 Produto
 
-  echo "</section>"; # Fim Produto Textos
-  echo "</section>"; # Fim Produto
+echo "</section>"; # Fim Produto Textos
+echo "</section>"; # Fim Produto
 
-  echo "</main>";
+echo "</main>";
 
-  /*-------------------------------
+/*-------------------------------
       Rodapé, Scripts e Fim HTML
   -------------------------------*/
-  include("./partials/footer.php"); 
+include("./partials/footer.php");
 
-  echo "<script type='module' src='./assets/js/script.js'></script>
+echo "<script type='module' src='./assets/js/script.js'></script>
       </body>
     </html>";
-?>
