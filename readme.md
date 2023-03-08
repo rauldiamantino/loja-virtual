@@ -1,6 +1,6 @@
 # Demonstração
 
-[screen-capture.webm](https://user-images.githubusercontent.com/100098231/222880716-326386c1-8198-4790-846e-98e4e94b201b.webm)
+[screen-capture (1).webm](https://user-images.githubusercontent.com/100098231/223591456-07113145-ec24-42f0-87ba-1dcdecefaf6a.webm)
 
 
 # Tecnologias utilizadas
@@ -11,11 +11,8 @@
 # Configurações do Ambiente
 
 ## 1. Clonar Repositório
-- Digite no Git Bash:
-  ```
-    1. cd desktop
-    2. git clone https://github.com/rauldiamantino/loja-virtual.git        
-  ```
+- 
+  `git clone https://github.com/rauldiamantino/loja-virtual.git`
   
 - Instale o MAMP para abrir o projeto no localhost: https://www.mamp.info/en/downloads/
 - Abrir o MAMP > Preferences:
