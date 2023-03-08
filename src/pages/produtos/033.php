@@ -12,9 +12,9 @@ $produto = [
       [
         "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/001/1.webp",
           "../assets/images/produtos/001/6.webp",
           "../assets/images/produtos/001/3.webp",
+          "../assets/images/produtos/001/1.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
