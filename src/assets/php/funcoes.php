@@ -1,5 +1,12 @@
 <?php
 
+function addProdutoListagem($codigo) {
+  $produtoCodigo = $codigo;
+
+  include('./partials/produto-listagem.php');
+  return $produtoCodigo;
+}
+
 function definirImagemPrincipal($imagensPrimVariacao, $imagensSemVariacao)
 {
   if (!empty($imagensPrimVariacao)) {

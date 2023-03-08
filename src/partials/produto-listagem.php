@@ -40,3 +40,4 @@ echo "<a href='produto.php?dir=pages/produtos&file=$produtoCodigo'>
           </div>
         </section>
       </a>";
+?>

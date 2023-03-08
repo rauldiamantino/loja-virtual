@@ -1,16 +1,11 @@
-<section class="lg:grid-cols-4 w-full grid grid-cols-2 gap-2 css-produtos">
+<?php
+
+  echo "<section class='lg:grid-cols-4 w-full grid grid-cols-2 gap-2 css-produtos'>";
+  require('./assets/php/funcoes.php');
   
-  <!-- Produto 001 -->
-  <?php
-    $produtoCodigo = "001";
-    include('./partials/produto-listagem.php');
-  ?>
+  addProdutoListagem("033");
+  addProdutoListagem("001");
 
-  <!-- Produto 033 -->
-  <?php
-    $produtoCodigo = "033";
-    include('./partials/produto-listagem.php');
-  ?>
-
-
-</section>
+  echo "</section>";
+  
+?>
