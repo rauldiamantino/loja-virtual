@@ -1,6 +1,6 @@
 <?php
 $produto = [
-  "codigo" => 001,
+  "codigo" => "001",
   "referencia" => "rd001",
   "nome" => "Tênis Nike Revolution 6 - Masculino",
   "preco-de" => 459.99,

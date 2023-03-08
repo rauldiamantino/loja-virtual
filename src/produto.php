@@ -24,6 +24,7 @@ $qtdeParcelas = $produto["qtde-parcelas"];
 $totalParcelado = numeroParaReal($precoPor / $qtdeParcelas);
 $textoDescricao = $produto["descricao"]["texto"];
 $tituloDescricao = $produto["descricao"]["titulo"];
+$urlCategoria = ucwords($_GET["categoria"]);
 
 /*-------------------------------
 Página do Produto
@@ -34,6 +35,19 @@ include("./partials/header.php");
 
 echo "<main class='xl:mx-auto xl:max-w-7xl py-2'>";
 
+echo "<nav class='py-10 text-gray-500'>
+        <ul class='flex items-center gap-4'>
+          <li class='hover:text-black'><a href='/'>Home</a></li>
+          <li>
+            <svg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='currentColor' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/>
+            </svg>
+          </li>
+          <li class='hover:text-black'>
+            <a href='categorias.php?dir=pages&file=lancamentos'>$urlCategoria</a>
+          </li>
+        </ul>
+      </nav>";
+      
 # Início Produto
 echo "<section class='w-full h-max grid grid-cols-4 gap-4 items-start css-pag-produto'>";
 
@@ -69,7 +83,7 @@ echo "<section class='css-pag-produto-textos'>";
 
 # Início Caixa 2 Produto
 echo "<section class='flex flex-col gap-4 css-pp-caixa-2'>
-          <h2 class='text-sm css-c2-categoria'>Lançamentos</h2>
+          <h2 class='text-sm css-c2-categoria'>$urlCategoria</h2>
           <h1 class='text-2xl font-medium css-c2-produto-name'>$nomeProduto</h1>
 
           <section class='css-c2-preco'>

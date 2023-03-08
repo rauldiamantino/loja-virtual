@@ -5,7 +5,8 @@
   
   addProdutoListagem("033");
   addProdutoListagem("001");
+  addProdutoListagem("005"); # produto não existe.
 
   echo "</section>";
-  
+
 ?>

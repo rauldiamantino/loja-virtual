@@ -1,6 +1,6 @@
 <?php
 $produto = [
-  "codigo" => 033,
+  "codigo" => "033",
   "referencia" => "rd033",
   "nome" => "Tênis Nike - Feminino",
   "preco-de" => 659.99,
