@@ -7,7 +7,6 @@ $produto = [
   "preco-por" => 399.99,
   "qtde-parcelas" => 3,
   "prim-variacao" => [
-    "imagens" => [],
     "nome-prim-variacao" => "Cor",
     "itens" => [
       [

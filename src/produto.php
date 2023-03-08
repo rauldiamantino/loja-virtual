@@ -5,8 +5,8 @@ echo "<!DOCTYPE html>
 include("./partials/head.php");
 
 /*-------------------------------
-    Informações do array $produto[]
-  -------------------------------*/
+Informações do array $produto[]
+-------------------------------*/
 include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
 
 $produtoJson = json_encode($produto);
@@ -29,8 +29,8 @@ $textoDescricao = $produto["descricao"]["texto"];
 $tituloDescricao = $produto["descricao"]["titulo"];
 
 /*-------------------------------
-              Funções
-  -------------------------------*/
+Funções
+-------------------------------*/
 function numeroParaReal($numero)
 {
   $formatado = number_format($numero, 2, ",", ".");
@@ -64,8 +64,8 @@ function imagensProduto($primeiraVariacao, $produto)
 }
 
 /*-------------------------------
-          Página do Produto
-  -------------------------------*/
+Página do Produto
+-------------------------------*/
 echo "<body>";
 
 include("./partials/header.php");
@@ -80,37 +80,28 @@ echo "<div class='hidden css-pp-objeto'>$produtoJson</div>";
 # Início Caixa 1 Produto
 
 if (variacaoExiste($itensPrimeiraVariacao)) {
-  // $colunasDeImagens;
-  // $urlsImagens = imagensProduto($primeiraVariacao, $produto);
-  // $imagemPrincipal = $urlsImagens[0];
-  // $qtdeImagens = sizeof($urlsImagens);
-
-  // $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
 
   foreach ($itensPrimeiraVariacao as $item) {
     $colunasDeImagens;
     $urlsImagensItem = $item["imagens"];
     $qtdeImagens = sizeof($urlsImagensItem);
+    $nomeImagens = $item["nome"];
 
     if (!empty($urlsImagensItem)) {
-      // print_r($urlsImagensItem);
       $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
     } else {
       $qtdeImagens = sizeof($produto["imagens-sem-variacao"]);
       $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
     }
 
-    echo "<div class='w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1'>";
+    echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' data-nome-imagens='$nomeImagens'>";
 
     foreach ($urlsImagensItem as $urlImagem) {
-      echo $urlImagem;
       echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full'>";
     }
     echo "</div>"; # Fim Caixa 1 Produto
   }
 }
-
-
 
 # Início Produto Textos
 echo "<section class='css-pag-produto-textos'>";
@@ -136,7 +127,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
             <span class='css-nome-prim-variacao'>$nomePrimeiraVariacao</span>
             <span class='pt-2 grid grid-cols-4 gap-1 css-itens-prim-variacao'>";
 
-  foreach ($primeiraVariacao as $itemPrimVariacao) {
+  foreach ($primeiraVariacao["itens"] as $itemPrimVariacao) {
 
     if (is_array($itemPrimVariacao) && array_key_exists("seg-variacao", $itemPrimVariacao)) {
       $nomeItemPrimVariacao = $itemPrimVariacao["nome"];
@@ -154,10 +145,10 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
     }
   }
 
-  echo  "</span>
+  echo "</span>
         </section>"; # Fim Primeira Variação
 
-  foreach ($primeiraVariacao as $itemPrimVariacao) {
+  foreach ($primeiraVariacao["itens"] as $itemPrimVariacao) {
     if (is_array($itemPrimVariacao) && array_key_exists("seg-variacao", $itemPrimVariacao)) {
       $nomeItemPrimVariacao = $itemPrimVariacao["nome"];
 
@@ -255,8 +246,8 @@ echo "</section>"; # Fim Produto
 echo "</main>";
 
 /*-------------------------------
-      Rodapé, Scripts e Fim HTML
-  -------------------------------*/
+Rodapé, Scripts e Fim HTML
+-------------------------------*/
 include("./partials/footer.php");
 
 echo "<script type='module' src='./assets/js/script.js'></script>

@@ -1,11 +1,14 @@
 const $inputsPrimeiraVariacao = document.querySelectorAll(".css-c2-prim-variacao input");
 const $segundaVariacao = document.querySelectorAll(".css-c2-variacoes");
 const selecionarPrimeiraVariacao = () => {
+    const $imagensVariacao = document.querySelectorAll(".css-pp-caixa-1");
     const $primeiraVariacaoPadrao = $inputsPrimeiraVariacao[0];
+    carregaImgPadrao($imagensVariacao);
     definirSegundaVariacao($primeiraVariacaoPadrao);
     $inputsPrimeiraVariacao.forEach(($inputVariacao) => {
         $inputVariacao.addEventListener("click", () => {
             definirSegundaVariacao($inputVariacao);
+            definirImgCliqueVariacao($inputVariacao, $imagensVariacao);
         });
     });
 };
@@ -26,6 +29,21 @@ const selecionaSegundaVariacao = ($nomePrimeiraVariacao, $nomeSegundaVariacao, $
     else {
         $variacao.classList.add("hidden");
     }
+};
+const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacao) => {
+    const $nomePrimeiraVariacao = $inputVariacao.nextElementSibling.innerText;
+    $imagensVariacao.forEach($imagensVariacao => {
+        const $nomeImagens = $imagensVariacao.dataset.nomeImagens;
+        if ($nomePrimeiraVariacao == $nomeImagens) {
+            $imagensVariacao.classList.remove("hidden");
+        }
+        else {
+            $imagensVariacao.classList.add("hidden");
+        }
+    });
+};
+const carregaImgPadrao = ($imagensVariacao) => {
+    $imagensVariacao[0].classList.remove("hidden");
 };
 export { selecionarPrimeiraVariacao };
 //# sourceMappingURL=produto.js.map
