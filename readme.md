@@ -8,21 +8,9 @@
 - TailwindCss: `3.2.6`
 - PHP: `8.1.0`
 
-# Configurações do Ambiente
+# Como executar este projeto
 
-## 1. Clonar Repositório
-- 
-  `git clone https://github.com/rauldiamantino/loja-virtual.git`
-  
-- Instale o MAMP para abrir o projeto no localhost: https://www.mamp.info/en/downloads/
-- Abrir o MAMP > Preferences:
-  - Start/Stop: Deixar marcado somente Start servers
-  - Ports: Deixar o padrão: Set Web & MySQL ports to `80 & 3306`
-  - PHP: Version `8.1.0`, Cache `off`
-  - Server: Web server `Apache`, Document root `selecione a pasta src do projeto Loja Virtual`
-  - Cloud: `off`
-- Volte para o início do MAMP e clique no botão `Start Servers`
-- Acesse http://localhost/
-
-## 2. Compilação
-- Compilar TypeScript: `npx tsc`
+- Para que funcione corretamente, clone o repositório na pasta onde você executa projetos php (se utilizar o XAMPP, por padrão é a `htdocs`);
+- `git clone https://github.com/rauldiamantino/loja-virtual.git`
+- Caso queira, você pode configurar o ambiente php conforme o repositório https://github.com/rauldiamantino/ambiente-php
+- Acesse o `localhost` em seu navegador
