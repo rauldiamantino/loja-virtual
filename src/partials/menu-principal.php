@@ -9,7 +9,7 @@
 
           <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="categorias.php?dir=pages&file=lancamentos" class="lg:p-4 css-categoria-titulo-depois-texto">Lançamentos</a></div>
 
-          <section class="lg:pt-2 lg:pb-10 lg:fixed lg:top-[93px] lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
+          <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-[100%] lg:left-0 lg:right-0 lg:group-hover:block bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
               <li class="lg:text-left text-neutral-500 css-categoria-subcategoria-n1">
                 <div class="lg:pl-0 lg:border-b lg:border-neutral-200 p-2 pt-3 hover:text-black css-categoria-subcategoria-n1-texto"><a href="">Masculino</a></div>
@@ -48,7 +48,7 @@
 
           <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Mulheres</a></div>
 
-          <section class="lg:pt-2 lg:pb-10 lg:fixed lg:top-[93px] lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
+          <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-[100%] lg:left-0 lg:right-0 lg:group-hover:block bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
               <li class="lg:text-left text-neutral-500 css-categoria-subcategoria-n1">
                 <div class="lg:pl-0 lg:border-b lg:border-neutral-200 p-2 pt-3 hover:text-black css-categoria-subcategoria-n1-texto"><a href="">Calçados</a></div>
@@ -109,7 +109,7 @@
 
           <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Homens</a></div>
 
-          <section class="lg:pt-2 lg:pb-10 lg:fixed lg:top-[93px] lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
+          <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-[100%] lg:left-0 lg:right-0 lg:group-hover:block bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
               <li class="lg:text-left text-neutral-500 css-categoria-subcategoria-n1">
                 <div class="lg:pl-0 lg:border-b lg:border-neutral-200 p-2 pt-3 hover:text-black css-categoria-subcategoria-n1-texto"><a href="">Calçados</a></div>
@@ -168,7 +168,7 @@
 
           <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Infantil</a></div>
 
-          <section class="lg:pt-2 lg:pb-10 lg:fixed lg:top-[93px] lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
+          <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-[100%] lg:left-0 lg:right-0 lg:group-hover:block bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
               <li class="lg:text-left text-neutral-500 css-categoria-subcategoria-n1">
                 <div class="lg:pl-0 lg:border-b lg:border-neutral-200 p-2 pt-3 hover:text-black css-categoria-subcategoria-n1-texto"><a href="">Categoria</a></div>
@@ -220,7 +220,7 @@
 
           <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Esportes</a></div>
 
-          <section class="lg:pt-2 lg:pb-10 lg:fixed lg:top-[93px] lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
+          <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-[100%] lg:left-0 lg:right-0 lg:group-hover:block bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
               <li class="lg:text-left text-neutral-500 css-categoria-subcategoria-n1">
                 <div class="lg:pl-0 lg:border-b lg:border-neutral-200 p-2 pt-3 hover:text-black css-categoria-subcategoria-n1-texto"><a href="">Futebol</a></div>
@@ -272,7 +272,7 @@
 
           <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Coleções</a></div>
 
-          <section class="lg:pt-2 lg:pb-10 lg:fixed lg:top-[93px] lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
+          <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-[100%] lg:left-0 lg:right-0 lg:group-hover:block bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
               <li class="lg:text-left text-neutral-500 css-categoria-subcategoria-n1">
                 <div class="lg:pl-0 lg:border-b lg:border-neutral-200 p-2 pt-3 hover:text-black css-categoria-subcategoria-n1-texto"><a href="">Coleções</a></div>
@@ -298,7 +298,7 @@
 
           <div class="lg:border-b lg:border-transparent lg:p-0 lg:group-hover:border-black lg:flex peer-checked:block hidden p-2 lg:font-light font-bold text-black css-categoria-titulo-depois"><a href="" class="lg:p-4 css-categoria-titulo-depois-texto">Outlet</a></div>
 
-          <section class="lg:pt-2 lg:pb-10 lg:fixed lg:top-[93px] lg:left-0 lg:right-0 lg:group-hover:block lg:w-full bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
+          <section class="lg:pt-2 lg:pb-10 lg:absolute lg:top-[100%] lg:left-0 lg:right-0 lg:group-hover:block bg-white hidden peer-checked:block shadow-sm css-categoria-todas">
             <section class="lg:mx-auto lg:grid lg:grid-cols-4 lg:justify-center lg:gap-7 lg:w-4/5 lg:bg-white">
               <li class="lg:text-left text-neutral-500 css-categoria-subcategoria-n1">
                 <div class="lg:pl-0 lg:border-b lg:border-neutral-200 p-2 pt-3 hover:text-black css-categoria-subcategoria-n1-texto"><a href="">Mulheres</a></div>
