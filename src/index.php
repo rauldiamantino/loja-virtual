@@ -1,28 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <?php include("./partials/head.php"); ?>
+<?php
 
-  <body>
-    <?php include("./partials/header.php"); ?>
+  echo "<!DOCTYPE html>
+        <html lang='pt-br'>";
+  
+  include("./partials/head.php");
 
-    <main class="h-full w-full css-conteudo-principal">
-      <?php 
-        $banner = [
-          "imagens" => [
-            './assets/images/banner-principal/1.jpg',
-            './assets/images/banner-principal/2.jpg',
-            './assets/images/banner-principal/4.jpg'
-          ],
-        ];
+  echo "<body>";
+  
+  include("./partials/header.php");
 
-        include("./partials/banner-principal.php");
-      ?>
+  echo "<main class='h-full w-full css-conteudo-principal'>";
+  
+  $banner = [
+    "imagens" => [
+      './assets/images/banner-principal/1.jpg',
+      './assets/images/banner-principal/2.jpg',
+      './assets/images/banner-principal/4.jpg'
+    ],
+  ];
 
-    </main>
+  include("./partials/banner-principal.php");
 
-    <?php include("./partials/footer.php"); ?>
+  echo "</main>";
 
-    <script type="module" src="./assets/js/script.js"></script>
-  </body>
+  include("./partials/footer.php"); 
 
-</html>
+  echo "<script type='module' src='./assets/js/script.js'></script>
+      </body>
+    </html>";
+?>
