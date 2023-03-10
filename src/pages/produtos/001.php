@@ -39,9 +39,9 @@ $produto = [
   ],
 
   "imagens-sem-variacao" => [
-    "../assets/images/produtos/001/1.webp",
-    "../assets/images/produtos/001/5.jpg",
-    "../assets/images/produtos/001/6.webp",
+    // "../assets/images/produtos/001/1.webp",
+    // "../assets/images/produtos/001/5.jpg",
+    // "../assets/images/produtos/001/6.webp",
   ],
   "descricao" => [
     "titulo" => "CONFORTO CLÁSSICO",

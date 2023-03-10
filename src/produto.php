@@ -57,21 +57,33 @@ echo "<div class='hidden css-pp-objeto'>$produtoJson</div>";
 if (variacaoExiste($itensPrimeiraVariacao)) {
 
   foreach ($itensPrimeiraVariacao as $item) {
-    $colunasDeImagens;
-    $urlsImagensItem = $item["imagens"];
-    $qtdeImagens = sizeof($urlsImagensItem);
+    $colunasDeImagens = 1;
     $nomeImagens = $item["nome"];
+    $urlsImagensItem = $item["imagens"];
+    $imagensSemVariacao = $produto["imagens-sem-variacao"];
+    $urlsImagens = $imagensSemVariacao;
 
-    if (!empty($urlsImagensItem)) {
+
+    if(empty($imagensSemVariacao)) {
+      $urlsImagens = $urlsImagensItem;
+      $qtdeImagens = sizeof($urlsImagensItem);
       $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
-    } else {
-      $qtdeImagens = sizeof($produto["imagens-sem-variacao"]);
+      
+      if(empty($urlsImagensItem)) {
+        continue;
+      }
+
+    }else {
+      $urlsImagens = $imagensSemVariacao;
+      $qtdeImagens = sizeof($imagensSemVariacao);
       $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
+      
     }
 
-    echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' data-nome-imagens='$nomeImagens'>";
 
-    foreach ($urlsImagensItem as $urlImagem) {
+    echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' id='$nomeImagens'>";
+
+    foreach ($urlsImagens as $urlImagem) {
       echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full'>";
     }
     echo "</div>"; # Fim Caixa 1 Produto
