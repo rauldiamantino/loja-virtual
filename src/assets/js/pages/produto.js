@@ -30,16 +30,16 @@ const selecionaSegundaVariacao = ($nomePrimeiraVariacao, $nomeSegundaVariacao, $
         $variacao.classList.add("hidden");
     }
 };
-const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacao) => {
-    const $nomePrimeiraVariacao = $inputVariacao.nextElementSibling.innerText;
-    const idVariacao = `#${$nomePrimeiraVariacao}`;
-    $imagensVariacao.forEach($imagemVariacao => {
-        const $nomeImagens = $imagemVariacao.id;
-        escondeImagens($imagemVariacao);
-        if ($nomePrimeiraVariacao == $nomeImagens) {
-            $imagemVariacao.classList.remove("hidden");
-        }
+const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacoes) => {
+    $imagensVariacoes.forEach($imagensVariacao => {
+        variacaoComImagens($inputVariacao, $imagensVariacao);
     });
+};
+const variacaoComImagens = ($input, $variacao) => {
+    const idVar = 'css-id-item-' + $variacao.id;
+    if ($input.id == idVar) {
+        console.log($variacao);
+    }
 };
 const escondeImagens = ($imagem) => {
     $imagem.classList.add("hidden");

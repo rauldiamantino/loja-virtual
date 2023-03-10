@@ -84,7 +84,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
     echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' id='$nomeImagens'>";
 
     foreach ($urlsImagens as $urlImagem) {
-      echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full'>";
+      echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full' id='img-$nomeImagens'>";
     }
     echo "</div>"; # Fim Caixa 1 Produto
   }

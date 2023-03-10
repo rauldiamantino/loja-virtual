@@ -39,23 +39,43 @@ const selecionaSegundaVariacao = ($nomePrimeiraVariacao, $nomeSegundaVariacao, $
   }
 }
 
-const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacao) => {
-  const $nomePrimeiraVariacao:string = $inputVariacao.nextElementSibling.innerText
-  const idVariacao:string = `#${$nomePrimeiraVariacao}`
-  
-  $imagensVariacao.forEach($imagemVariacao => {
-    const $nomeImagens:string = $imagemVariacao.id
-    
-    escondeImagens($imagemVariacao)
+const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacoes) => {
 
-    if($nomePrimeiraVariacao == $nomeImagens) {
-      $imagemVariacao.classList.remove("hidden")
-    }
-    
-    // else {
-    //   $imagemVariacao.classList.add("hidden")
-    // }
+
+  $imagensVariacoes.forEach($imagensVariacao => {
+    variacaoComImagens($inputVariacao, $imagensVariacao)
   })
+  
+
+  // const $nomePrimeiraVariacao:string = $inputVariacao.nextElementSibling.innerText
+  // const idVariacao:string = `#${$nomePrimeiraVariacao}`
+  
+  // $imagensVariacao.forEach($imagemVariacao => {
+  //   const $nomeImagens:string = $imagemVariacao.id
+
+  //   if($nomePrimeiraVariacao == $nomeImagens) {
+  //     $imagemVariacao.classList.remove("hidden")
+      
+    
+  //   }else {
+  //       escondeImagens($imagemVariacao)
+  //   }
+
+
+
+
+  //   // else {
+  //   //   $imagemVariacao.classList.add("hidden")
+  //   // }
+  // })
+}
+
+const variacaoComImagens = ($input, $variacao) => { 
+  const idVar = 'css-id-item-' + $variacao.id
+  // console.log(idVar)
+  if($input.id == idVar) {
+    console.log($variacao)
+  }
 }
 
 const escondeImagens = ($imagem) => {
@@ -65,5 +85,6 @@ const escondeImagens = ($imagem) => {
 const carregaImgPadrao = ($imagensVariacao) => {
   $imagensVariacao[0].classList.remove("hidden")
 }
+
 
 export { selecionarPrimeiraVariacao }
