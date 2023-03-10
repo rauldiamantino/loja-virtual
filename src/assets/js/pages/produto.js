@@ -8,7 +8,11 @@ const selecionarPrimeiraVariacao = () => {
     $inputsPrimeiraVariacao.forEach(($inputVariacao) => {
         $inputVariacao.addEventListener("click", () => {
             definirSegundaVariacao($inputVariacao);
-            definirImgCliqueVariacao($inputVariacao, $imagensVariacao);
+            const $nomePrimeiraVariacao = $inputVariacao.nextElementSibling.innerText;
+            const idVar = '#' + $nomePrimeiraVariacao;
+            if (document.querySelector(idVar)) {
+                definirImgCliqueVariacao($inputVariacao, $imagensVariacao);
+            }
         });
     });
 };
@@ -31,14 +35,13 @@ const selecionaSegundaVariacao = ($nomePrimeiraVariacao, $nomeSegundaVariacao, $
     }
 };
 const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacoes) => {
-    $imagensVariacoes.forEach($imagensVariacao => {
-        variacaoComImagens($inputVariacao, $imagensVariacao);
-    });
+    const $nomePrimeiraVariacao = $inputVariacao.nextElementSibling.innerText;
+    console.log($inputVariacao);
 };
 const variacaoComImagens = ($input, $variacao) => {
     const idVar = 'css-id-item-' + $variacao.id;
     if ($input.id == idVar) {
-        console.log($variacao);
+        return $variacao;
     }
 };
 const escondeImagens = ($imagem) => {
