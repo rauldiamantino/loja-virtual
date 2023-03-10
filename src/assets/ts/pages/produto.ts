@@ -14,7 +14,7 @@ const selecionarPrimeiraVariacao = () => {
       definirSegundaVariacao($inputVariacao)
 
 
-      const $nomePrimeiraVariacao:string = $inputVariacao.nextElementSibling.innerText
+      const $nomePrimeiraVariacao:string = ($inputVariacao as any).nextElementSibling.innerText
       const idVar:string = '#'+$nomePrimeiraVariacao
 
       if(document.querySelector(idVar)) {
@@ -47,63 +47,17 @@ const selecionaSegundaVariacao = ($nomePrimeiraVariacao, $nomeSegundaVariacao, $
 }
 
 const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacoes) => {
-  const $nomePrimeiraVariacao:string = $inputVariacao.nextElementSibling.innerText
+  const $nomePrimeiraVariacao:any = $inputVariacao.nextElementSibling.innerText
+ 
+  $imagensVariacoes.forEach($imagemVariacao => {
+    const $nomeImagens:string = $imagemVariacao.id
 
-  console.log($inputVariacao)
-
-
-
-
-  // newArray.forEach($elemento => {
-  //   console.log($elemento)
-  // })
-
-
-  // $imagensVariacoes.forEach($imagensVariacao => {
-  //   const $imagemVariacao:HTMLElement = variacaoComImagens($inputVariacao, $imagensVariacao);
-  //   const $nomePrimeiraVariacao:string = $inputVariacao.nextElementSibling.innerText
-  //   const idVar = '#' + $imagensVariacao.id
-
-    
-  //   console.log($inputVariacao.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector(idVar))
-    
-
-  //   // if($imagemVariacao) {
-  //   //   const $nomeImagens:string = $imagemVariacao.id
-      
-  //   //   if($nomePrimeiraVariacao == $nomeImagens) {
-  //   //     // console.log($inputVariacao)
-  //   //     // console.log($imagemVariacao)
-  //   //   }
-      
-  //   //   if($nomePrimeiraVariacao == "") {
-  //   //     // console.log($inputVariacao)
-  //   //   }
-  //   // }
-  // })
-  
-
-  // const $nomePrimeiraVariacao:string = $inputVariacao.nextElementSibling.innerText
-  // const idVariacao:string = `#${$nomePrimeiraVariacao}`
-  
-  // $imagensVariacao.forEach($imagemVariacao => {
-  //   const $nomeImagens:string = $imagemVariacao.id
-
-    // if($nomePrimeiraVariacao == $nomeImagens) {
-    //   $imagemVariacao.classList.remove("hidden")
-      
-    
-    // }else {
-    //     escondeImagens($imagemVariacao)
-    // }
-
-
-
-
-  //   // else {
-  //   //   $imagemVariacao.classList.add("hidden")
-  //   // }
-  // })
+    if($nomePrimeiraVariacao == $nomeImagens) {
+      $imagemVariacao.classList.remove("hidden")
+    }else {
+      escondeImagens($imagemVariacao)
+    }
+  })
 }
 
 const variacaoComImagens = ($input, $variacao) => { 
