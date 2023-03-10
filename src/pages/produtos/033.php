@@ -12,9 +12,9 @@ $produto = [
       [
         "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/001/6.webp",
           "../assets/images/produtos/001/3.webp",
           "../assets/images/produtos/001/1.webp",
+          "../assets/images/produtos/001/6.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
@@ -45,16 +45,16 @@ $produto = [
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [45, 41, 44],
+          [40, 41, 42],
         ],
       ],
     ],
   ],
 
   "imagens-sem-variacao" => [
-    // "../assets/images/produtos/001/6.webp",
-    // "../assets/images/produtos/001/2.webp",
-    // "../assets/images/produtos/001/1.webp",
+    "../assets/images/produtos/001/1.webp",
+    "../assets/images/produtos/001/2.webp",
+    "../assets/images/produtos/001/6.webp",
     // "../assets/images/produtos/001/5.jpg",
     // "../assets/images/produtos/001/4.webp",
     // "../assets/images/produtos/001/3.webp",

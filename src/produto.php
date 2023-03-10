@@ -63,29 +63,20 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
     $imagensSemVariacao = $produto["imagens-sem-variacao"];
     $urlsImagens = $imagensSemVariacao;
 
-
-    if(empty($imagensSemVariacao)) {
-      $urlsImagens = $urlsImagensItem;
-      $qtdeImagens = sizeof($urlsImagensItem);
-      $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
-      
-      if(empty($urlsImagensItem)) {
-        continue;
-      }
-
-    }else {
-      $urlsImagens = $imagensSemVariacao;
-      $qtdeImagens = sizeof($imagensSemVariacao);
-      $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
-      
+    $urlsImagens = $urlsImagensItem;
+    $qtdeImagens = sizeof($urlsImagensItem);
+    $qtdeImagens == 1 ? $colunasDeImagens = 1 : $colunasDeImagens = 2;
+    
+    if(empty($urlsImagensItem)) {
+      continue;
     }
-
 
     echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' id='$nomeImagens'>";
 
     foreach ($urlsImagens as $urlImagem) {
       echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full' id='img-$nomeImagens'>";
     }
+
     echo "</div>"; # Fim Caixa 1 Produto
   }
 }
@@ -152,12 +143,12 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
                   <input
                     type='radio'
                     name='css-id-itens-seg-variacao'
-                    id='css-id-item-$variacao'
+                    id='css-id-$nomeItemPrimVariacao-$variacao'
                     class='hidden peer'
                   />
 
                   <label
-                    for='css-id-item-$variacao'
+                    for='css-id-$nomeItemPrimVariacao-$variacao'
                     class='border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded'>
                     $variacao
                   </label>
