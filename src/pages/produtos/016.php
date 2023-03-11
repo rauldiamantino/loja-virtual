@@ -1,48 +1,40 @@
 <?php
 $produto = [
-  "codigo" => "003",
-  "referencia" => "rd003",
-  "nome" => "Tênis Nike Court Vision Low Next Nature Feminino",
-  "preco-de" => 0,
-  "preco-por" => 439.99,
+  "codigo" => "016",
+  "referencia" => "rd016",
+  "nome" => "Chinelo Nike Victori One Feminino",
+  "preco-de" => 199.99,
+  "preco-por" => 89.99,
   "qtde-parcelas" => 10,
   "prim-variacao" => [
     "nome-prim-variacao" => "Cor",
     "itens" => [
       [
-        "nome" => "Branco",
+        "nome" => "Marrom",
         "imagens" => [
-          "../assets/images/produtos/003/branco/3.webp",
-          "../assets/images/produtos/003/branco/1.webp",
-          "../assets/images/produtos/003/branco/2.webp",
-          "../assets/images/produtos/003/branco/4.webp",
-          "../assets/images/produtos/003/branco/5.webp",
-          "../assets/images/produtos/003/branco/6.webp",
+          "../assets/images/produtos/016/marrom/3.avif",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [40, 41.5],
+          [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
         ],
       ],
-
       [
-        "nome" => "Detalhe",
+        "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/003/branco-detalhe/3.webp",
-          "../assets/images/produtos/003/branco-detalhe/1.webp",
-          "../assets/images/produtos/003/branco-detalhe/2.webp",
-          "../assets/images/produtos/003/branco-detalhe/4.webp",
-          "../assets/images/produtos/003/branco-detalhe/5.webp",
+          "../assets/images/produtos/016/preto/3.webp",
+          "../assets/images/produtos/016/preto/1.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [39],
+          [37],
         ],
       ],
     ],
   ],
 
   "imagens-sem-variacao" => [
+    
   ],
   "descricao" => [
     "titulo" => "CONFORTO CLÁSSICO EXCELENTE",

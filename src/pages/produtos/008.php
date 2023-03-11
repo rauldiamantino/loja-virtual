@@ -1,48 +1,50 @@
 <?php
 $produto = [
-  "codigo" => "003",
-  "referencia" => "rd003",
-  "nome" => "Tênis Nike Court Vision Low Next Nature Feminino",
+  "codigo" => "008",
+  "referencia" => "rd008",
+  "nome" => "Tênis Air Jordan 1 Mid Feminino",
   "preco-de" => 0,
-  "preco-por" => 439.99,
+  "preco-por" => 1199.99,
   "qtde-parcelas" => 10,
   "prim-variacao" => [
     "nome-prim-variacao" => "Cor",
     "itens" => [
       [
-        "nome" => "Branco",
+        "nome" => "Bege",
         "imagens" => [
-          "../assets/images/produtos/003/branco/3.webp",
-          "../assets/images/produtos/003/branco/1.webp",
-          "../assets/images/produtos/003/branco/2.webp",
-          "../assets/images/produtos/003/branco/4.webp",
-          "../assets/images/produtos/003/branco/5.webp",
-          "../assets/images/produtos/003/branco/6.webp",
+          "../assets/images/produtos/008/bege/3.avif",
+          "../assets/images/produtos/008/bege/1.avif",
+          "../assets/images/produtos/008/bege/2.avif",
+          "../assets/images/produtos/008/bege/4.avif",
+          "../assets/images/produtos/008/bege/5.avif",
+          "../assets/images/produtos/008/bege/6.avif",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [40, 41.5],
+          [37, 38],
         ],
       ],
 
       [
-        "nome" => "Detalhe",
+        "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/003/branco-detalhe/3.webp",
-          "../assets/images/produtos/003/branco-detalhe/1.webp",
-          "../assets/images/produtos/003/branco-detalhe/2.webp",
-          "../assets/images/produtos/003/branco-detalhe/4.webp",
-          "../assets/images/produtos/003/branco-detalhe/5.webp",
+          "../assets/images/produtos/008/preto/3.avif",
+          "../assets/images/produtos/008/preto/1.avif",
+          "../assets/images/produtos/008/preto/2.avif",
+          "../assets/images/produtos/008/preto/4.avif",
+          "../assets/images/produtos/008/preto/5.avif",
+          "../assets/images/produtos/008/preto/6.avif",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [39],
+          [37, 38, 39, 40],
         ],
       ],
     ],
   ],
 
   "imagens-sem-variacao" => [
+    
   ],
   "descricao" => [
     "titulo" => "CONFORTO CLÁSSICO EXCELENTE",

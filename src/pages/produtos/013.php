@@ -1,48 +1,46 @@
 <?php
 $produto = [
-  "codigo" => "003",
-  "referencia" => "rd003",
-  "nome" => "Tênis Nike Court Vision Low Next Nature Feminino",
+  "codigo" => "013",
+  "referencia" => "rd013",
+  "nome" => "Tênis Air Jordan 1 Elevate High Feminino",
   "preco-de" => 0,
-  "preco-por" => 439.99,
+  "preco-por" => 1199.99,
   "qtde-parcelas" => 10,
   "prim-variacao" => [
     "nome-prim-variacao" => "Cor",
     "itens" => [
       [
-        "nome" => "Branco",
+        "nome" => "Azul",
         "imagens" => [
-          "../assets/images/produtos/003/branco/3.webp",
-          "../assets/images/produtos/003/branco/1.webp",
-          "../assets/images/produtos/003/branco/2.webp",
-          "../assets/images/produtos/003/branco/4.webp",
-          "../assets/images/produtos/003/branco/5.webp",
-          "../assets/images/produtos/003/branco/6.webp",
+          "../assets/images/produtos/013/azul/3.avif",
+          "../assets/images/produtos/013/azul/1.avif",
+          "../assets/images/produtos/013/azul/2.avif",
+          "../assets/images/produtos/013/azul/4.avif",
+          "../assets/images/produtos/013/azul/5.avif",
+          "../assets/images/produtos/013/azul/6.avif",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [40, 41.5],
+          [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
         ],
       ],
-
       [
-        "nome" => "Detalhe",
+        "nome" => "Branco",
         "imagens" => [
-          "../assets/images/produtos/003/branco-detalhe/3.webp",
-          "../assets/images/produtos/003/branco-detalhe/1.webp",
-          "../assets/images/produtos/003/branco-detalhe/2.webp",
-          "../assets/images/produtos/003/branco-detalhe/4.webp",
-          "../assets/images/produtos/003/branco-detalhe/5.webp",
+          "../assets/images/produtos/013/branco/3.avif",
+          "../assets/images/produtos/013/branco/1.avif",
+          "../assets/images/produtos/013/branco/2.avif",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [39],
+          [37, 38, 39],
         ],
       ],
     ],
   ],
 
   "imagens-sem-variacao" => [
+    
   ],
   "descricao" => [
     "titulo" => "CONFORTO CLÁSSICO EXCELENTE",

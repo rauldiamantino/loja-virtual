@@ -30,6 +30,18 @@
   addProdutoListagem("002");
   addProdutoListagem("003");
   addProdutoListagem("004");
+  addProdutoListagem("005");
+  addProdutoListagem("006");
+  addProdutoListagem("007");
+  addProdutoListagem("008");
+  addProdutoListagem("009");
+  addProdutoListagem("010");
+  addProdutoListagem("011");
+  addProdutoListagem("012");
+  addProdutoListagem("013");
+  addProdutoListagem("014");
+  addProdutoListagem("015");
+  addProdutoListagem("016");
 
   echo "</section>
       </section>";

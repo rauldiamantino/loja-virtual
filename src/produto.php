@@ -95,7 +95,7 @@ echo "<p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "
     </section>
 
     <p class='text-sm css-c2-parcelamento'>
-      <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de<span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
+      <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de <span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
     </p>";
 
 if (variacaoExiste($itensPrimeiraVariacao)) {
