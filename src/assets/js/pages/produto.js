@@ -20,7 +20,7 @@ const abrirFotoTelaCheia = ($imagensVariacao) => {
             $foto.addEventListener('click', () => {
                 const $modalImagensVariacao = document.querySelector('.css-pp-tela-cheia');
                 const $modalConteudo = $modalImagensVariacao.querySelector('.css-tela-cheia-conteudo');
-                $modalConteudo.innerHTML = `<img src='${$foto.src}' class='m-auto'>`;
+                $modalConteudo.innerHTML = `<img src='${$foto.src}' class='m-auto lg:w-2/5'>`;
                 $modalImagensVariacao.classList.remove('hidden');
                 fecharFotoTelaCheia($modalImagensVariacao, $modalConteudo);
                 pausarScrollFundo();

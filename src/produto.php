@@ -74,7 +74,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
     echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' id='$nomeImagens'>";
 
     foreach ($urlsImagens as $urlImagem) {
-      echo "<img src=$urlImagem class='border border-gray-200 p-4 w-full' id='img-$nomeImagens'>";
+      echo "<img src=$urlImagem class='w-full cursor-pointer' id='img-$nomeImagens'>";
     }
 
     echo "</div>"; # Fim Caixa 1 Produto
@@ -123,7 +123,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
       echo "<span class='w-full flex items-center justify-center css-item-prim-variacao'>
                 <input type='radio' name='css-id-itens-prim-variacao' id='css-id-item-$nomeItemPrimVariacao' class='hidden peer'/>
                 <label
-                  for='css-id-item-$nomeItemPrimVariacao' class='border border-gray-200 hover:border-gray-900  transition duration-150 peer-checked:border-gray-900  p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded'>
+                  for='css-id-item-$nomeItemPrimVariacao' class='border border-gray-200 hover:border-gray-900  transition duration-150 peer-checked:border-gray-900  p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded cursor-pointer'>
                   $nomeItemPrimVariacao
                 </label>
               </span>";
@@ -158,7 +158,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
 
                   <label
                     for='css-id-$nomeItemPrimVariacao-$variacao'
-                    class='border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded'>
+                    class='border border-gray-200 hover:border-gray-900 transition duration-150 peer-checked:border-gray-900 p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded cursor-pointer'>
                     $variacao
                   </label>
                 </span>";
@@ -197,7 +197,7 @@ echo "<button class='p-4 bg-black hover:opacity-80 text-white rounded-full css-c
       <section class='css-c2-especificacoes'>
         <section class='w-full h-min css-pp-caixa-2'>
           <details open>
-            <summary class='border-t border-gray-200 py-4 flex justify-between items-center list-none'>Descrição</summary>
+            <summary class='border-t border-gray-200 py-4 flex justify-between items-center list-none cursor-pointer'>Descrição</summary>
             <section class='py-4 css-c2-descricao'>
               <h2 class='pb-4 font-medium text-lg css-descricao-titulo'>$tituloDescricao</h2>
               <p class='css-descricao-texto'>$textoDescricao</p>
@@ -208,7 +208,7 @@ echo "<button class='p-4 bg-black hover:opacity-80 text-white rounded-full css-c
       <section class='flex flex-col css-c2-frete'>
           <details>
 
-            <summary class='border-t border-gray-200 py-4 flex items-center list-none'>Calcular frete e entrega</summary>
+            <summary class='border-t border-gray-200 py-4 flex items-center list-none cursor-pointer'>Calcular frete e entrega</summary>
             
             <div class='pt-2 pb-4 text-sm'>Calcule o frete e o prazo de entrega estimados para sua região.</div>
 

@@ -12,9 +12,9 @@ $produto = [
       [
         "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/001/3.webp",
-          "../assets/images/produtos/001/1.webp",
-          "../assets/images/produtos/001/6.webp",
+          "../assets/images/produtos/001/azul/3.webp",
+          "../assets/images/produtos/001/azul/1.webp",
+          "../assets/images/produtos/001/azul/6.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
@@ -36,12 +36,12 @@ $produto = [
       [
         "nome" => "Branco",
         "imagens" => [
-          "../assets/images/produtos/001/4.webp",
-          "../assets/images/produtos/001/5.jpg",
-          "../assets/images/produtos/001/2.webp",
-          "../assets/images/produtos/001/6.webp",
-          "../assets/images/produtos/001/3.webp",
-          "../assets/images/produtos/001/1.webp",
+          "../assets/images/produtos/001/azul/4.webp",
+          "../assets/images/produtos/001/azul/5.webp",
+          "../assets/images/produtos/001/azul/2.webp",
+          "../assets/images/produtos/001/azul/6.webp",
+          "../assets/images/produtos/001/azul/3.webp",
+          "../assets/images/produtos/001/azul/1.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
@@ -52,12 +52,12 @@ $produto = [
   ],
 
   "imagens-sem-variacao" => [
-    "../assets/images/produtos/001/1.webp",
-    "../assets/images/produtos/001/2.webp",
-    "../assets/images/produtos/001/6.webp",
-    // "../assets/images/produtos/001/5.jpg",
-    // "../assets/images/produtos/001/4.webp",
-    // "../assets/images/produtos/001/3.webp",
+    "../assets/images/produtos/001/azul/1.webp",
+    "../assets/images/produtos/001/azul/2.webp",
+    "../assets/images/produtos/001/azul/6.webp",
+    // "../assets/images/produtos/001/azul/5.webp",
+    // "../assets/images/produtos/001/azul/4.webp",
+    // "../assets/images/produtos/001/azul/3.webp",
   ],
   "descricao" => [
     "titulo" => "CONFORTO CLÁSSICO EXCELENTE",

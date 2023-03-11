@@ -10,14 +10,14 @@ $produto = [
     "nome-prim-variacao" => "Cor",
     "itens" => [
       [
-        "nome" => "Preto",
+        "nome" => "Azul",
         "imagens" => [
-          "../assets/images/produtos/001/1.webp",
-          "../assets/images/produtos/001/2.webp",
-          "../assets/images/produtos/001/3.webp",
-          "../assets/images/produtos/001/4.webp",
-          "../assets/images/produtos/001/5.jpg",
-          "../assets/images/produtos/001/6.webp",
+          "../assets/images/produtos/001/azul/1.webp",
+          "../assets/images/produtos/001/azul/2.webp",
+          "../assets/images/produtos/001/azul/3.webp",
+          "../assets/images/produtos/001/azul/4.webp",
+          "../assets/images/produtos/001/azul/5.webp",
+          "../assets/images/produtos/001/azul/6.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
@@ -26,9 +26,14 @@ $produto = [
       ],
 
       [
-        "nome" => "Azul",
+        "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/001/6.webp",
+          "../assets/images/produtos/001/preto/1.webp",
+          "../assets/images/produtos/001/preto/2.webp",
+          "../assets/images/produtos/001/preto/3.webp",
+          "../assets/images/produtos/001/preto/4.webp",
+          "../assets/images/produtos/001/preto/5.webp",
+          "../assets/images/produtos/001/preto/6.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
@@ -39,9 +44,9 @@ $produto = [
   ],
 
   "imagens-sem-variacao" => [
-    // "../assets/images/produtos/001/1.webp",
-    // "../assets/images/produtos/001/5.jpg",
-    // "../assets/images/produtos/001/6.webp",
+    // "../assets/images/produtos/001/azul/1.webp",
+    // "../assets/images/produtos/001/azul/5.webp",
+    // "../assets/images/produtos/001/azul/6.webp",
   ],
   "descricao" => [
     "titulo" => "CONFORTO CLÁSSICO",
