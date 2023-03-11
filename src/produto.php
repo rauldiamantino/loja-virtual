@@ -81,6 +81,10 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
   }
 }
 
+  echo "<div class='hidden fixed top-0 left-0 z-50 flex items-center w-full h-full bg-black/95 css-pp-tela-cheia'>
+        <p class='absolute right-0 top-0 text-lg text-white'>X</p>
+        </div>";
+
 # Início Produto Textos
 echo "<section class='css-pag-produto-textos'>";
 

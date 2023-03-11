@@ -1,9 +1,11 @@
 // const $dadosProdutoObj:Object = document.querySelector(".css-pp-objeto").innerHTML
 const selecionarPrimeiraVariacao = () => {
+  const $modalImagensVariacoes = document.querySelectorAll('.css-pp-tela-cheia')
   const $inputsPrimeiraVariacao:NodeList = document.querySelectorAll(".css-c2-prim-variacao input")
   const $imagensVariacao:any = document.querySelectorAll(".css-pp-caixa-1")
   const $primeiraVariacaoPadrao:any = $inputsPrimeiraVariacao[0]
 
+  abrirFotoTelaCheia($imagensVariacao)
   carregaImgPadrao($imagensVariacao)
   definirSegundaVariacao($primeiraVariacaoPadrao)
 
@@ -13,6 +15,44 @@ const selecionarPrimeiraVariacao = () => {
       enviaInputsComImagens($inputVariacao, $imagensVariacao)
     })
   })
+}
+
+const abrirFotoTelaCheia = ($imagensVariacao) => {
+  $imagensVariacao.forEach($blocoImagens => {
+    const $fotosProduto = $blocoImagens.querySelectorAll('img')
+    
+    $fotosProduto.forEach($foto => {
+
+      $foto.addEventListener('click', () => {
+        const $modalImagensVariacao:HTMLDialogElement = document.querySelector('.css-pp-tela-cheia')
+
+        $modalImagensVariacao.innerHTML = `<img src='${$foto.src}' class='h-11/12 m-auto'>`
+        $modalImagensVariacao.classList.remove('hidden')
+        fecharFotoTelaCheia($modalImagensVariacao)
+      })
+    })
+  })
+}
+
+const fecharFotoTelaCheia = ($modalImagensVariacao) => {
+  fecharClicouFora($modalImagensVariacao)
+  fecharTeclaEsc($modalImagensVariacao)
+}
+
+const fecharClicouFora = ($modalImagensVariacao) => {
+  document.addEventListener('click', (event) => {
+    const clicouFora:boolean = event.target == $modalImagensVariacao
+
+    if(clicouFora) $modalImagensVariacao.classList.add('hidden')
+  })
+}
+
+const fecharTeclaEsc = ($modalImagensVariacao) => {
+  document.addEventListener('keydown', (event) => {
+    const teclaEsc:string = event.key;
+
+    if (teclaEsc === 'Escape') $modalImagensVariacao.classList.add('hidden')
+});
 }
 
 const enviaInputsComImagens = ($inputVariacao, $imagensVariacao) => {

@@ -18,3 +18,4 @@ elementoClicado()
 bannerPrincipal()
 navegadorRedimensionado()
 selecionarPrimeiraVariacao()
+

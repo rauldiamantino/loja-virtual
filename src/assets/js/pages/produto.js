@@ -1,7 +1,9 @@
 const selecionarPrimeiraVariacao = () => {
+    const $modalImagensVariacoes = document.querySelectorAll('.css-pp-tela-cheia');
     const $inputsPrimeiraVariacao = document.querySelectorAll(".css-c2-prim-variacao input");
     const $imagensVariacao = document.querySelectorAll(".css-pp-caixa-1");
     const $primeiraVariacaoPadrao = $inputsPrimeiraVariacao[0];
+    abrirFotoTelaCheia($imagensVariacao);
     carregaImgPadrao($imagensVariacao);
     definirSegundaVariacao($primeiraVariacaoPadrao);
     $inputsPrimeiraVariacao.forEach(($inputVariacao) => {
@@ -9,6 +11,37 @@ const selecionarPrimeiraVariacao = () => {
             definirSegundaVariacao($inputVariacao);
             enviaInputsComImagens($inputVariacao, $imagensVariacao);
         });
+    });
+};
+const abrirFotoTelaCheia = ($imagensVariacao) => {
+    $imagensVariacao.forEach($blocoImagens => {
+        const $fotosProduto = $blocoImagens.querySelectorAll('img');
+        $fotosProduto.forEach($foto => {
+            $foto.addEventListener('click', () => {
+                const $modalImagensVariacao = document.querySelector('.css-pp-tela-cheia');
+                $modalImagensVariacao.innerHTML = `<img src='${$foto.src}' class='h-11/12 m-auto'>`;
+                $modalImagensVariacao.classList.remove('hidden');
+                fecharFotoTelaCheia($modalImagensVariacao);
+            });
+        });
+    });
+};
+const fecharFotoTelaCheia = ($modalImagensVariacao) => {
+    fecharClicouFora($modalImagensVariacao);
+    fecharTeclaEsc($modalImagensVariacao);
+};
+const fecharClicouFora = ($modalImagensVariacao) => {
+    document.addEventListener('click', (event) => {
+        const clicouFora = event.target == $modalImagensVariacao;
+        if (clicouFora)
+            $modalImagensVariacao.classList.add('hidden');
+    });
+};
+const fecharTeclaEsc = ($modalImagensVariacao) => {
+    document.addEventListener('keydown', (event) => {
+        const teclaEsc = event.key;
+        if (teclaEsc === 'Escape')
+            $modalImagensVariacao.classList.add('hidden');
     });
 };
 const enviaInputsComImagens = ($inputVariacao, $imagensVariacao) => {
