@@ -33,7 +33,6 @@ $produto = [
           "../assets/images/produtos/003/branco-detalhe/2.webp",
           "../assets/images/produtos/003/branco-detalhe/4.webp",
           "../assets/images/produtos/003/branco-detalhe/5.webp",
-          "../assets/images/produtos/003/branco-detalhe/6.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
