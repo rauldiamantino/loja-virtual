@@ -1,4 +1,4 @@
-const selecionarPrimeiraVariacao = () => {
+const carregarPrimeiraVariacao = () => {
     const $modalImagensVariacoes = document.querySelectorAll('.css-pp-tela-cheia');
     const $inputsPrimeiraVariacao = document.querySelectorAll(".css-c2-prim-variacao input");
     const $imagensVariacao = document.querySelectorAll(".css-pp-caixa-1");
@@ -19,31 +19,40 @@ const abrirFotoTelaCheia = ($imagensVariacao) => {
         $fotosProduto.forEach($foto => {
             $foto.addEventListener('click', () => {
                 const $modalImagensVariacao = document.querySelector('.css-pp-tela-cheia');
-                $modalImagensVariacao.innerHTML = `<img src='${$foto.src}' class='h-11/12 m-auto'>`;
+                const $modalConteudo = $modalImagensVariacao.querySelector('.css-tela-cheia-conteudo');
+                $modalConteudo.innerHTML = `<img src='${$foto.src}' class='m-auto'>`;
                 $modalImagensVariacao.classList.remove('hidden');
-                fecharFotoTelaCheia($modalImagensVariacao);
+                fecharFotoTelaCheia($modalImagensVariacao, $modalConteudo);
+                pausarScrollFundo();
             });
         });
     });
 };
-const fecharFotoTelaCheia = ($modalImagensVariacao) => {
-    fecharClicouFora($modalImagensVariacao);
-    fecharTeclaEsc($modalImagensVariacao);
+const fecharFotoTelaCheia = ($modalImagensVariacao, $modalConteudo) => {
+    cliqueFora($modalImagensVariacao, $modalConteudo);
+    teclaEsc($modalImagensVariacao);
+    cliqueBotaoFechar($modalImagensVariacao);
 };
-const fecharClicouFora = ($modalImagensVariacao) => {
+const cliqueFora = ($modalImagensVariacao, $modalConteudo) => {
     document.addEventListener('click', (event) => {
-        const clicouFora = event.target == $modalImagensVariacao;
+        const clicouFora = event.target == $modalConteudo;
         if (clicouFora)
-            $modalImagensVariacao.classList.add('hidden');
+            fecharModal($modalImagensVariacao);
     });
 };
-const fecharTeclaEsc = ($modalImagensVariacao) => {
+const teclaEsc = ($modalImagensVariacao) => {
     document.addEventListener('keydown', (event) => {
-        const teclaEsc = event.key;
-        if (teclaEsc === 'Escape')
-            $modalImagensVariacao.classList.add('hidden');
+        if (event.key === 'Escape')
+            fecharModal($modalImagensVariacao);
     });
 };
+const cliqueBotaoFechar = ($modalImagensVariacao) => {
+    const $btnFechar = $modalImagensVariacao.querySelector('button');
+    $btnFechar.addEventListener('click', () => fecharModal($modalImagensVariacao));
+};
+const fecharModal = ($modalImagensVariacao) => ($modalImagensVariacao.classList.add('hidden'), retornarScrollFundo());
+const pausarScrollFundo = () => (document.documentElement.style.overflow = "hidden");
+const retornarScrollFundo = () => (document.documentElement.style.overflow = "auto");
 const enviaInputsComImagens = ($inputVariacao, $imagensVariacao) => {
     const $nomePrimeiraVariacao = $inputVariacao.nextElementSibling.innerText;
     const idVar = '#' + $nomePrimeiraVariacao;
@@ -78,5 +87,5 @@ const definirImgCliqueVariacao = ($inputVariacao, $imagensVariacoes) => {
 };
 const escondeImagens = ($imagem) => $imagem.classList.add("hidden");
 const carregaImgPadrao = ($imagensVariacao) => $imagensVariacao[0].classList.remove("hidden");
-export { selecionarPrimeiraVariacao };
+export { carregarPrimeiraVariacao };
 //# sourceMappingURL=produto.js.map

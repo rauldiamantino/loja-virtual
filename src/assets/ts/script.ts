@@ -1,6 +1,6 @@
 import { menuPrincipal, fechaCategoriasDoMenu } from "./components/menu-principal.js"
 import { bannerPrincipal } from "./components/banner-principal.js"
-import { selecionarPrimeiraVariacao } from "./pages/produto.js"
+import { carregarPrimeiraVariacao } from "./pages/produto.js"
 
 const elementoClicado = () => {
   document.addEventListener('click', (event) => {
@@ -17,5 +17,5 @@ const navegadorRedimensionado = () => {
 elementoClicado()
 bannerPrincipal()
 navegadorRedimensionado()
-selecionarPrimeiraVariacao()
+carregarPrimeiraVariacao()
 
