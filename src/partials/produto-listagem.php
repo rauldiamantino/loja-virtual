@@ -20,7 +20,7 @@
     $imagemPrincipal = definirImagemPrincipal($imgsItem1PrimVariacao, $imagensSemVariacao);
 
     echo "<a href='produto.php?categoria=$urlCategoria&dir=pages/produtos&file=" . $codigoProduto . "'>
-            <section class='px-2 border border-transparent hover:border-gray-200 rounded-md css-produto-listagem'>
+            <section class='p-2 border border-transparent hover:border-gray-200 rounded-md css-produto-listagem'>
               <div class='css-produto-imagem-principal'>
                 <img src='$imagemPrincipal'>
               </div>
