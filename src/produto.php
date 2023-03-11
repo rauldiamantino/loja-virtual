@@ -74,7 +74,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
     echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' id='$nomeImagens'>";
 
     foreach ($urlsImagens as $urlImagem) {
-      echo "<img src=$urlImagem class='w-full cursor-pointer' id='img-$nomeImagens'>";
+      echo "<div class='overflow-hidden'><img src=$urlImagem class='w-full hover:scale-125 transition duration-500 cursor-pointer' id='img-$nomeImagens'></div>";
     }
 
     echo "</div>"; # Fim Caixa 1 Produto
