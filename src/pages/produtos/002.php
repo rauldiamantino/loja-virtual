@@ -1,47 +1,39 @@
 <?php
 $produto = [
-  "codigo" => "033",
-  "referencia" => "rd033",
-  "nome" => "Tênis Nike - Feminino",
-  "preco-de" => 659.99,
-  "preco-por" => 299.99,
-  "qtde-parcelas" => 6,
+  "codigo" => "002",
+  "referencia" => "rd002",
+  "nome" => "Tênis Nike Downshifter 12 Feminino",
+  "preco-de" => 0,
+  "preco-por" => 289.99,
+  "qtde-parcelas" => 4,
   "prim-variacao" => [
     "nome-prim-variacao" => "Cor",
     "itens" => [
       [
-        "nome" => "Preto",
+        "nome" => "Rosa",
         "imagens" => [
-          "../assets/images/produtos/001/azul/3.webp",
-          "../assets/images/produtos/001/azul/1.webp",
-          "../assets/images/produtos/001/azul/6.webp",
+          "../assets/images/produtos/002/rosa/3.webp",
+          "../assets/images/produtos/002/rosa/1.webp",
+          "../assets/images/produtos/002/rosa/2.webp",
+          "../assets/images/produtos/002/rosa/4.webp",
+          "../assets/images/produtos/002/rosa/5.webp",
+          "../assets/images/produtos/002/rosa/6.webp",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",
-          [35, 36, 37],
+          [34, 35, 36],
         ],
       ],
 
       [
-        "nome" => "Azul",
+        "nome" => "Roxo",
         "imagens" => [
-
-        ],
-        "seg-variacao" => [
-          "nome" => "Tamanho",
-          [40],
-        ],
-      ],
-
-      [
-        "nome" => "Branco",
-        "imagens" => [
-          "../assets/images/produtos/001/azul/4.webp",
-          "../assets/images/produtos/001/azul/5.webp",
-          "../assets/images/produtos/001/azul/2.webp",
-          "../assets/images/produtos/001/azul/6.webp",
-          "../assets/images/produtos/001/azul/3.webp",
-          "../assets/images/produtos/001/azul/1.webp",
+          "../assets/images/produtos/002/roxo/3.avif",
+          "../assets/images/produtos/002/roxo/1.avif",
+          "../assets/images/produtos/002/roxo/2.avif",
+          "../assets/images/produtos/002/roxo/4.avif",
+          "../assets/images/produtos/002/roxo/5.avif",
+          "../assets/images/produtos/002/roxo/6.avif",
         ],
         "seg-variacao" => [
           "nome" => "Tamanho",

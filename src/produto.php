@@ -35,19 +35,6 @@ include("./partials/header.php");
 
 echo "<main class='xl:mx-auto xl:max-w-7xl py-2'>";
 
-echo "<nav class='py-10 text-gray-500'>
-        <ul class='flex items-center gap-4'>
-          <li class='hover:text-black'><a href='/'>Home</a></li>
-          <li>
-            <svg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='currentColor' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/>
-            </svg>
-          </li>
-          <li class='hover:text-black'>
-            <a href='categorias.php?dir=pages&file=lancamentos'>$urlCategoria</a>
-          </li>
-        </ul>
-      </nav>";
-      
 # Início Produto
 echo "<section class='w-full h-max grid grid-cols-4 gap-4 items-start css-pag-produto'>";
 
@@ -74,7 +61,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
     echo "<div class='hidden w-full grid grid-cols-$colunasDeImagens col-span-3 row-span-full gap-4 css-pp-caixa-1' id='$nomeImagens'>";
 
     foreach ($urlsImagens as $urlImagem) {
-      echo "<div class='overflow-hidden'><img src=$urlImagem class='w-full hover:scale-125 transition duration-500 cursor-pointer' id='img-$nomeImagens'></div>";
+      echo "<div class='overflow-hidden'><img src=$urlImagem class='w-full hover:scale-110 transition duration-500 cursor-pointer' id='img-$nomeImagens'></div>";
     }
 
     echo "</div>"; # Fim Caixa 1 Produto
@@ -98,14 +85,18 @@ echo "<section class='flex flex-col gap-4 css-pp-caixa-2'>
           <h2 class='text-sm css-c2-categoria'>$urlCategoria</h2>
           <h1 class='text-2xl font-medium css-c2-produto-name'>$nomeProduto</h1>
 
-          <section class='css-c2-preco'>
-            <p class='text-sm line-through text-gray-500 css-c2-preco-de'>R$ " . numeroParaReal($precoDe) . "</p>
-            <p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "</p>
-          </section>
+          <section class='css-c2-preco'>";
 
-          <p class='text-sm css-c2-parcelamento'>
-            <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de<span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
-          </p>";
+if($precoDe != 0) {
+  echo "<p class='text-sm line-through text-gray-500 css-c2-preco-de'>R$ " . numeroParaReal($precoDe) . "</p>";
+}
+
+echo "<p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "</p>
+    </section>
+
+    <p class='text-sm css-c2-parcelamento'>
+      <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de<span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
+    </p>";
 
 if (variacaoExiste($itensPrimeiraVariacao)) {
 
@@ -123,7 +114,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
       echo "<span class='w-full flex items-center justify-center css-item-prim-variacao'>
                 <input type='radio' name='css-id-itens-prim-variacao' id='css-id-item-$nomeItemPrimVariacao' class='hidden peer'/>
                 <label
-                  for='css-id-item-$nomeItemPrimVariacao' class='border border-gray-200 hover:border-gray-900  transition duration-150 peer-checked:border-gray-900  p-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded cursor-pointer'>
+                  for='css-id-item-$nomeItemPrimVariacao' class='border border-gray-200 hover:border-gray-900  transition duration-150 peer-checked:border-gray-900 py-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded cursor-pointer'>
                   $nomeItemPrimVariacao
                 </label>
               </span>";
