@@ -100,7 +100,7 @@ echo "<p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "
       <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de <span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
     </p>";
 
-echo "<form action='carrinho.php' method='post'>
+echo "<form action='carrinho.php' method='get'>
         <input type='hidden' name='array-produto' value='".serialize($produto)."'>";
 
 if (variacaoExiste($itensPrimeiraVariacao)) {
