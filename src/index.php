@@ -1,4 +1,5 @@
 <?php
+  session_start();
 
   echo "<!DOCTYPE html>
         <html lang='pt-br'>";
@@ -21,7 +22,6 @@
   ];
 
   include("./partials/banner-principal.php");
-  
 
   echo "<section class='xl:mx-auto xl:max-w-7xl py-4 '>
           <section class='lg:grid-cols-4 w-full grid grid-cols-2 gap-4 css-produtos'>";

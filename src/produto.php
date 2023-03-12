@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 echo "<!DOCTYPE html>
           <html lang='pt-br'>";
 
@@ -98,6 +100,8 @@ echo "<p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "
       <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de <span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
     </p>";
 
+echo "<form action='#' method='post'>";
+
 if (variacaoExiste($itensPrimeiraVariacao)) {
 
   # Início Primeira Variação
@@ -112,7 +116,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
       $segundaVariacaoDoItem = $itemPrimVariacao["seg-variacao"];
 
       echo "<span class='w-full flex items-center justify-center css-item-prim-variacao'>
-                <input type='radio' name='css-id-itens-prim-variacao' id='css-id-item-$nomeItemPrimVariacao' class='hidden peer'/>
+                <input type='radio' name='css-id-itens-prim-variacao' id='css-id-item-$nomeItemPrimVariacao' value='$nomeItemPrimVariacao' class='hidden peer'/>
                 <label
                   for='css-id-item-$nomeItemPrimVariacao' class='border border-gray-200 hover:border-gray-900  transition duration-150 peer-checked:border-gray-900 py-4 w-full text-center bg-white peer-checked:ring-4 ring-blue-500/20 rounded cursor-pointer'>
                   $nomeItemPrimVariacao
@@ -144,6 +148,7 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
                     type='radio'
                     name='css-id-itens-seg-variacao'
                     id='css-id-$nomeItemPrimVariacao-$variacao'
+                    value='$variacao'
                     class='hidden peer'
                   />
 
@@ -163,8 +168,43 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
 }
 
 echo "<button class='p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar'>Adicionar ao carrinho</button>
+    </form>";
 
-      <section class='p-2 flex justify-between text-sm css-c2-compartilhar'>
+if(! isset($_SESSION['carrinho'])) {
+  $_SESSION['carrinho'] = array();
+}
+
+if(!empty($_POST)) {
+  $primVariacaoPost = $_POST["css-id-itens-prim-variacao"];
+  $segVariacaoPost = $_POST["css-id-itens-seg-variacao"];
+  $imagemProduto;
+
+  foreach($itensPrimeiraVariacao as $itemPrimeiraVariacao) {
+    if($itemPrimeiraVariacao["nome"] == $primVariacaoPost) {
+      $imagemProduto = $itemPrimeiraVariacao["imagens"][0];
+    }
+  }
+  
+  
+
+  $_SESSION['carrinho']["$codigoProduto-$primVariacaoPost-$segVariacaoPost"] = array(
+    'nome-produto' => $nomeProduto,
+    'imagem' => $imagemProduto,
+    'prim-variacao' => $primVariacaoPost,
+    'seg-variacao' => $segVariacaoPost,
+    'quantidade' => 1,
+  );
+}
+
+if(!empty($_SESSION['carrinho'])) {
+  foreach($_SESSION['carrinho'] as $item) {
+    echo '<br>';
+    print_r($item);
+    echo '<br>';
+  }
+}
+
+echo "<section class='p-2 flex justify-between text-sm css-c2-compartilhar'>
         <span>Compartilhar:</span>
         <a href='#' class='cursor-default' target='_blank'>
           <span class='flex items-center gap-1 css-compartilhar-whatsapp'>
