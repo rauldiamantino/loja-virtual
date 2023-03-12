@@ -100,10 +100,10 @@ echo "<p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "
       <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de <span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
     </p>";
 
-echo "<form action='#' method='post'>";
+echo "<form action='carrinho.php' method='post'>
+        <input type='hidden' name='array-produto' value='".serialize($produto)."'>";
 
 if (variacaoExiste($itensPrimeiraVariacao)) {
-
   # Início Primeira Variação
   echo "<section class='css-c2-prim-variacao'>
             <span class='css-nome-prim-variacao'>$nomePrimeiraVariacao</span>
@@ -167,42 +167,8 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
   }
 }
 
-echo "<button class='p-4 bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar'>Adicionar ao carrinho</button>
+echo "<button class='p-4 w-full bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar'>Adicionar ao carrinho</button>
     </form>";
-
-if(! isset($_SESSION['carrinho'])) {
-  $_SESSION['carrinho'] = array();
-}
-
-if(!empty($_POST)) {
-  $primVariacaoPost = $_POST["css-id-itens-prim-variacao"];
-  $segVariacaoPost = $_POST["css-id-itens-seg-variacao"];
-  $imagemProduto;
-
-  foreach($itensPrimeiraVariacao as $itemPrimeiraVariacao) {
-    if($itemPrimeiraVariacao["nome"] == $primVariacaoPost) {
-      $imagemProduto = $itemPrimeiraVariacao["imagens"][0];
-    }
-  }
-  
-  
-
-  $_SESSION['carrinho']["$codigoProduto-$primVariacaoPost-$segVariacaoPost"] = array(
-    'nome-produto' => $nomeProduto,
-    'imagem' => $imagemProduto,
-    'prim-variacao' => $primVariacaoPost,
-    'seg-variacao' => $segVariacaoPost,
-    'quantidade' => 1,
-  );
-}
-
-if(!empty($_SESSION['carrinho'])) {
-  foreach($_SESSION['carrinho'] as $item) {
-    echo '<br>';
-    print_r($item);
-    echo '<br>';
-  }
-}
 
 echo "<section class='p-2 flex justify-between text-sm css-c2-compartilhar'>
         <span>Compartilhar:</span>
