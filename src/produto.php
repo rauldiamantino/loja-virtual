@@ -100,7 +100,7 @@ echo "<p class='text-base css-c2-preco-por'>R$ " . numeroParaReal($precoPor) . "
       <span class='css-c2-qtde-parcelas'>ou $qtdeParcelas</span>x de <span class='css-c2-totalParcelado'>R$ $totalParcelado</span>
     </p>";
 
-echo "<form action='carrinho.php' method='get'>
+echo "<form action='#' method='POST'>
         <input type='hidden' name='array-produto' value='".serialize($produto)."'>";
 
 if (variacaoExiste($itensPrimeiraVariacao)) {
@@ -169,6 +169,11 @@ if (variacaoExiste($itensPrimeiraVariacao)) {
 
 echo "<button class='p-4 w-full bg-black hover:opacity-80 text-white rounded-full css-c2-btn-comprar'>Adicionar ao carrinho</button>
     </form>";
+
+$produtoAdicionado = ! empty($_POST);
+$sessionInexistente = ! isset($_SESSION['carrinho']);
+$sessionInexistente ? $_SESSION['carrinho'] = array() : false;
+$produtoAdicionado ? salvaProdutoSession($produto) : false;
 
 echo "<section class='p-2 flex justify-between text-sm css-c2-compartilhar'>
         <span>Compartilhar:</span>

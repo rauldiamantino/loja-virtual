@@ -1,7 +1,7 @@
 <?php
 function carregaArrayProduto() {
-  if(! empty($_GET["array-produto"])){
-    return unserialize($_GET["array-produto"]);
+  if(! empty($_POST["array-produto"])){
+    return unserialize($_POST["array-produto"]);
   }
 }
 
@@ -20,8 +20,8 @@ function salvaProdutoSession($produto) {
   $codigoProduto = $produto["codigo"];
   $primeiraVariacao = $produto["prim-variacao"];
   $itensPrimeiraVariacao = $primeiraVariacao["itens"];
-  $primVariacaoPost = $_GET["css-id-itens-prim-variacao"];
-  $segVariacaoPost = $_GET["css-id-itens-seg-variacao"];
+  $primVariacaoPost = $_POST["css-id-itens-prim-variacao"];
+  $segVariacaoPost = $_POST["css-id-itens-seg-variacao"];
   $imagemProduto = buscaImagemVariacao($itensPrimeiraVariacao, $primVariacaoPost);
 
   $_SESSION['carrinho']["$codigoProduto-$primVariacaoPost-$segVariacaoPost"] = array(
