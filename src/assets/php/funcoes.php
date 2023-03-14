@@ -1,4 +1,12 @@
 <?php
+function criaCarrinho() {
+  $_SESSION['carrinho'] = array();
+}
+
+function redirecionaParaCarrinho() {
+  return "<script>window.location='carrinho.php'</script>";
+}
+
 function carregaArrayProduto() {
   if(! empty($_POST["array-produto"])){
     return unserialize($_POST["array-produto"]);
@@ -19,6 +27,7 @@ function salvaProdutoSession($produto) {
   $nomeProduto = $produto["nome"];
   $codigoProduto = $produto["codigo"];
   $primeiraVariacao = $produto["prim-variacao"];
+  $precoPor = $produto["preco-por"];
   $itensPrimeiraVariacao = $primeiraVariacao["itens"];
   $primVariacaoPost = $_POST["css-id-itens-prim-variacao"];
   $segVariacaoPost = $_POST["css-id-itens-seg-variacao"];
@@ -27,6 +36,7 @@ function salvaProdutoSession($produto) {
   $_SESSION['carrinho']["$codigoProduto-$primVariacaoPost-$segVariacaoPost"] = array(
     'codigo-produto' => $codigoProduto,
     'nome-produto' => $nomeProduto,
+    'preco-produto' => $precoPor,
     'imagem' => $imagemProduto,
     'prim-variacao' => $primVariacaoPost,
     'seg-variacao' => $segVariacaoPost,

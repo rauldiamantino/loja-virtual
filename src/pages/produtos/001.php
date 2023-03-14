@@ -28,9 +28,9 @@ $produto = [
       [
         "nome" => "Preto",
         "imagens" => [
-          "../assets/images/produtos/001/preto/1.webp",
-          "../assets/images/produtos/001/preto/2.webp",
           "../assets/images/produtos/001/preto/3.webp",
+          "../assets/images/produtos/001/preto/2.webp",
+          "../assets/images/produtos/001/preto/1.webp",
           "../assets/images/produtos/001/preto/4.webp",
           "../assets/images/produtos/001/preto/5.webp",
           "../assets/images/produtos/001/preto/6.webp",

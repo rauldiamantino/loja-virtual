@@ -1,7 +1,6 @@
 <?php
 session_start();
 require('./assets/php/funcoes.php');
-
 # Início - Adiciona produtos ao carrinho
 
 echo "<!DOCTYPE html>
@@ -32,33 +31,32 @@ if(! empty($_SESSION['carrinho'])) {
             <div class='pt-4 flex flex-col gap-8 css-ci-produtos'>";
 
   foreach($_SESSION['carrinho'] as $produtoCarrinho) {
-    $produto = $produtoCarrinho;
-    $idSession = $produto['codigo-produto'].'-'.$produto['prim-variacao'].'-'.$produto['seg-variacao'];
+    $idSession = $produtoCarrinho['codigo-produto'].'-'.$produtoCarrinho['prim-variacao'].'-'.$produtoCarrinho['seg-variacao'];
 
     echo "<form action='#' method='post'>
             <div class='grid grid-cols-3 grid-rows-2 gap-2 css-cip-produto'>
-              <img class='row-span-2 rounded-md' src='{$produto['imagem']}'>
+              <a class='row-span-2 rounded-md' href='produto.php?categoria=&dir=pages/produtos&file=".$produtoCarrinho['codigo-produto']."'><img src='{$produtoCarrinho['imagem']}'></a>
               <div class='border border-gray-200 p-4 col-span-2 row-span-2 flex justify-between items-between rounded-md css-cipp-textos'>
                 <div class='w-full flex flex-col justify-between css-textos-bloco-1'>
                   <div class='css-textos-bloco-1-superior'>
-                    <h1 class='font-medium'>{$produto['nome-produto']}</h1>
+                    <h1 class='font-medium'>{$produtoCarrinho['nome-produto']}</h1>
                     <p>
                       <span>Cor:</span>
-                      <span>{$produto['prim-variacao']}</span>
+                      <span>{$produtoCarrinho['prim-variacao']}</span>
                     </p>
                     <p>
                       <span>Tamanho:</span>
-                      <span>{$produto['seg-variacao']}</span>
+                      <span>{$produtoCarrinho['seg-variacao']}</span>
                     </p>
                   </div>
 
                   <div class='flex justify-between items-end css-textos-bloco-1-inferior'>
-                    <input class='border border-gray-200 pl-4 py-2 w-20 text-base font-medium' type='number' value='{$produto['quantidade']}' min='1'>
+                    <input class='border border-gray-200 pl-4 py-2 w-20 text-base font-medium' type='number' value='{$produtoCarrinho['quantidade']}' min='1'>
                   </div>
                 </div>
                 <div class='flex flex-col justify-between items-end css-textos-bloco-2'>
                   <p class='flex gap-1'>
-                    R$<span>899,99</span>
+                    R$<span>{$produtoCarrinho['preco-produto']}</span>
                   </p>
                   <button name='produto' value='$idSession'>
                     <svg class='opacity-50' xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 16 16'>
@@ -76,7 +74,8 @@ if(! empty($_SESSION['carrinho'])) {
     <div class='w-2/5 h-full bg-gray-400 css-carrinho-resumo'>
       <h2>Resumo</h2>
     </div>
-  </section>";
+  </section>
+</main>";
 
   # Fim Itens do Carrinho
 }else { 
@@ -87,12 +86,11 @@ if(! empty($_SESSION['carrinho'])) {
               <a href='/' class='py-2 px-4 bg-black hover:opacity-80 text-white rounded-full'>Continuar comprando</a>
             </div>
           </div>
-        </section>";
+        </section>;
+      </main>";
+
+  include("./partials/footer.php"); 
 }
-
-echo "</main>";
-
-include("./partials/footer.php"); 
 
 echo "<script type='module' src='./assets/js/script.js'></script>
     </body>

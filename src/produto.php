@@ -171,9 +171,17 @@ echo "<button class='p-4 w-full bg-black hover:opacity-80 text-white rounded-ful
     </form>";
 
 $produtoAdicionado = ! empty($_POST);
-$sessionInexistente = ! isset($_SESSION['carrinho']);
-$sessionInexistente ? $_SESSION['carrinho'] = array() : false;
-$produtoAdicionado ? salvaProdutoSession($produto) : false;
+
+if($produtoAdicionado) {
+  $carrinhoInexistente = ! isset($_SESSION['carrinho']);
+  
+  if($carrinhoInexistente) {
+    criaCarrinho();
+  }
+
+  salvaProdutoSession($produto);
+  echo redirecionaParaCarrinho();
+}
 
 echo "<section class='p-2 flex justify-between text-sm css-c2-compartilhar'>
         <span>Compartilhar:</span>
