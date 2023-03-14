@@ -13,7 +13,7 @@
   [carrinho.webm](https://user-images.githubusercontent.com/100098231/224863608-5dbeea43-df65-4df7-bf39-03748384ae85.webm)
 </details>
 
-<details>
+<details open>
   <summary>Como rodar o projeto?</summary>
 
   1. Utilizando o terminal, certifique-se que está no C: e em seguida clone o repositório `git clone https://github.com/rauldiamantino/loja-virtual.git`
@@ -34,7 +34,7 @@
 </details>
 
 
-<details open>
+<details>
   <summary>Tecnologias utilizadas</summary>
   <p>
     
