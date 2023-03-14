@@ -1,10 +1,14 @@
+## Projeto em desenvolvimento - Exclusivamente para fins educativos.
 
-
-<details open>
-  <summary>Demonstração</summary>
-  <br>
-  
-https://user-images.githubusercontent.com/100098231/225097379-66f5e423-daa4-41ff-8678-f3a517b5911c.mp4
+<details>
+  <summary>Tecnologias utilizadas</summary>
+  <p>
+    
+  - TypeScript: `4.9.5`
+  - TailwindCss: `3.2.6`
+  - PHP: `8.1.0`  
+    
+  </p>
 
 </details>
 
@@ -31,15 +35,13 @@ https://user-images.githubusercontent.com/100098231/225097379-66f5e423-daa4-41ff
 </details>
 
 
-<details>
-  <summary>Tecnologias utilizadas</summary>
-  <p>
-    
-  - TypeScript: `4.9.5`
-  - TailwindCss: `3.2.6`
-  - PHP: `8.1.0`  
-    
-  </p>
 
-  </details>
+<details open>
+  <summary>Demonstração</summary>
+  <br>
+  
+https://user-images.githubusercontent.com/100098231/225097379-66f5e423-daa4-41ff-8678-f3a517b5911c.mp4
+
+</details>
+
 
