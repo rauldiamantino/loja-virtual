@@ -1,4 +1,4 @@
-## Projeto em desenvolvimento - Exclusivamente para fins educativos.
+## Loja virtual em desenvolvimento # Exclusivamente para fins educacionais.
 
 <details>
   <summary>Tecnologias utilizadas</summary>
