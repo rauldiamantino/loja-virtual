@@ -23,12 +23,14 @@
   2. Se você tem o servidor embutido do php instalado (<a href="https://github.com/rauldiamantino/ambiente-php">veja aqui</a> como instalar):
      - Navegue pelo terminal até o diretório src: `cd loja-virtual/src`
      - rode o comando: `php -S localhost:8080`
+     - abra o navegador e acesse <a href="http://localhost:8080">localhost:8080</a>
   
   3. Se você utiliza o XAMPP, abra o arquivo Apache (httpd.conf) e altere as linhas abaixo para:
      ```
      DocumentRoot "C:/loja-virtual/src"
      <Directory "C:/loja-virtual/src">
      ```
+     - abra o navegador e acesse o localhost
        
   **4. Importante - Se você acessa o localhost de alguma outra forma, é importante alterar o caminho da pasta padrão para este do passo 3, se não fizer isso as imagens não vão aparecer**.
 </details>
