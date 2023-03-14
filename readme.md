@@ -1,6 +1,6 @@
 
 
-<details>
+<details open>
   <summary>Demonstração</summary>
   <br>
   
@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/100098231/225097379-66f5e423-daa4-41ff
 
 </details>
 
-<details open>
+<details>
   <summary>Como rodar o projeto?</summary>
 
   1. Utilizando o terminal, certifique-se que está no C: e em seguida clone o repositório `git clone https://github.com/rauldiamantino/loja-virtual.git`
