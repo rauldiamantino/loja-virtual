@@ -34,9 +34,9 @@ if(! empty($_SESSION['carrinho'])) {
     $idSession = $produtoCarrinho['codigo-produto'].'-'.$produtoCarrinho['prim-variacao'].'-'.$produtoCarrinho['seg-variacao'];
 
     echo "<form action='#' method='post'>
-            <div class='grid grid-cols-3 grid-rows-2 gap-2 css-cip-produto'>
+            <div class='grid grid-cols-4 grid-rows-2 gap-2 css-cip-produto'>
               <a class='row-span-2 rounded-md' href='produto.php?categoria=&dir=pages/produtos&file=".$produtoCarrinho['codigo-produto']."'><img src='{$produtoCarrinho['imagem']}'></a>
-              <div class='border border-gray-200 p-4 col-span-2 row-span-2 flex justify-between items-between rounded-md css-cipp-textos'>
+              <div class='border border-gray-200 p-4 col-span-3 row-span-2 flex justify-between items-between rounded-md css-cipp-textos'>
                 <div class='w-full flex flex-col justify-between css-textos-bloco-1'>
                   <div class='css-textos-bloco-1-superior'>
                     <h1 class='font-medium'>{$produtoCarrinho['nome-produto']}</h1>
