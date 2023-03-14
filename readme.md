@@ -3,14 +3,9 @@
 <details>
   <summary>Demonstração</summary>
   <br>
-  Banner, lista de produtos, menu e página do produto:
   
-  [home-produto.webm](https://user-images.githubusercontent.com/100098231/224863603-7ee84724-738d-4e5f-b963-95e21c230d0c.webm)
+https://user-images.githubusercontent.com/100098231/225097379-66f5e423-daa4-41ff-8678-f3a517b5911c.mp4
 
-  <br>
-  Adicionando e removendo itens do carrinho:
-  
-  [carrinho.webm](https://user-images.githubusercontent.com/100098231/224863608-5dbeea43-df65-4df7-bf39-03748384ae85.webm)
 </details>
 
 <details open>
